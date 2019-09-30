@@ -1,10 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<script>
-		console.log('test');
+		'use strict';
+		const log= console.log;
+		window.onload= ()=>{
+			/*fetch('content')
+				.then((resp)=>resp.json().then((resp)=>{
+					document.querySelector('#page').innerHTML= resp.title+"<br>"+resp.body;
+					console.log(resp);}));*/
+			const bar= document.querySelector('#bar');
+			const page= document.querySelector("#page");
+			const title= document.querySelector('#title');
+			const content= document.querySelector('#content');
+			const frag= window.location.href.split('#')[1] || 'home';
+			log('frag:',frag);
+			const loadPage= (name)=>{fetch(name+'.json').then((resp)=>resp.json().then((json)=>{
+					log(json);
+					log('title:',title);
+					title.innerHTML= json.title;
+					content.innerHTML= json.body;
+			}))};
+			loadPage(frag);
+			const buttons= [
+				['Who we are','admin'],
+				['Home','home'],
+				['asdf','asdf']
+			];
+			buttons.forEach(([name,page])=>{
+				log(name);
+				const button= document.createElement('div');
+				button.addEventListener('click',()=>{loadPage(page)});
+				button.innerHTML= name;
+				bar.append(button);
+				//bar.innerHTML+= '<div onclick="'+clickHandler+'">'+name+'</div>'
+			});
+		}
+		const aclicked= ()=>{
+			console.log("aclicked");
+		};
 	</script>
+	<style>
+		body {
+			margin: 0;
+		}
+		#bar {
+			text-align:center;
+			display:block;
+			color:yellow;
+			background-color:red;
+		}
+		#bar>div {
+			cursor: pointer;
+			padding: 10px;
+			margin: 10px;
+			display: inline-block;
+			background-color:blue;
+			border-radius:10px;
+		}
+		#bar>div:hover {
+			background-color:slateblue;
+		}
+		#title {
+			text-align:center;
+			font-size:large;
+		}
+	</style>
 </head>
 <body>
+	<div id=bar></div>
+	<div id=page>
+		<div id=title></div>
+		<div id=content></div>
+	</div>
 </body>
 </html>
