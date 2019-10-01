@@ -34,25 +34,10 @@
 				content.append(articlePreviewList);
 			};
 			const logo= document.querySelector('.logo');
-			const barLogo= logo.cloneNode(true);
-			[logo,barLogo].forEach((x)=>{x.addEventListener('click',home);});
-			window.onscroll= (()=>{
-				let prev= true;
-				return ()=>{
-					let isAtTop= window.scrollY<logo.clientHeight;
-					if(isAtTop==prev)
-						return;
-					prev= isAtTop;
-					if(isAtTop) {
-						menu.removeChild(barLogo);
-						menu.classList.remove('menu-stick');
-					} else {
-						log('appended');
-						menu.prepend(barLogo);
-						menu.classList.add('menu-stick');
-					}
-				};
-			})();
+			const homeButton= document.createElement('div');
+			homeButton.innerHTML='Home';
+			[logo,homeButton].forEach((x)=>{x.addEventListener('click',home);});
+			menu.append(homeButton);
 			{
 				const parts= window.location.href.split('#');
 				if(parts.length===1)
@@ -90,6 +75,7 @@
 			display:block;
 			white-space:nowrap;
 			overflow:auto;
+			transition: height 1s;
 		}
 		#menu.menu-stick {
 			position:sticky;
@@ -148,8 +134,8 @@
 	</style>
 </head>
 <body>
-	<div class=logo class=clickable>The Flounder</div>
-	<div id=menu></div>
+	<div class='logo clickable'>The Flounder</div>
+	<div id=menu class='menu-stick'></div>
 	<div id=page>
 		<div id=title></div>
 		<div id=content></div>
