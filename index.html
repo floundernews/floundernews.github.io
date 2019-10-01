@@ -34,12 +34,11 @@
 						const articlePreview= document.createElement('div');
 						articlePreview.classList.add('article-preview','clickable');
 						articlePreview.addEventListener('click',()=>visit(json));
-						articlePreview.innerHTML= json.title+' <small>'+json.headline+'</small>';
+						articlePreview.innerHTML= json.title+'<br><small>'+json.headline+'</small>';
 						articlePreviewList.append(articlePreview);
 					});
 				});
 			});});
-				//log('articles array:',articles);
 			const home= ()=>{
 				title.innerHTML= 'Our Articles';
 				content.removeAllChildren();
@@ -63,30 +62,49 @@
 				button.addEventListener('click',()=>{visit(json)});
 				button.innerHTML= name;
 				menu.append(button);
-				//bar.innerHTML+= '<div onclick="'+clickHandler+'">'+name+'</div>'
 			})));
 		}
-		const aclicked= ()=>{
-			console.log("aclicked");
-		};
 	</script>
 	<style>
 		body {
 			margin: 0;
+			background-color:lightgreen;
 		}
 		#bar {
-			text-align:center;
-			display:block;
-			color:yellow;
+			//display:flex;
+			color:white;
 			background-color:red;
+			//white-space:nowrap;
+			//overflow:auto;
+			align-items:stretch;
+			text-align:center;
+			vertical-align:center;
 		}
 		#menu {
-			display: inline;
+			//align-itms:center;
+			//height:auto;
+			white-space:nowrap;
+			//display:table-cell;
+			overflow:auto;
+			//text-align:center;
+			//display:flex;
+			//vertical-align:middle;
+			//justify-content:center;
 		}
 		#logo {
-			display: inline-block
-			border-radius:10px;
+			//display:block;
+			padding:3px;
+			float:left;
+			//vertical-align:middle;
+			//align-self:stretch;
 			background-color:green;
+			display:box;
+			box-pack:center;
+			box-align:center;
+		}
+		#logo-center {
+			display:inline;
+			vertical-align:center;
 		}
 		.clickable {
 			cursor: pointer;
@@ -97,10 +115,9 @@
 			margin: 10px;
 			padding: 10px;
 			border-radius:10px;
-			display: inline-flex;
 			align-self: center;
 		}
-		#menu>div {
+		#menu div {
 			cursor: pointer;
 			padding: 10px;
 			margin: 10px;
@@ -108,23 +125,23 @@
 			background-color:blue;
 			border-radius:10px;
 		}
-		#menu>div:hover {
+		#menu div:hover {
 			background-color:slateblue;
 		}
 		#title {
 			text-align:center;
-			font-size:large;
+			font-size:2em;
 		}
 		#article-list {
+			white-space:wrap;
 			flex-direction:column;
-			background:pink;
 			display:flex;
 			text-align:center;
 		}
 	</style>
 </head>
 <body>
-	<div id=bar><div id=logo class=clickable>The Flounder</div><div id=menu></div></div>
+	<div id=bar><div id=logo class=clickable><div id=logo-center>The Flounder</div></div><div id=menu></div></div>
 	<div id=page>
 		<div id=title></div>
 		<div id=content></div>
