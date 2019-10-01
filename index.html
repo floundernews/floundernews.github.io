@@ -10,13 +10,7 @@
 				this.removeChild(this.lastChild);
 		};
 		window.onload= ()=>{
-			/*fetch('content')
-				.then((resp)=>resp.json().then((resp)=>{
-					document.querySelector('#page').innerHTML= resp.title+"<br>"+resp.body;
-					console.log(resp);}));*/
 			const menu= document.querySelector('#menu');
-			const bar= document.querySelector('#bar');
-			const logo= document.querySelector('#logo');
 			const page= document.querySelector("#page");
 			const title= document.querySelector('#title');
 			const content= document.querySelector('#content');
@@ -32,12 +26,33 @@
 				articlePreview.classList.add('article-preview','clickable');
 				articlePreview.addEventListener('click',()=>visit(json));
 				articlePreview.innerHTML= json.title+'<br><small>'+json.headline+'</small>';
-				articlePreviewList.append(articlePreview);})))})});
+				articlePreviewList.append(articlePreview);
+			})))})});
 			const home= ()=>{
 				title.innerHTML= 'Our Articles';
 				content.removeAllChildren();
 				content.append(articlePreviewList);
 			};
+			const logo= document.querySelector('.logo');
+			const barLogo= logo.cloneNode(true);
+			[logo,barLogo].forEach((x)=>{x.addEventListener('click',home);});
+			window.onscroll= (()=>{
+				let prev= true;
+				return ()=>{
+					let isAtTop= window.scrollY<logo.clientHeight;
+					if(isAtTop==prev)
+						return;
+					prev= isAtTop;
+					if(isAtTop) {
+						menu.removeChild(barLogo);
+						menu.classList.remove('menu-stick');
+					} else {
+						log('appended');
+						menu.prepend(barLogo);
+						menu.classList.add('menu-stick');
+					}
+				};
+			})();
 			{
 				const parts= window.location.href.split('#');
 				if(parts.length===1)
@@ -46,7 +61,6 @@
 					// this needs to be implemented
 					loadPage(parts[1]);
 			}
-			logo.addEventListener('click',()=>{log('logo clicked');home();});
 			[
 				['Who we are','admin'],
 				['Subscribe','subscribe'],
@@ -65,27 +79,30 @@
 			margin: 0;
 			background-color:lightgreen;
 		}
-		#bar {
+		#menu {
 			color:white;
 			background-color:darkgreen;
 			align-items:stretch;
 			overflow:auto;
+			text-align:center;
 			justify-content:center;
 			white-space:nowrap;
-		}
-		#menu {
-			display:inline-block;
+			display:block;
 			white-space:nowrap;
 			overflow:auto;
 		}
-		#logo {
+		#menu.menu-stick {
+			position:sticky;
+			left:0px;
+			top:0px;
+		}
+		.logo {
+			color:white;
+			text-align:center;
+			display:block;
 			font-size:1.5em;
 			padding:24px;
-			float:left;
 			background-color:green;
-		}
-		#logo-center {
-			display:inline;
 		}
 		.clickable {
 			cursor: pointer;
@@ -131,7 +148,8 @@
 	</style>
 </head>
 <body>
-	<div id=bar><div id=logo class=clickable><div id=logo-center>The Flounder</div></div><div id=menu></div></div>
+	<div class=logo class=clickable>The Flounder</div>
+	<div id=menu></div>
 	<div id=page>
 		<div id=title></div>
 		<div id=content></div>
