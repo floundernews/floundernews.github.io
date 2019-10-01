@@ -5,27 +5,55 @@
 	<script>
 		'use strict';
 		const log= console.log;
+		Element.prototype.removeAllChildren= function() {
+			for(;this.hasChildNodes();)
+				this.removeChild(this.lastChild);
+		};
 		window.onload= ()=>{
 			/*fetch('content')
 				.then((resp)=>resp.json().then((resp)=>{
 					document.querySelector('#page').innerHTML= resp.title+"<br>"+resp.body;
 					console.log(resp);}));*/
+			const menu= document.querySelector('#menu');
 			const bar= document.querySelector('#bar');
+			const logo= document.querySelector('#logo');
 			const page= document.querySelector("#page");
 			const title= document.querySelector('#title');
 			const content= document.querySelector('#content');
-			const frag= window.location.href.split('#')[1] || 'home';
-			log('frag:',frag);
 			const loadPage= (name)=>{fetch(name+'.json').then((resp)=>resp.json().then((json)=>{
 					log(json);
 					log('title:',title);
 					title.innerHTML= json.title;
 					content.innerHTML= json.body;
 			}))};
-			loadPage(frag);
+			const articleList= document.createElement('div');
+			articleList.id= 'article-list';
+			fetch('list.json').then((resp)=>{resp.json().then((pages)=>{
+				log('pages:',pages);
+				pages.forEach((page)=>{
+					const article= document.createElement('div');
+					article.classList.add(['article-preview']);
+					article.innerHTML= page;
+					articleList.append(article);
+				});
+				const home= ()=>{
+					title.innerHTML= 'Our Articles';
+					content.removeAllChildren();
+					content.append(articleList);
+					log('articleList:',articleList);
+				};
+				{
+					const parts= window.location.href.split('#');
+					if(parts.length===1)
+						home();
+					else
+						loadPage(parts[1]);
+				}
+				logo.addEventListener('click',()=>{log('logo clicked');home();});
+			})});
 			const buttons= [
 				['Who we are','admin'],
-				['Home','home'],
+				['hecc','hecc'],
 				['asdf','asdf']
 			];
 			buttons.forEach(([name,page])=>{
@@ -33,7 +61,7 @@
 				const button= document.createElement('div');
 				button.addEventListener('click',()=>{loadPage(page)});
 				button.innerHTML= name;
-				bar.append(button);
+				menu.append(button);
 				//bar.innerHTML+= '<div onclick="'+clickHandler+'">'+name+'</div>'
 			});
 		}
@@ -51,7 +79,27 @@
 			color:yellow;
 			background-color:red;
 		}
-		#bar>div {
+		#menu {
+			display: inline;
+		}
+		#logo {
+			display: inline-block
+			border-radius:10px;
+			background-color:green;
+		}
+		.clickable {
+			cursor: pointer;
+		}
+		.article-preview {
+			text-align:center;
+			background-color:violet;
+			margin: 10px;
+			padding: 10px;
+			border-radius:10px;
+			display: inline-flex;
+			align-self: center;
+		}
+		#menu>div {
 			cursor: pointer;
 			padding: 10px;
 			margin: 10px;
@@ -59,17 +107,23 @@
 			background-color:blue;
 			border-radius:10px;
 		}
-		#bar>div:hover {
+		#menu>div:hover {
 			background-color:slateblue;
 		}
 		#title {
 			text-align:center;
 			font-size:large;
 		}
+		#article-list {
+			flex-direction:column;
+			background:pink;
+			display:flex;
+			text-align:center;
+		}
 	</style>
 </head>
 <body>
-	<div id=bar></div>
+	<div id=bar><div id=logo class=clickable>The Flounder</div><div id=menu></div></div>
 	<div id=page>
 		<div id=title></div>
 		<div id=content></div>
