@@ -56,10 +56,9 @@
 			logo.addEventListener('click',()=>{log('logo clicked');home();});
 			[
 				['Who we are','admin'],
-				['hecc','hecc'],
-				['asdf','asdf']
+				['Subscribe','subscribe']
 			].forEach(([name,page])=>fetch(page+'.json').then((resp)=>resp.json().then((json)=>{
-				log('button:',name,page);
+				log('button:',[name,page]);
 				const button= document.createElement('div');
 				button.addEventListener('click',()=>{visit(json)});
 				button.innerHTML= name;
