@@ -20,27 +20,31 @@
 			const page= document.querySelector("#page");
 			const title= document.querySelector('#title');
 			const content= document.querySelector('#content');
-			const loadPage= (name)=>{fetch(name+'.json').then((resp)=>resp.json().then((json)=>{
-					log(json);
-					log('title:',title);
-					title.innerHTML= json.title;
-					content.innerHTML= json.body;
-			}))};
-			const articleList= document.createElement('div');
-			articleList.id= 'article-list';
+			const articlePreviewList= document.createElement('div');
+			articlePreviewList.id= 'article-list';
 			fetch('list.json').then((resp)=>{resp.json().then((pages)=>{
 				log('pages:',pages);
-				pages.forEach((page)=>{
-					const article= document.createElement('div');
-					article.classList.add(['article-preview']);
-					article.innerHTML= page;
-					articleList.append(article);
+				Promise.all(pages.map((page)=>fetch('articles/'+page+'.json').then((resp)=>resp.json().then((json)=>[page,json])))).then((articles)=>{
+					articles.forEach(([page,json])=>{
+						log('ret:',[page,json]);
+						log('page:',page,', articleJSON:',json);
+						const articlePreview= document.createElement('div');
+						articlePreview.classList.add('article-preview','clickable');
+						articlePreview.addEventListener('click',()=>{
+							title.innerHTML= json.title;
+							content.innerHTML= json.content;
+						});
+						articlePreview.innerHTML= json.title;
+						articlePreviewList.append(articlePreview);
+					});
 				});
+					/*
+					*/
+				//log('articles array:',articles);
 				const home= ()=>{
 					title.innerHTML= 'Our Articles';
 					content.removeAllChildren();
-					content.append(articleList);
-					log('articleList:',articleList);
+					content.append(articlePreviewList);
 				};
 				{
 					const parts= window.location.href.split('#');
