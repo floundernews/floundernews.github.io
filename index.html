@@ -21,53 +21,51 @@
 			const title= document.querySelector('#title');
 			const content= document.querySelector('#content');
 			const articlePreviewList= document.createElement('div');
+			const visit= (articleJSON)=>{
+				title.innerHTML= articleJSON.title;
+				content.innerHTML= articleJSON.content;
+			};
 			articlePreviewList.id= 'article-list';
 			fetch('list.json').then((resp)=>{resp.json().then((pages)=>{
-				log('pages:',pages);
 				Promise.all(pages.map((page)=>fetch('articles/'+page+'.json').then((resp)=>resp.json().then((json)=>[page,json])))).then((articles)=>{
 					articles.forEach(([page,json])=>{
-						log('ret:',[page,json]);
-						log('page:',page,', articleJSON:',json);
+						//log('ret:',[page,json]);
+						//log('page:',page,', articleJSON:',json);
 						const articlePreview= document.createElement('div');
 						articlePreview.classList.add('article-preview','clickable');
-						articlePreview.addEventListener('click',()=>{
-							title.innerHTML= json.title;
-							content.innerHTML= json.content;
-						});
-						articlePreview.innerHTML= json.title;
+						articlePreview.addEventListener('click',()=>visit(json));
+						articlePreview.innerHTML= json.title+' <small>'+json.headline+'</small>';
 						articlePreviewList.append(articlePreview);
 					});
 				});
-					/*
-					*/
+			});});
 				//log('articles array:',articles);
-				const home= ()=>{
-					title.innerHTML= 'Our Articles';
-					content.removeAllChildren();
-					content.append(articlePreviewList);
-				};
-				{
-					const parts= window.location.href.split('#');
-					if(parts.length===1)
-						home();
-					else
-						loadPage(parts[1]);
-				}
-				logo.addEventListener('click',()=>{log('logo clicked');home();});
-			})});
-			const buttons= [
+			const home= ()=>{
+				title.innerHTML= 'Our Articles';
+				content.removeAllChildren();
+				content.append(articlePreviewList);
+			};
+			{
+				const parts= window.location.href.split('#');
+				if(parts.length===1)
+					home();
+				else
+					// this needs to be implemented
+					loadPage(parts[1]);
+			}
+			logo.addEventListener('click',()=>{log('logo clicked');home();});
+			[
 				['Who we are','admin'],
 				['hecc','hecc'],
 				['asdf','asdf']
-			];
-			buttons.forEach(([name,page])=>{
-				log(name);
+			].forEach(([name,page])=>fetch(page+'.json').then((resp)=>resp.json().then((json)=>{
+				log('button:',name,page);
 				const button= document.createElement('div');
-				button.addEventListener('click',()=>{loadPage(page)});
+				button.addEventListener('click',()=>{visit(json)});
 				button.innerHTML= name;
 				menu.append(button);
 				//bar.innerHTML+= '<div onclick="'+clickHandler+'">'+name+'</div>'
-			});
+			})));
 		}
 		const aclicked= ()=>{
 			console.log("aclicked");
