@@ -51,7 +51,7 @@
 			[logo,homeButton].forEach((x)=>{x.addEventListener('click',()=>{visit('home');});});
 			menu.append(homeButton);
 			Promise.all([
-				fetch('list.json')
+				fetch('articles.json')
 					.then((resp)=>resp.json())
 					.then((pages)=>Promise.all(pages.map((page)=>fetch('articles/'+page+'.json')
 						.then((resp)=>resp.json())
@@ -68,7 +68,7 @@
 					))),
 				fetch('static.json')
 					.then((resp)=>resp.json())
-					.then((staticPages)=>Promise.all(staticPages.map(([buttonLabel,res])=>fetch(res+'.json')
+					.then((staticPages)=>Promise.all(staticPages.map(([buttonLabel,res])=>fetch('static/'+res+'.json')
 						.then((resp)=>resp.json())
 						.then((json)=>{
 							log('got json:',json);
