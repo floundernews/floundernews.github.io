@@ -32,7 +32,6 @@
 				setPage(page);
 				history.pushState(page,'',loc[0]+'#'+page);
 			};
-			setPage(loc[1]||'home');
 			window.onpopstate= (e)=>{
 				setPage(e.state||'home');
 			};
@@ -48,16 +47,22 @@
 				}
 				return ret;
 			};
-			fetch('list.json').then((resp)=>{resp.json().then((pages)=>{pages.forEach((page)=>fetch('articles/'+page+'.json').then((resp)=>resp.json().then((json)=>{
-				json= processContent(json);
-				pageMap[page]= json;
-				const preview= document.createElement('div');
-				preview.classList.add('article-preview','clickable');
-				preview.addEventListener('click',()=>{visit(page);});
-				preview.append(json.title);
-				preview.append(json.headline);
-				previewList.append(preview);
-			})));});});
+			fetch('list.json').then(
+				(resp)=>{resp.json().then((pages)=>{
+					Promise.all(pages.map((page)=>fetch('articles/'+page+'.json').then((resp)=>resp.json().then((json)=>{
+						json= processContent(json);
+						pageMap[page]= json;
+						const preview= document.createElement('div');
+						preview.classList.add('article-preview','clickable');
+						preview.addEventListener('click',()=>{visit(page);});
+						preview.append(json.title);
+						preview.append(json.headline);
+						previewList.append(preview);
+						return json;
+					})))).then((pages)=>{
+						setPage(loc[1]||'home');
+						log('pages:',pages);
+					})});});
 			const logo= document.querySelector('.logo');
 			const homeButton= document.createElement('div');
 			homeButton.innerHTML='Home';
