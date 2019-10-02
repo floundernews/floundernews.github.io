@@ -9,7 +9,6 @@
 			for(;this.hasChildNodes();)
 				this.removeChild(this.lastChild);
 		};
-		window.
 		window.onload= ()=>{
 			const menu= document.querySelector('#menu');
 			const page= document.querySelector("#page");
@@ -23,6 +22,8 @@
 				content:previewList
 			};
 			const setPage= (page)=>{
+				log('setPage:',page);
+				page= page||'home';
 				title.removeAllChildren();
 				title.append(pageMap[page].title);
 				content.removeAllChildren();
@@ -32,12 +33,9 @@
 				setPage(page);
 				history.pushState(page,'',loc[0]+'#'+page);
 			};
-			window.onpopstate= (e)=>{
-				setPage(e.state||'home');
-			};
+			window.onpopstate= (e)=>{ setPage(e.state); };
 			previewList.id= 'article-list';
 			const deepCopy= (json)=>JSON.parse(JSON.stringify(json));
-			// modifies the passed argument
 			const processContent= (json)=>{
 				let ret= {};
 				for(let key in json) {
@@ -47,39 +45,45 @@
 				}
 				return ret;
 			};
-			fetch('list.json').then((resp)=>{resp.json().then((pages)=>{
-				Promise.all(pages.map((page)=>fetch('articles/'+page+'.json').then((resp)=>resp.json().then((json)=>{
-					json= processContent(json);
-					pageMap[page]= json;
-					const preview= document.createElement('div');
-					preview.classList.add('article-preview','clickable');
-					preview.addEventListener('click',()=>{visit(page);});
-					preview.append(json.title.cloneNode(true));
-					preview.append(json.headline);
-					previewList.append(preview);
-					return json;
-				})))).then((pages)=>{
-					setPage(loc[1]||'home');
-					log('pages:',pages);
-				})});
-			});
 			const logo= document.querySelector('.logo');
 			const homeButton= document.createElement('div');
 			homeButton.innerHTML='Home';
 			[logo,homeButton].forEach((x)=>{x.addEventListener('click',()=>{visit('home');});});
 			menu.append(homeButton);
-			[
-				['Who we are','admin'],
-				['Subscribe','subscribe'],
-				['Static page','static']
-			].forEach(([name,page])=>fetch(page+'.json').then((resp)=>resp.json().then((json)=>{
-				json= processContent(json);
-				pageMap[page]= json;
-				const button= document.createElement('div');
-				button.addEventListener('click',()=>{visit(page);});
-				button.innerHTML= name;
-				menu.append(button);
-			})));
+			Promise.all([
+				fetch('list.json')
+					.then((resp)=>resp.json())
+					.then((pages)=>Promise.all(pages.map((page)=>fetch('articles/'+page+'.json')
+						.then((resp)=>resp.json())
+						.then((json)=>{
+							json=processContent(json);
+							pageMap[page]= json;
+							const preview= document.createElement('div');
+							preview.classList.add('article-preview','clickable');
+							preview.addEventListener('click',()=>{visit(page);});
+							preview.append(json.title.cloneNode(true));
+							preview.append(json.headline);
+							previewList.append(preview);
+						})
+					))),
+				fetch('static.json')
+					.then((resp)=>resp.json())
+					.then((staticPages)=>Promise.all(staticPages.map(([buttonLabel,res])=>fetch(res+'.json')
+						.then((resp)=>resp.json())
+						.then((json)=>{
+							log('got json:',json);
+							json= processContent(json);
+							pageMap[res]= json;
+							const button= document.createElement('div');
+							button.addEventListener('click',()=>{visit(res);});
+							button.innerHTML= buttonLabel;
+							log('button:',button);
+							menu.append(button);
+						})
+					)))
+			]).then(()=>{
+				setPage(loc[1]);
+			});
 		}
 	</script>
 	<style>
