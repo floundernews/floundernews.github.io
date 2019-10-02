@@ -9,51 +9,69 @@
 			for(;this.hasChildNodes();)
 				this.removeChild(this.lastChild);
 		};
+		window.
 		window.onload= ()=>{
 			const menu= document.querySelector('#menu');
 			const page= document.querySelector("#page");
 			const title= document.querySelector('#title');
 			const content= document.querySelector('#content');
-			const articlePreviewList= document.createElement('div');
-			const visit= (articleJSON)=>{
-				title.innerHTML= articleJSON.title;
-				content.innerHTML= articleJSON.content;
+			const previewList= document.createElement('div');
+			const loc= window.location.href.split('#');
+			let pageMap= {};
+			pageMap['home']= {
+				title:'Our Articles',
+				content:previewList
 			};
-			articlePreviewList.id= 'article-list';
-			log('test');
-			fetch('list.json').then((resp)=>{resp.json().then((pages)=>{pages.forEach((page)=>fetch('articles/'+page+'.json').then((resp)=>resp.json().then((json)=>{
-				const articlePreview= document.createElement('div');
-				articlePreview.classList.add('article-preview','clickable');
-				articlePreview.addEventListener('click',()=>visit(json));
-				articlePreview.innerHTML= json.title+'<br><small>'+json.headline+'</small>';
-				articlePreviewList.append(articlePreview);
-			})))})});
-			const home= ()=>{
-				title.innerHTML= 'Our Articles';
+			const setPage= (page)=>{
+				title.removeAllChildren();
+				title.append(pageMap[page].title);
 				content.removeAllChildren();
-				content.append(articlePreviewList);
+				content.append(pageMap[page].content);
 			};
+			const visit= (page)=>{
+				setPage(page);
+				history.pushState(page,'',loc[0]+'#'+page);
+			};
+			setPage(loc[1]||'home');
+			window.onpopstate= (e)=>{
+				setPage(e.state||'home');
+			};
+			previewList.id= 'article-list';
+			const deepCopy= (json)=>JSON.parse(JSON.stringify(json));
+			// modifies the passed argument
+			const processContent= (json)=>{
+				let ret= {};
+				for(let key in json) {
+					let div= document.createElement('div');
+					div.innerHTML= json[key];
+					ret[key]= div;
+				}
+				return ret;
+			};
+			fetch('list.json').then((resp)=>{resp.json().then((pages)=>{pages.forEach((page)=>fetch('articles/'+page+'.json').then((resp)=>resp.json().then((json)=>{
+				json= processContent(json);
+				pageMap[page]= json;
+				const preview= document.createElement('div');
+				preview.classList.add('article-preview','clickable');
+				preview.addEventListener('click',()=>{visit(page);});
+				preview.append(json.title);
+				preview.append(json.headline);
+				previewList.append(preview);
+			})));});});
 			const logo= document.querySelector('.logo');
 			const homeButton= document.createElement('div');
 			homeButton.innerHTML='Home';
-			[logo,homeButton].forEach((x)=>{x.addEventListener('click',home);});
+			[logo,homeButton].forEach((x)=>{x.addEventListener('click',()=>{visit('home');});});
 			menu.append(homeButton);
-			{
-				const parts= window.location.href.split('#');
-				if(parts.length===1)
-					home();
-				else
-					// this needs to be implemented
-					loadPage(parts[1]);
-			}
 			[
 				['Who we are','admin'],
 				['Subscribe','subscribe'],
 				['Static page','static']
 			].forEach(([name,page])=>fetch(page+'.json').then((resp)=>resp.json().then((json)=>{
-				log('button:',[name,json]);
+				json= processContent(json);
+				pageMap[page]= json;
 				const button= document.createElement('div');
-				button.addEventListener('click',()=>{visit(json)});
+				button.addEventListener('click',()=>{visit(page);});
 				button.innerHTML= name;
 				menu.append(button);
 			})));
