@@ -39,6 +39,7 @@
 				let ret= {};
 				for(let key in json) {
 					let div= document.createElement('div');
+					div.classList.add('flex-grow','column');
 					div.innerHTML= json[key];
 					ret[key]= div;
 				}
@@ -86,9 +87,19 @@
 	<style>
 		body {
 			margin: 0;
+			min-height:100vh;
 			background-color:lightgreen;
 		}
+		/* https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space */
+		.column {
+			display: flex;
+			flex-flow: column;
+		}
+		.flex-grow {
+			flex:1 1 auto;
+		}
 		#menu {
+			flex:0 1 auto;
 			color:white;
 			background-color:darkgreen;
 			align-items:stretch;
@@ -143,7 +154,7 @@
 			font-size:2em;
 		}
 		#page {
-			text-align:center;
+			align-items:center;
 		}
 		#article-list {
 			flex-direction:column;
@@ -153,16 +164,16 @@
 		#content {
 			display:inline-block;
 			text-align:left;
-			max-width:700px;
+			display:flex;
 		}
 	</style>
 </head>
-<body>
+<body class='column'>
 	<div class='logo clickable'>The Flounder</div>
 	<div id=menu class='menu-stick'></div>
-	<div id=page>
+	<div id=page class='column flex-grow'>
 		<div id=title></div>
-		<div id=content></div>
+		<div id=content class='column flex-grow'></div>
 	</div>
 </body>
 </html>
