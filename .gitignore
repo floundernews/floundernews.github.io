@@ -1,8 +1,9 @@
 # Jekyll .gitignore
-_site/
-.sass-cache/
-.jekyll-cache/
+_site
+.sass-cache
+.jekyll-cache
 .jekyll-metadata
+vendor
 
 # No backup files
 \#*\#

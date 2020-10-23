@@ -1,0 +1,14 @@
+title: The Flounder
+email: thefloundernews@gmail.com
+description: >-
+  TODO Description.
+permalink: /:year/:month/:title/
+plugins:
+  - jekyll-feed
+
+# Pagination
+paginate: true
+
+# Social media accounts
+github_username: floundernews
+instagram_username: floundernews
