@@ -5,9 +5,11 @@ description: >-
 permalink: /:year/:month/:title/
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Pagination
-paginate: true
+paginate: 5
+paginate_path: "/:num/"
 
 # Social media accounts
 github_username: floundernews
