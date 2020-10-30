@@ -1,8 +1,8 @@
 ---
 layout: post
 author: "John Doe"
-title: "Example Post"
-description: "An Example Post"
+title: "Example Post 7"
+description: "An Example Post 7"
 # thumbnail: /assets/img/
 ---
 
