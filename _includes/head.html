@@ -11,6 +11,7 @@
   <meta name="description" content="{{ page.description | default: site.description }}">
   <meta name="author" content="{{ page.author | default: site.title }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% if page.thumbnail %}<meta property="og:image" content="{{ page.thumbnail | absolute_url }}">{% endif %}
 
   {% if page.redirect_url %} 
     <meta http-equiv="refresh" content="0;url={{ page.redirect_url }}" />

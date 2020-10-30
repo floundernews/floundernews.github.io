@@ -8,6 +8,9 @@ layout: default
   {%- for post in paginator.posts -%}
     <li>
       <a href="{{ post.url | relative_url }}">
+        {% if post.thumbnail %}
+          <img style="max-width: 20%;" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail | relative_url }}"><br>
+        {% endif %}
         {{ post.title | escape }}
       </a>
     </li>

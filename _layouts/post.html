@@ -2,4 +2,8 @@
 layout: default
 ---
 
+{% if page.thumbnail %}
+  <img style="max-width: 50%;" src="{{ page.thumbnail | relative_url }}" alt="{{ page.thumbnail | relative_url }}">
+{% endif %}
+
 {{ content }}

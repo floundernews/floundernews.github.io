@@ -3,7 +3,7 @@ layout: post
 author: "John Doe"
 title: "Example Post 2"
 description: "An Example Post 2"
-# thumbnail: /assets/img/
+thumbnail: "/assets/img/test-image.png"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec ultrices dui sapien eget mi proin sed. Blandit turpis cursus in hac habitasse. Dui sapien eget mi proin sed. Non arcu risus quis varius quam quisque. Neque viverra justo nec ultrices dui sapien eget mi. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Aliquam id diam maecenas ultricies mi eget mauris pharetra. Sit amet tellus cras adipiscing enim eu. Mattis aliquam faucibus purus in massa. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Tempor commodo ullamcorper a lacus vestibulum. Nisl nunc mi ipsum faucibus vitae aliquet. Tortor id aliquet lectus proin nibh nisl condimentum id. Eget mi proin sed libero enim sed faucibus turpis in. Mattis ullamcorper velit sed ullamcorper. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat.

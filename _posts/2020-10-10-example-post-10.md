@@ -3,7 +3,6 @@ layout: post
 author: "John Doe"
 title: "Example Post 10"
 description: "An Example Post 10"
-# thumbnail: /assets/img/
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices vitae auctor eu augue ut lectus arcu. Odio aenean sed adipiscing diam donec adipiscing tristique risus. Tortor at risus viverra adipiscing. Lorem mollis aliquam ut porttitor leo a diam. Dignissim enim sit amet venenatis urna cursus eget nunc scelerisque. Sit amet commodo nulla facilisi nullam vehicula ipsum. Tortor dignissim convallis aenean et tortor at. Ut pharetra sit amet aliquam. In vitae turpis massa sed elementum. Tellus rutrum tellus pellentesque eu.

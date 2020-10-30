@@ -3,7 +3,6 @@ layout: post
 author: "John Doe"
 title: "Example Post 4"
 description: "An Example Post 4"
-# thumbnail: /assets/img/
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Id porta nibh venenatis cras sed. Aenean vel elit scelerisque mauris. Nunc mi ipsum faucibus vitae. Purus in mollis nunc sed id semper risus in. Nulla facilisi nullam vehicula ipsum a arcu cursus. Magna ac placerat vestibulum lectus. Felis donec et odio pellentesque diam volutpat. Ultrices vitae auctor eu augue. Iaculis eu non diam phasellus vestibulum lorem. Nibh ipsum consequat nisl vel pretium lectus quam. In ante metus dictum at tempor commodo ullamcorper a lacus. Faucibus scelerisque eleifend donec pretium vulputate sapien. Gravida in fermentum et sollicitudin ac orci phasellus. Mauris augue neque gravida in fermentum et sollicitudin. Ac tincidunt vitae semper quis lectus nulla at. Egestas quis ipsum suspendisse ultrices gravida dictum fusce.
