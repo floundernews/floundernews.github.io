@@ -14,13 +14,13 @@ layout: default
   {%- endfor -%}
 </ul>
 
-{%- if !paginator.previous_page -%}
+{%- if paginator.previous_page -%}
   <a href="{{ paginator.previous_page_path }}">Previous page</a>
 {%- else -%}
   Previous Page
 {%- endif -%}
 &nbsp;|&nbsp; 
-{%- if !paginator.next_page -%}
+{%- if paginator.next_page -%}
   <a href="{{ paginator.next_page_path }}">Next Page</a>
 {%- else -%}
   Next Page
