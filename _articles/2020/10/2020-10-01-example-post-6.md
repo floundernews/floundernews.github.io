@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: article
 author: "John Doe"
 title: "Example Post 6"
 description: "An Example Post 6"
+order: 6
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies lacus sed turpis tincidunt id. Interdum posuere lorem ipsum dolor sit amet consectetur. Quisque sagittis purus sit amet volutpat consequat mauris nunc congue. Arcu non odio euismod lacinia at quis risus sed. Sed risus ultricies tristique nulla aliquet enim tortor at auctor. Vel fringilla est ullamcorper eget nulla facilisi etiam. Mi in nulla posuere sollicitudin aliquam ultrices. Vestibulum mattis ullamcorper velit sed. Sapien eget mi proin sed libero enim sed. Pharetra sit amet aliquam id diam. Mattis pellentesque id nibh tortor id. Vel pretium lectus quam id leo in.

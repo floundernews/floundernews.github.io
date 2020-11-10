@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: article
 author: "John Doe"
 title: "Example Post 8"
 description: "An Example Post 8"
+order: 1
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh venenatis cras sed felis eget velit aliquet sagittis. At consectetur lorem donec massa sapien faucibus et molestie. Nunc non blandit massa enim nec. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Risus sed vulputate odio ut enim blandit volutpat maecenas. Fringilla phasellus faucibus scelerisque eleifend donec. Lectus mauris ultrices eros in cursus turpis massa. Nisi porta lorem mollis aliquam ut porttitor leo a diam. Enim tortor at auctor urna nunc id. Ut diam quam nulla porttitor massa id. Placerat vestibulum lectus mauris ultrices eros in cursus turpis. Eget gravida cum sociis natoque penatibus et magnis dis. Dolor purus non enim praesent elementum facilisis leo.

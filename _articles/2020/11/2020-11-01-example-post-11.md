@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: article
 author: "John Doe"
 title: "Example Post 11"
 description: "An Example Post 11"
+order: 4
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu vitae elementum curabitur vitae nunc sed. Odio tempor orci dapibus ultrices in. Vitae auctor eu augue ut lectus arcu bibendum. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Et malesuada fames ac turpis egestas maecenas pharetra convallis. Morbi leo urna molestie at elementum eu facilisis sed odio. Facilisis volutpat est velit egestas dui id ornare. Magna ac placerat vestibulum lectus mauris ultrices eros in cursus. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Tellus at urna condimentum mattis pellentesque id nibh tortor id. Sit amet luctus venenatis lectus magna fringilla urna. Malesuada nunc vel risus commodo viverra maecenas. Dictum fusce ut placerat orci. Maecenas ultricies mi eget mauris pharetra et ultrices neque. Egestas tellus rutrum tellus pellentesque eu tincidunt. Vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt. Convallis tellus id interdum velit laoreet. Est lorem ipsum dolor sit. Amet est placerat in egestas erat imperdiet sed euismod.

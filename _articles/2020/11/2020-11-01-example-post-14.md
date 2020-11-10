@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: article
 author: "John Doe"
 title: "Example Post 14"
 description: "An Example Post 14"
+order: 7
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Lectus vestibulum mattis ullamcorper velit. In est ante in nibh mauris. At urna condimentum mattis pellentesque id nibh. Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Nec feugiat in fermentum posuere urna nec. A erat nam at lectus. Pretium aenean pharetra magna ac placerat vestibulum lectus. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. At risus viverra adipiscing at in. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Nibh ipsum consequat nisl vel pretium lectus. Lectus nulla at volutpat diam ut venenatis. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet.

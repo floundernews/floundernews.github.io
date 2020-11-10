@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: article
 author: "John Doe"
 title: "Example Post 13"
 description: "An Example Post 13"
 thumbnail: "/assets/img/test-image.png"
+order: 6
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit libero volutpat sed cras. Ut morbi tincidunt augue interdum velit euismod in pellentesque massa. Donec adipiscing tristique risus nec. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Posuere sollicitudin aliquam ultrices sagittis orci. Nunc mattis enim ut tellus. Auctor eu augue ut lectus. Posuere sollicitudin aliquam ultrices sagittis. Auctor neque vitae tempus quam pellentesque nec. Cursus in hac habitasse platea dictumst quisque sagittis purus. Sed sed risus pretium quam vulputate dignissim. Pretium viverra suspendisse potenti nullam ac. Enim neque volutpat ac tincidunt vitae. Nulla facilisi etiam dignissim diam. Posuere urna nec tincidunt praesent semper feugiat. Porta non pulvinar neque laoreet suspendisse interdum. Velit egestas dui id ornare arcu.
