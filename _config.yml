@@ -1,16 +1,20 @@
 title: The Flounder
-email: thefloundernews@gmail.com
 description: >-
   TODO Description.
-permalink: /:year/:month/:title/
 plugins:
   - jekyll-feed
   - jekyll-paginate
 
-# Pagination
-paginate: 5
-paginate_path: "/:num/"
+# Custom Directory Structure
+collections:
+  issues:
+    output: true
+    permalink: /:year/:month/
+  articles:
+    output: true
+    permalink: /:year/:month/:title/
 
-# Social media accounts
+# Contacts
+email: thefloundernews@gmail.com
 github_username: floundernews
 instagram_username: floundernews

@@ -5,26 +5,14 @@ layout: default
 {{ content }}
 
 <ul>
-  {%- for post in paginator.posts -%}
+  {%- for issue in site.issues -%}
     <li>
-      <a href="{{ post.url | relative_url }}">
-        {% if post.thumbnail %}
-          <img style="max-width: 20%;" src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail | relative_url }}"><br>
+      <a href="{{ issue.url | relative_url }}">
+        {% if issue.thumbnail %}
+          <img style="max-width: 20%;" src="{{ issue.thumbnail | relative_url }}" alt="{{ issue.thumbnail | relative_url }}"><br>
         {% endif %}
-        {{ post.title | escape }}
+        {{ issue.title | escape }}
       </a>
     </li>
   {%- endfor -%}
 </ul>
-
-{%- if paginator.previous_page -%}
-  <a href="{{ paginator.previous_page_path }}">Previous page</a>
-{%- else -%}
-  Previous Page
-{%- endif -%}
-&nbsp;|&nbsp; 
-{%- if paginator.next_page -%}
-  <a href="{{ paginator.next_page_path }}">Next Page</a>
-{%- else -%}
-  Next Page
-{%- endif -%}

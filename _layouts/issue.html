@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% assign articles = site.articles | where_exp:"article", "article.date == page.date" | sort: "order", "last" %}
+
+<h2>Table of Contents</h2>
+<ul>
+  {% for article in articles %}
+    <li>
+      <a href="#{{ article.title | escape }}">
+        {{ article.title | escape }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% for article in articles %}
+  <hr>
+  <div id="{{ article.title | escape }}">
+    <h2>{{ article.title }}</h2>
+    <a href="{{ article.url | relative_url }}">Link to Standalone Article</a>
+    &nbsp;|&nbsp;
+    <a href="#">Back to Top</a>
+    <br>
+    {% if article.thumbnail %}
+      <img style="max-width: 50%;" src="{{ article.thumbnail | relative_url }}" alt="{{ article.thumbnail | relative_url }}">
+    {% endif %}
+    {{ article | markdownify }}
+  </div>
+{% endfor %}
+
+{{ content }}
