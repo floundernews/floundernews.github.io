@@ -3,7 +3,12 @@ description: >-
   TODO Description.
 plugins:
   - jekyll-feed
-  - jekyll-paginate
+
+# RSS
+feed:
+  collections:
+    issues:
+      path: "/issues.xml"
 
 # Custom Directory Structure
 collections:
