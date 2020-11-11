@@ -8,7 +8,7 @@ layout: default
 <ul>
   {% for article in articles %}
     <li>
-      <a href="#{{ article.title | escape }}">
+      <a href="#{{ article.slug }}">
         {{ article.title | escape }}
       </a>
     </li>
@@ -17,7 +17,7 @@ layout: default
 
 {% for article in articles %}
   <hr>
-  <div id="{{ article.title | escape }}">
+  <div id="{{ article.slug }}">
     <h2>{{ article.title }}</h2>
     <a href="{{ article.url | relative_url }}">Link to Standalone Article</a>
     &nbsp;|&nbsp;
