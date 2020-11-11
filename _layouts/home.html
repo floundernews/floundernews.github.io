@@ -5,7 +5,7 @@ layout: default
 {{ content }}
 
 <ul>
-  {%- for issue in site.issues -%}
+  {% for issue in site.issues %}
     <li>
       <a href="{{ issue.url | relative_url }}">
         {% if issue.thumbnail %}
@@ -14,5 +14,5 @@ layout: default
         {{ issue.title | escape }}
       </a>
     </li>
-  {%- endfor -%}
+  {% endfor %}
 </ul>

@@ -4,6 +4,17 @@ description: >-
 plugins:
   - jekyll-feed
 
+# HTML Compression
+compress_html:
+  blanklines: false
+  clippings: []
+  comments: ["<!-- ", " -->"]
+  endings: []
+  ignore:
+    envs: []
+  profile: false
+  startings: []
+
 # RSS
 feed:
   collections:
