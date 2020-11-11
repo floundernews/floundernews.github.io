@@ -3,7 +3,7 @@ layout: article
 author: "John Doe"
 title: "Example Post 1"
 description: "An Example Post 1"
-thumbnail: "/assets/img/test-image.png"
+image: "/assets/img/test-image.png"
 order: 1
 ---
 

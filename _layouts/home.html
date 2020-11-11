@@ -8,8 +8,8 @@ layout: default
   {% for issue in site.issues %}
     <li>
       <a href="{{ issue.url | relative_url }}">
-        {% if issue.thumbnail %}
-          <img style="max-width: 20%;" src="{{ issue.thumbnail | relative_url }}" alt="{{ issue.thumbnail | relative_url }}"><br>
+        {% if issue.image %}
+          <img style="max-width: 20%;" src="{{ issue.image | relative_url }}" alt="{{ issue.image | relative_url }}"><br>
         {% endif %}
         {{ issue.title | escape }}
       </a>
