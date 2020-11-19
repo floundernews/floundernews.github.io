@@ -4,7 +4,14 @@ description: >-
 plugins:
   - jekyll-feed
 
-# HTML Compression
+collections:
+  articles:
+    output: true
+    permalink: /:year/:month/:title/
+  issues:
+    output: true
+    permalink: /:year/:month/
+
 compress_html:
   blanklines: false
   clippings: []
@@ -15,22 +22,12 @@ compress_html:
   profile: false
   startings: []
 
-# RSS
+externals:
+  email: thefloundernews@gmail.com
+  github: floundernews
+  instagram: floundernews
+
 feed:
   collections:
     issues:
       path: "/issues.xml"
-
-# Custom Directory Structure
-collections:
-  issues:
-    output: true
-    permalink: /:year/:month/
-  articles:
-    output: true
-    permalink: /:year/:month/:title/
-
-# Contacts
-email: thefloundernews@gmail.com
-github_username: floundernews
-instagram_username: floundernews
