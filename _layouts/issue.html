@@ -23,10 +23,7 @@ layout: default
     &nbsp;|&nbsp;
     <a href="#">Back to Top</a>
     <br>
-    {% if article.image %}
-      <img style="max-width: 50%;" src="{{ article.image | relative_url }}" alt="{{ article.image | relative_url }}">
-    {% endif %}
-    {{ article | markdownify }}
+    {{ article.content | markdownify }}
   </div>
 {% endfor %}
 
