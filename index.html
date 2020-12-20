@@ -2,4 +2,33 @@
 layout: home
 ---
 
-<h1>Issues</h1>
+<h1 class="page-title">Latest Issue</h1>
+
+<section>
+  {%- assign latest_issue = site.issues | reverse | first -%}
+
+  <a class="issue-preview" href="{{ latest_issue.url | relative_url }}">
+    {% if latest_issue.image %}
+      <img src="{{ latest_issue.image | relative_url }}" alt="{{ latest_issue.image | relative_url }}"/>
+    {% endif %}
+    <h4>{{ latest_issue.title | escape }}</h4>
+  </a>
+</section>
+
+<h1 class="page-title">Our Articles</h1>
+
+<section>
+  <ul class="article-list grid">
+    {% for article in site.articles reversed %}
+      <li>
+        <a class="article-preview" href="{{ article.url | relative_url }}">
+          {% if article.image %}
+            <img src="{{ article.image | relative_url }}" alt="{{ article.image | relative_url }}"/>
+          {% endif %}
+          <h4>{{ article.title | escape }}</h4>
+          <p>{{ article.description | escape }}</p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,3 +1,33 @@
+@import "variables.scss";
+
 * {
-  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html,
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  font: $body-font;
+  display: flex;
+  flex-flow: column;
+}
+
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  min-height: calc(100vh - 10rem);
+}
+
+h1 {
+  font: $title-font;
+}
+
+@import "header";
+@import "footer";
+@import "page";
