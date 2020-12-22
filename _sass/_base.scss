@@ -16,6 +16,14 @@ body {
   font: $body-font;
   display: flex;
   flex-flow: column;
+
+  color: white;
+
+  background-image: url("/assets/img/background.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 main {
