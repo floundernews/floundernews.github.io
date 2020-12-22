@@ -35,6 +35,16 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .scroll-to-top {
+    right: 2rem;
+
+    &.visible {
+      bottom: 2rem;
+    }
+  }
+}
+
 /* Footer Styles */
 .site-footer {
   width: 100%;
