@@ -14,7 +14,7 @@ permalink: /about/
   <div class="team">
     <h2>Writers</h2>
     <ul>
-      {%- assign team = site.members | where:"team","writer" -%}
+      {%- assign team = site.data.members | where:"team","writer" -%}
       {%- for member in team -%}
         <li>{{ member.name }}</li>
       {%- endfor -%}
@@ -23,7 +23,7 @@ permalink: /about/
   <div class="team">
     <h2>Illustrators</h2>
     <ul>
-      {%- assign team = site.members | where:"team","illustrator" -%}
+      {%- assign team = site.data.members | where:"team","illustrator" -%}
       {%- for member in team -%}
         <li>{{ member.name }}</li>
       {%- endfor -%}
@@ -32,7 +32,7 @@ permalink: /about/
   <div class="team">
     <h2>Editors</h2>
     <ul>
-      {%- assign team = site.members | where:"team","editor" -%}
+      {%- assign team = site.data.members | where:"team","editor" -%}
       {%- for member in team -%}
         <li>{{ member.name }}</li>
       {%- endfor -%}
@@ -41,7 +41,7 @@ permalink: /about/
   <div class="team">
     <h2>Layout Designers</h2>
     <ul>
-      {%- assign team = site.members | where:"team","layout" -%}
+      {%- assign team = site.data.members | where:"team","layout" -%}
       {%- for member in team -%}
         <li>{{ member.name }}</li>
       {%- endfor -%}
@@ -50,7 +50,7 @@ permalink: /about/
   <div class="team">
     <h2>Web Developers</h2>
     <ul>
-      {%- assign team = site.members | where:"team","dev" -%}
+      {%- assign team = site.data.members | where:"team","web" -%}
       {%- for member in team -%}
         <li>{{ member.name }}</li>
       {%- endfor -%}
@@ -59,7 +59,7 @@ permalink: /about/
   <div class="team">
     <h2>Social Media</h2>
     <ul>
-      {%- assign team = site.members | where:"team","social" -%}
+      {%- assign team = site.data.members | where:"team","social" -%}
       {%- for member in team -%}
         <li>{{ member.name }}</li>
       {%- endfor -%}
