@@ -1,0 +1,130 @@
+/* Scroll to Top Styles */
+.scroll-to-top {
+  position: fixed;
+  bottom: -5rem;
+  right: 4rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+
+  img {
+    width: 5rem;
+    transform: rotate(-90deg);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+
+  &.visible {
+    bottom: 4rem;
+    opacity: 1;
+
+    &:hover {
+      transform: translate(0, -10px);
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .scroll-to-top {
+    right: 2rem;
+
+    &.visible {
+      bottom: 2rem;
+    }
+  }
+}
+
+/* Footer Styles */
+.site-footer {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 0.75rem;
+  background-color: $nav-color;
+  color: $nav-text-color;
+
+  .page-link {
+    text-align: center;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: $nav-text-color;
+    transition: color 0.2s ease-in-out;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .page-link {
+      padding: 0 0.5rem;
+    }
+  }
+
+  .page-link:hover {
+    color: white;
+  }
+
+  .page-link + .page-link {
+    border-left: 1px solid $nav-text-color;
+  }
+
+  .footer-nav {
+    display: flex;
+
+    .page-link {
+      font: $nav-font;
+    }
+  }
+
+  .aux-links {
+    display: flex;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .social-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      background-color: $nav-text-color;
+      transition: all 0.2s ease-in-out;
+
+      &.instagram {
+        mask: url(/assets/img/instagram.svg);
+        -webkit-mask: url(/assets/img/instagram.svg);
+      }
+      &.facebook {
+        mask: url(/assets/img/facebook.svg);
+        -webkit-mask: url(/assets/img/facebook.svg);
+      }
+      &.email {
+        mask: url(/assets/img/gmail.svg);
+        -webkit-mask: url(/assets/img/gmail.svg);
+      }
+    }
+
+    .social-link:hover {
+      background-color: white;
+    }
+
+    .social-link + .social-link {
+      margin-left: 2rem;
+    }
+  }
+}

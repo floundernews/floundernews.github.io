@@ -1,22 +1,10 @@
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  {%- seo -%}
 
-  <title>
-    {% if page.title %}
-      {{ page.title }} | {{ site.title }}
-    {% else %}
-      {{ site.title }}
-    {% endif %}
-  </title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
-  <meta name="author" content="{{ page.author | default: site.title }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}">{% endif %}
-
-  {% if page.redirect_url %} 
-    <meta http-equiv="refresh" content="0;url={{ page.redirect_url }}" />
-  {% endif %}
-
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   <link rel="shortcut icon" type="image/png" href="{{ "/favicon.ico" | relative_url }}">
+
+  <script defer src="/assets/js/scrollToTop.js"></script>
 </head>

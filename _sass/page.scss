@@ -1,0 +1,171 @@
+/* Page Styles */
+.page-title {
+  font: $title-font;
+  text-align: center;
+  margin-bottom: 1rem;
+
+  &::before {
+    content: "\2013";
+    margin-right: 0.5rem;
+  }
+  &::after {
+    content: "\2013";
+    margin-left: 0.5rem;
+  }
+
+  &:not(:first-of-type) {
+    margin-top: 2rem;
+  }
+}
+
+section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.article-list {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.article-list.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.issue-preview,
+.article-preview {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 200px;
+  transition: transform 0.3s ease;
+
+  img {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.grid .article-preview {
+  width: 100%;
+}
+
+section.apply {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.jobs {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem 2rem;
+  padding: 2rem;
+  // margin: 0 auto;
+  max-width: 630px;
+  border-radius: 5px;
+  background-color: $light-blue;
+
+  .job {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    flex: 1 0 160px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.application-form {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  margin-top: 2rem;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.school {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  overflow: hidden;
+
+  div {
+    height: 100%;
+    // flex: 1 0 200px;
+    position: relative;
+
+    .fish {
+      width: 100%;
+      position: absolute;
+
+      img {
+        width: 100%;
+        position: relative;
+        left: 0;
+        transition: left 0.75s ease;
+      }
+
+      &:hover img {
+        left: 100vw;
+      }
+    }
+  }
+
+  @for $i from 1 through 12 {
+    div:nth-of-type(#{$i}) {
+      $size: ((random(6) + 2) * 16);
+      flex: 1 0 $size + px;
+      margin-left: 20px;
+
+      .fish {
+        top: random(400-$size) + px;
+      }
+    }
+  }
+}
+
+.teams {
+  color: $nav-text-color;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+
+  .team {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
+    border-radius: 5px;
+    background-color: $light-blue;
+
+    ul {
+      margin-left: 1.5rem;
+    }
+  }
+}

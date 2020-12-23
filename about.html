@@ -1,0 +1,68 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+<section>
+  The Flounder is a newspaper.
+</section>
+
+<h1 class="page-title">Our Team</h1>
+
+<section class="teams">
+  <div class="team">
+    <h2>Writers</h2>
+    <ul>
+      {%- assign team = site.data.members | where:"team","writer" -%}
+      {%- for member in team -%}
+        <li>{{ member.name }}</li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class="team">
+    <h2>Illustrators</h2>
+    <ul>
+      {%- assign team = site.data.members | where:"team","illustrator" -%}
+      {%- for member in team -%}
+        <li>{{ member.name }}</li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class="team">
+    <h2>Editors</h2>
+    <ul>
+      {%- assign team = site.data.members | where:"team","editor" -%}
+      {%- for member in team -%}
+        <li>{{ member.name }}</li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class="team">
+    <h2>Layout Designers</h2>
+    <ul>
+      {%- assign team = site.data.members | where:"team","layout" -%}
+      {%- for member in team -%}
+        <li>{{ member.name }}</li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class="team">
+    <h2>Web Developers</h2>
+    <ul>
+      {%- assign team = site.data.members | where:"team","web" -%}
+      {%- for member in team -%}
+        <li>{{ member.name }}</li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class="team">
+    <h2>Social Media</h2>
+    <ul>
+      {%- assign team = site.data.members | where:"team","social" -%}
+      {%- for member in team -%}
+        <li>{{ member.name }}</li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
