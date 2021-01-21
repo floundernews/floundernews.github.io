@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 99;
+  z-index: 999;
   background: none;
   border: none;
   cursor: pointer;
@@ -17,6 +17,7 @@
   img {
     width: 5rem;
     transform: rotate(-90deg);
+    max-width: initial;
   }
 
   &:active,

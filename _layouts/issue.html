@@ -20,8 +20,6 @@ layout: default
   <div id="{{ article.slug }}">
     <h2>{{ article.title }}</h2>
     <a href="{{ article.url | relative_url }}">Link to Standalone Article</a>
-    &nbsp;|&nbsp;
-    <a href="#">Back to Top</a>
     <br>
     {{ article.content | markdownify }}
   </div>
