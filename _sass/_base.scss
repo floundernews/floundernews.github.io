@@ -19,7 +19,7 @@ body {
 
   color: white;
 
-  background-image: url("/assets/img/background.png");
+  background-image: url("/assets/img/background-blurred.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: bottom;
@@ -32,10 +32,19 @@ main {
   min-height: calc(100vh - 10rem);
 }
 
+a {
+  color: white;
+}
+
 h1 {
   font: $title-font;
+}
+
+img {
+  max-width: 100%;
 }
 
 @import "header";
 @import "footer";
 @import "page";
+@import "article";
