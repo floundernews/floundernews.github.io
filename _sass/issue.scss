@@ -1,0 +1,55 @@
+#toc {
+  position: relative;
+  font-family: league-gothic, sans-serif;
+
+  h2 {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    text-align: right;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: 90% 50%;
+
+    span:first-child {
+      font-size: 1.5em;
+      letter-spacing: 0.25em;
+    }
+    span:last-child {
+      color: yellow;
+      font-family: "Spartan", sans-serif;
+      font-size: 4em;
+    }
+  }
+}
+
+.toc-list {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  margin: 5rem 0;
+  font-size: 2em;
+  max-width: 50%;
+  list-style: none;
+  
+  li {
+    counter-increment: toc-counter;
+    position: relative;
+    margin: 1rem 0;
+
+    &::before {
+      content: counter(toc-counter);
+      font-family: "Spartan", sans-serif;
+      font-size: 2em;
+      color: yellow;
+      position: absolute;
+      right: calc(100% + 1rem);
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

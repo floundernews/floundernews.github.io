@@ -4,16 +4,21 @@ layout: default
 
 {% assign articles = site.articles | where_exp:"article", "article.date == page.date" | sort: "order", "last" %}
 
-<h2>Table of Contents</h2>
-<ul>
-  {% for article in articles %}
-    <li>
-      <a href="#{{ article.slug }}">
-        {{ article.title | escape }}
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+<section id="toc">
+  <h2>
+    <span>Table of </span>
+    <span>Contents</span>
+  </h2>
+  <ol class="toc-list">
+    {% for article in articles %}
+      <li>
+        <a href="#{{ article.slug }}">
+          {{ article.title | escape }}
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
 
 {% for article in articles %}
   <hr>
