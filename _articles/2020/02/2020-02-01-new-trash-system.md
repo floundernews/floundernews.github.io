@@ -6,9 +6,7 @@ description: "\"After all, not everybody can properly sort their waste\u2014it's
 image: "/assets/img/2020-02-01-new-trash-system.png"
 ---
 
-![]({{ page.image | relative_url }})
-
-A preview of Mackenzie's new and innovative trash sorting system.
+{% include image.html image=page.image caption="A preview of Mackenzie's new and innovative trash sorting system." %}
 
 Starting in March of 2020, the science hallway of Mackenzie will be reconstructed in order to implement a revolutionary waste-sorting strategy. Instead of designated black bins, blue bins, and green bins, all waste in the school will be sorted alphabetically and by colour. According to the official Mackenzie trash council, this new system will make it easier for students to properly sort their waste.
 

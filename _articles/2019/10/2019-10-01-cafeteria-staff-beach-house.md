@@ -10,9 +10,7 @@ High School students at Mackenzie forget to bring cutlery for lunch enough to tu
 
 Expert statistician Ellen K. Almeida estimates, students forget to bring their own cutlery every 2 days out of 6. Furthermore, 90% of those cases will result in a purchased utensil.
 
-![]({{ page.image | relative_url }})
-
-Additional data collected by school survey.
+{% include image.html image=page.image caption="Additional data collected by school survey." %}
 
 "They're fair people. They don’t charge for spoons and forks the first time you forget yours," says one excited student. "But if you come frequently, the 25 cent fee is pretty reasonable."
 

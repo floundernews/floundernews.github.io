@@ -6,9 +6,7 @@ description: "\"Aren't bridges supposed to be made with popsicle sticks?\""
 image: "/assets/img/2020-02-01-popsicle-bridge.png"
 ---
 
-![]({{ page.image | relative_url }})
-
-The original technical drawing made by the lead bridge engineer.
+{% include image.html image=page.image caption="The original technical drawing made by the lead bridge engineer." %}
 
 A new Toronto bridge has been diverting traffic off of the busy Gardiner Expressway year. Reports confirmed Friday that the bridge, affectionately named Bridgey McBridgeface, was made entirely out of popsicle sticks and wood glue. Mackenzie graduate and lead engineer, Warren Trust, was nominated for the Suzuki Distinction Award, as well as two engineering awards for environmental innovation.
 
