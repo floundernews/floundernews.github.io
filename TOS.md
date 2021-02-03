@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Terms of Service
-permalink: /Terms-Of-Service/
+permalink: /Terms-of-Service/
 ---
 
 Please don't steal. :)
