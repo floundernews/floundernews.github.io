@@ -22,7 +22,7 @@ layout: default
 
 {% for article in articles %}
   <hr>
-  <div id="{{ article.slug }}">
+  <div id="{{ article.slug }}" class="article-wrapper">
     <h2>{{ article.title }}</h2>
     <a href="{{ article.url | relative_url }}">Link to Standalone Article</a>
     <br>
