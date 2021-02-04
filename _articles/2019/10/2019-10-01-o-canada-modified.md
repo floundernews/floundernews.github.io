@@ -5,7 +5,7 @@ title: "\"O Canada\" modified to begin with twenty seconds of silence"
 description: "Silence a welcome space for students to self-reflect and check their phones."
 ---
 
-OTTAWA, ON - The Canadian Senate has passed a bill to add twenty seconds of silence to the beginning of the country's national anthem.
+OTTAWA, ON -- The Canadian Senate has passed a bill to add twenty seconds of silence to the beginning of the country's national anthem.
 
 The revision was proposed by a member of the Ontario provincial parliament who became inspired to propose this radical idea after visiting a Toronto High School.
 

@@ -5,7 +5,7 @@ title: "Mackenzie doubles height of hallways to alleviate congestion"
 description: "Students now travel the halls one on top of another in an orderly fashion."
 ---
 
-TORONTO, ON — In an effort to ease congestion in school hallways, TDSB approved a renovation at William Lyon Mackenzie C.I. over the summer to increase the hallway height from 2.5 metres to 5.0 metres.
+TORONTO, ON -- In an effort to ease congestion in school hallways, TDSB approved a renovation at William Lyon Mackenzie C.I. over the summer to increase the hallway height from 2.5 metres to 5.0 metres.
 
 Students now travel the halls one on top of another in an orderly fashion. Students travelling north and east walk on the bottom, holding textbooks above their heads. Students travelling south and west walk on top.
 
