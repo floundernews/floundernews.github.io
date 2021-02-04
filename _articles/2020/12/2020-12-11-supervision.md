@@ -11,7 +11,7 @@ TORONTO, ON - Today, the Toronto District School Board implemented new supervisi
 
 "The TDSB has always been a leading innovator in improving the safety and well-being of our students," said a TDSB spokesperson. "Take, for example, the ‘home pass' concept, which brings the safety that the hall pass provides into the homes of all our students. Or the cameras looking into students' homes, which replaces the supervision that is usually provided by hall monitors and school security cameras. These new policies and innovations will help ensure that students are adequately supervised and kept safe at all times, even in a virtual setting."
 
-![]({{ page.image | relative_url }})
+{% include image.html image=page.image %}
 
 The new supervision policies are popular among school staff members who say that close supervision is key to keeping students safe. "How can students be trusted to go to the washroom at home without letting us know?" said a teacher. "They could be having private conversations!"
 

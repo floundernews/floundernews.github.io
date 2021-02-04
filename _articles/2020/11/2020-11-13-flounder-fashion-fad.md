@@ -5,4 +5,4 @@ image: "/assets/img/2020-11-13-flounder-fashion-fad.png"
 order: 11
 ---
 
-![]({{ page.image | relative_url }})
+{% include image.html image=page.image %}

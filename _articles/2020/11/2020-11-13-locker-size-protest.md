@@ -13,4 +13,4 @@ On April 20th, 2020, the students used the popular online platform VROOM (Virtua
 
 However, come the 26th, tragedy struck. The storage team decided to make a statement by utilizing the lockers to illustrate their point. By storing the protest's supplies in 1 locker, people would see firsthand how cramped the school lockers were. Unfortunately, the storage division forgot to carry the 2 when calculating how much the locker could handle. After reaching peak density, the locker imploded and the science department believes a black hole will be forming shortly. Thus, the protest was cancelled due to lack of equipment and a 73% loss in their numbers after several expedition teams sent for the supplies were sucked into the imploding mass. For the foreseeable future (roughly 3 more days before the black hole forms and humanity ceases to exist), no further protests will be held, so Mackenzie students will have to continue using cramped lockers.
 
-![]({{ page.image | relative_url }})
+{% include image.html image=page.image %}
