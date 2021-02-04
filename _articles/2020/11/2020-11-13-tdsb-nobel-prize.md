@@ -9,7 +9,7 @@ order: 4
 
 On October 23 2020, the TDSB was awarded the very prestigious Nobel Peace Prize for their multicultural website, which can be understood in every language. It is a huge achievement for the board and has even greater benefits to the multicultural student body of the TDSB.
 
-![]({{ page.image | relative_url }})
+{% include image.html image=page.image %}
 
 When our reporters asked the TDSB website development team what brought them to this great achievement, they replied, "We owe it all to the board, and the resources that they provide." The board said that it is a simple balance of quantity over quality. "It is much more effective to give the developers 100 broken 30 year old computers than 10 functioning computers to develop it." What profound words.
 

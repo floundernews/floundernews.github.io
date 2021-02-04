@@ -25,4 +25,4 @@ I sincerely regret taking you for granted. It’s impossible to imagine a luncht
 Love,
 Billy
 
-![]({{ page.image | relative_url }})
+{% include image.html image=page.image %}
