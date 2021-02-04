@@ -8,7 +8,7 @@ image: "/assets/img/2019-10-01-falling-eqao-scores.png"
 
 {% include image.html image=page.image caption="William Lyon Mackenzie's new school crest." %}
 
-TORONTO, ON — Last year's disappointing EQAO results have caused province wide changes in how teachers are hired. But here at Mackenzie a different approach is being taken to combat the board-wide trend.
+TORONTO, ON -- Last year's disappointing EQAO results have caused province wide changes in how teachers are hired. But here at Mackenzie a different approach is being taken to combat the board-wide trend.
 
 Certain astute returning Mackenzie students noticed that the crest looked a bit different this September, but chose not to say anything to staff members.
 
