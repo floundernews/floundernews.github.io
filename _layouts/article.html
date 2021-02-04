@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+
 <div class="article-wrapper">
+  {% if page.author %}
+    <div class="author">By: {{ page.author }}</div>
+  {% endif %}
   {{ content }}
 </div>

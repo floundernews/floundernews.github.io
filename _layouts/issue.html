@@ -24,6 +24,9 @@ layout: default
   <hr>
   <div id="{{ article.slug }}" class="article-wrapper">
     <h2>{{ article.title }}</h2>
+    {% if article.author %}
+      <div class="author">By: {{ article.author }}</div>
+    {% endif %}
     <a href="{{ article.url | relative_url }}">Link to Standalone Article</a>
     <br>
     {{ article.content | markdownify }}
