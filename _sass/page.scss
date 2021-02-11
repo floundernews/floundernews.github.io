@@ -36,8 +36,11 @@ section {
   list-style: none;
   width: 100%;
   display: flex;
+  flex-flow: wrap;
   justify-content: space-evenly;
   align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .issue-preview.latest {
