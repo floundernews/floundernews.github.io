@@ -200,7 +200,7 @@ section.apply {
 .about {
   text-align: center;
 
-  p:first-child {
+  p:not(:last-child) {
     margin-bottom: 1em;
   }
 }
