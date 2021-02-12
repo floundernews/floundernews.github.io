@@ -62,3 +62,17 @@
     margin: 5rem 0;
   }
 }
+
+.download-pdf-link {
+  text-decoration: none;
+  display: block;
+  text-align: right;
+  color: #cccccc;
+  font: $title-font;
+  font-size: 1.1em;
+  transition: all .1s ease-in;
+}
+
+.download-pdf-link:hover {
+  color: #aaaaaa;
+}
