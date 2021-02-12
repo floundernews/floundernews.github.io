@@ -18,7 +18,7 @@ First, to more clearly visualize the evidence, we ran a supercomputer simulation
 
 {% include image.html image=page.image %}
 
-The data proves that this situation is too damning to be a coincidence. We believe a massive conspiracy going on right in front of our very eyes.
+The data proves that this situation is too damning to be a coincidence. We believe a massive conspiracy is going on right in front of our very eyes.
 
 We knew that BIG TECH had to be involved, so we asked the key question: What do they have to gain from remotely hacking and destroying almost every webcam in the school? Was it money, power, both, or neither? This is something that we had to figure out.
 
