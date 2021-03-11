@@ -3,6 +3,9 @@ layout: default
 ---
 
 <div class="article-wrapper">
+  {% if page.description %}
+    <div class="description">{{ page.description }}</div>
+  {% endif %}
   {% if page.author %}
     <div class="author">By: {{ page.author }}</div>
   {% endif %}
