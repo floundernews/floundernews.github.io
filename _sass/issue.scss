@@ -62,3 +62,35 @@
     margin: 5rem 0;
   }
 }
+
+.download-pdf-link {
+  text-decoration: none;
+  display: block;
+  text-align: right;
+  color: #cccccc;
+  font: $title-font;
+  font-size: 1.1em;
+  transition: all .1s ease-in;
+}
+
+.download-pdf-link:hover {
+  color: #aaaaaa;
+}
+
+.external-link {
+  align-self: flex-end;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  color: #193536;
+
+  svg {
+    width: 0.75em;
+    height: 0.75em;
+  }
+
+  &:hover {
+    color: white;
+  }
+}
