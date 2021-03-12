@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+{%- for question in page.questions -%}
+  {%- assign q = question | first | first -%}
+  {%- assign answers = question | first | last -%}
+  <div class="question">
+    <h2>{{ q }}</h2>
+    <ul class="answers">
+      {%- for answer in answers -%}
+        <li class="answer">
+          <button>{{ answer }}</button>
+        </li>
+      {%- endfor -%}
+      </ul>
+  </div>
+{%- endfor -%}
+
+<div class="result">
+  <h2>You got: <span id="result"></span>!</h2>
+  <p>{{ page.message | default: "Thanks for taking this quiz!" }}</p>
+</div>
+
+<script>
+  let answers = [];
+  
+  {%- for answer in page.answers -%}
+    answers.push("{{ answer }}");
+  {%- endfor -%}
+</script>
