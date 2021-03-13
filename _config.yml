@@ -24,6 +24,7 @@ collections:
   members:
   quizzes:
     output: true
+    permalink: /:collection/:name/
 
 compress_html:
   blanklines: false

@@ -6,6 +6,11 @@ body {
   margin-bottom: 3rem;
   font: $title-font;
 
+  &:first-of-type {
+    padding-top: 1rem;
+    border-top: 2px solid $nav-text-color;
+  }
+
   h2 {
     text-transform: capitalize;
     font-size: 1.25em;
@@ -50,7 +55,7 @@ body {
 
       &.selected {
         color: black;
-        border: 4px solid $nav-text-color;
+        border: 8px solid $nav-text-color;
       }
     }
 
@@ -58,6 +63,16 @@ body {
       content: "";
       display: block;
       padding-bottom: 100%;
+    }
+
+    @media only screen and (max-width: 800px) {
+      button {
+        position: relative;
+      }
+
+      &::after {
+        content: none;
+      }
     }
   }
 }
@@ -67,6 +82,7 @@ body {
   background-color: darken($light-blue, 20%);
   color: black;
   padding: 2rem;
+  font-size: 1.5em;
 
   p {
     margin-top: 1rem;
