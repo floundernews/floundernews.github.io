@@ -49,17 +49,27 @@ section {
       transform: scale(1.1);
       color: white;
     }
-
-    @media only screen and (max-width: 800px) {
-      display: none;
-    }
   }
   .left {
     place-self: stretch end;
   }
 
+  .mobile-link {
+    display: none;
+  }
+
   @media only screen and (max-width: 800px) {
     display: block;
+
+    .left, .right, .issue-list {
+      display: none;
+    }
+
+    .mobile-link {
+      margin-top: 1rem;
+      display: block;
+      text-align: center;
+    }
   }
 }
 
@@ -78,11 +88,6 @@ section {
   li {
     flex: 0 0 10rem;
     margin-top: 0.5rem;
-  }
-
-  @media only screen and (max-width: 800px) {
-    flex-flow: column;
-    width: 100%;
   }
 }
 
