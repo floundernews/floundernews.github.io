@@ -14,14 +14,11 @@ if (document.querySelector(".question")) {
         if (
           document.querySelectorAll(".answer > button.selected").length ==
           document.querySelectorAll(".question").length
-        )
-          getResult();
+        ) {
+          document.getElementById("result").innerText = getResult();
+          document.querySelector(".result").style.display = "block";
+          document.querySelector(".result").scrollIntoView();
+        }
       });
     });
-}
-
-function getResult() {
-  document.getElementById("result").innerText =
-    answers[Math.floor(Math.random() * answers.length)];
-  document.querySelector(".result").style.display = "block";
 }

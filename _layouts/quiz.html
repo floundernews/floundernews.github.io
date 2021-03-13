@@ -18,14 +18,8 @@ layout: default
 {%- endfor -%}
 
 <div class="result">
-  <h2>You got: <span id="result"></span>!</h2>
+  <h2 id="result"></h2>
   <p>{{ page.message | default: "Thanks for taking this quiz!" }}</p>
 </div>
 
-<script>
-  let answers = [];
-  
-  {%- for answer in page.answers -%}
-    answers.push("{{ answer }}");
-  {%- endfor -%}
-</script>
+{{ content }}

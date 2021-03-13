@@ -21,10 +21,18 @@ questions:
     - B
     - C
     - D
-answers:
-  - A
-  - B
-  - AB
-  - O
 message: Thank you for teaching me how to spell "libary."
 ---
+
+<script>
+  let answers = ["A", "B", "AB", "O"];
+
+  /*
+   * Must define this function for each quiz. Returns the result of the quiz.
+   * 
+   * @return String The result of the quiz.
+   */
+  function getResult() {
+    return "You got: " + answers[Math.floor(Math.random() * answers.length)] + "!";
+  }
+</script>
