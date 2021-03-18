@@ -15,18 +15,39 @@ layout: home
     <h4>{{ latest_issue.title | escape }}</h4>
   </a>
 
-  <ul class="issue-list">
-    {%- for issue in issues -%}
-      <li>
-        <a class="issue-preview" href="{{ issue.url | relative_url }}">
-          {% if issue.image %}
-            <img src="{{ issue.image | relative_url }}" alt="{{ issue.image | relative_url }}"/>
-          {% endif %}
-          <h4>{{ issue.title | escape }}</h4>
-        </a>
-      </li>
-    {%- endfor -%}
-  </ul>
+  <div class="issue-slider">
+    <a href="/issues/" class="mobile-link">View more issues</a>
+    <a href="#" class="left">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 185.343 185.343" style="enable-background:new 0 0 185.343 185.343; transform: rotate(180deg);" xml:space="preserve">
+        <g>
+          <g>
+            <path style="fill: currentColor;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175    l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934    c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z"/>
+          </g>
+        </g>
+      </svg>
+    </a>
+    <ul class="issue-list">
+      {%- for issue in issues -%}
+        <li>
+          <a class="issue-preview" href="{{ issue.url | relative_url }}">
+            {% if issue.image %}
+              <img src="{{ issue.image | relative_url }}" alt="{{ issue.image | relative_url }}"/>
+            {% endif %}
+            <h4>{{ issue.title | escape }}</h4>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+    <a href="#" class="right">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 185.343 185.343" style="enable-background:new 0 0 185.343 185.343;" xml:space="preserve">
+        <g>
+          <g>
+            <path style="fill: currentColor;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175    l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934    c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z"/>
+          </g>
+        </g>
+      </svg>
+    </a>
+  </div>
 </section>
 
 <h1 class="page-title">Our Articles</h1>

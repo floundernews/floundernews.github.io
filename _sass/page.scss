@@ -32,15 +32,62 @@ section {
   align-items: center;
 }
 
+.issue-slider {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 8rem 1fr 8rem;
+
+  .left, .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #193536;
+
+    &:hover {
+      transform: scale(1.1);
+      color: white;
+    }
+  }
+  .left {
+    place-self: stretch end;
+  }
+
+  .mobile-link {
+    display: none;
+  }
+
+  @media only screen and (max-width: 800px) {
+    display: block;
+
+    .left, .right, .issue-list {
+      display: none;
+    }
+
+    .mobile-link {
+      margin-top: 1rem;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
 .issue-list {
   list-style: none;
   width: 100%;
   display: flex;
-  flex-flow: wrap;
-  justify-content: space-evenly;
+  flex-flow: row;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 1rem;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  
+  li {
+    flex: 0 0 10rem;
+    margin-top: 0.5rem;
+  }
 }
 
 .issue-preview.latest {
