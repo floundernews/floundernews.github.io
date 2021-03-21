@@ -21,7 +21,9 @@ collections:
   issues:
     output: true
     permalink: /:year/:month/
-  members:
+  entertainment:
+    output: true
+    permalink: /fun/:title/
 
 compress_html:
   blanklines: false
