@@ -23,7 +23,7 @@ collections:
     permalink: /:year/:month/
   entertainment:
     output: true
-    permalink: /fun/:title/
+    permalink: /fun/:name/
 
 compress_html:
   blanklines: false
