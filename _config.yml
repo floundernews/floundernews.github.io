@@ -1,5 +1,5 @@
 title: "The Flounder"
-description: "Home to all things dull and factual!"
+description: "Flounder News, Mackenzie's source for everything dull and factual."
 logo: "/assets/img/logo.png"
 plugins:
   - jekyll-feed
