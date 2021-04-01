@@ -62,15 +62,22 @@
 .download-pdf-link {
   text-decoration: none;
   display: block;
-  text-align: right;
-  color: #cccccc;
+  color: darken(yellow, 15%);
   font: $title-font;
-  font-size: 1.1em;
+  font-size: 1.5em;
+  text-align: center;
   transition: all .1s ease-in;
+  margin-bottom: 1rem;
+
+  @media only screen and (min-width: 800px) {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+  }
 }
 
 .download-pdf-link:hover {
-  color: #aaaaaa;
+  color: yellow;
 }
 
 .external-link {

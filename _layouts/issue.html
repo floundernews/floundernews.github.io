@@ -6,7 +6,7 @@ layout: default
 {% assign articles = site.articles | where_exp:"article", "article.date == page.date" | sort: "order", "last" %}
 
 {% if page.pdf %}
-  <a href="{{ page.pdf }}" class="download-pdf-link" target="_blank">[ Download PDF ]</a>
+  <a href="{{ page.pdf }}" class="download-pdf-link" target="_blank">[ View as PDF ]</a>
 {% endif %}
 
 <section id="toc">
