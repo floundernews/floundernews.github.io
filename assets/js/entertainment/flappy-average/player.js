@@ -4,39 +4,55 @@ export class Player {
   constructor() {
     this.x = width / 2;
     this.y = height / 2;
-    this.width = 50;
-    this.height = 50;
+    this.width = 25;
+    this.height = 25;
     this.vel = 0;
     this.score = 0;
     this.tail = [];
   }
 
-  update() {
+  update(addToTail) {
     this.vel = Math.min(50, Math.max(-50, this.vel));
     this.y += this.vel;
-    if (this.y <= 0) {
-      this.y = 0;
-      this.vel = 0;
-    } else if (this.y >= height - this.height) {
-      this.y = height - this.height;
-      this.vel = 0;
-    }
+    // if (this.y >= height - this.height) {
+    //   this.y = height - this.height;
+    //   this.vel = 0;
+    // }
 
-    this.tail.unshift(this.y);
-    if (this.tail.length > this.x - 20) this.tail.pop();
+    this.tail.forEach((piece) => (piece.x += 4));
+
+    if (addToTail) {
+      this.tail.unshift({ x: 0, y: this.y });
+      if (this.tail.length > this.x) this.tail.pop();
+    }
   }
 
-  draw(ctx) {
+  draw(ctx, gl) {
+    if(!gl) console.log("draw");
+    // ctx.strokeRect(this.x, this.y, this.width, this.height);
+
     ctx.beginPath();
-    moveTo(this.x + this.width / 2, this.y + this.height / 2);
+    ctx.moveTo(this.x + this.width / 2, this.y + this.height / 2);
     for (let i = 0; i < this.tail.length; i++) {
-      ctx.lineTo(this.x - i + 1, this.tail[i]);
+      ctx.lineTo(this.x - this.tail[i].x, this.tail[i].y);
     }
     ctx.stroke();
   }
 
   jump() {
     this.vel -= 10;
+  }
+
+  isDead(obstacles) {
+    if (this.y >= height) return true;
+    let result = false;
+    obstacles.forEach((obstacle) => {
+      if (obstacle.hits(this)) {
+        result = true;
+        return;
+      }
+    });
+    return result;
   }
 
   get top() {
