@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{%- if page.description -%}
+  <p class="page-description">{{ page.description }}</p>
+{%- endif -%}
+
 {%- for question in page.questions -%}
   {%- assign q = question | first | first -%}
   {%- assign answers = question | first | last -%}
