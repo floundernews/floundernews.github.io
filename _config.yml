@@ -51,8 +51,3 @@ defaults:
       path: ""
     values:
       image: "/assets/img/logo.png"
-  - scope:
-      path: ""
-      type: "quizzes"
-    values:
-      layout: quiz

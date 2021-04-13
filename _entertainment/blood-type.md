@@ -1,5 +1,7 @@
 ---
+layout: quiz
 title: This Quiz Will Tell You Your Blood Type
+image: "/assets/img/blood-type.png"
 questions:
   - What day is it?:
     - Monday

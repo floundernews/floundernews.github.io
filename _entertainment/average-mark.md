@@ -1,5 +1,7 @@
 ---
+layout: quiz
 title: This Quiz Will Tell You Your Average Mark
+image: "/assets/img/average-mark.png"
 questions:
   - How much of the homework do you do in each class?:
     - 0%
