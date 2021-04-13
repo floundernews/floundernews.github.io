@@ -10,13 +10,44 @@ const deathScreen = document.querySelector(".death-screen");
 
 let canvas, ctx;
 
+let bottomImgs = [
+  "/assets/img/flappy-average/bottom1.png",
+  "/assets/img/flappy-average/bottom2.png",
+  "/assets/img/flappy-average/bottom3.png",
+  "/assets/img/flappy-average/bottom4.png",
+  "/assets/img/flappy-average/bottom5.png",
+  "/assets/img/flappy-average/bottom6.png",
+];
+let topImgs = [
+  "/assets/img/flappy-average/top1.png",
+  "/assets/img/flappy-average/top2.png",
+  "/assets/img/flappy-average/top3.png",
+  "/assets/img/flappy-average/top4.png",
+  "/assets/img/flappy-average/top5.png",
+  "/assets/img/flappy-average/top6.png",
+];
+
 let player;
 let obstacles;
 let frames;
 
 let gameloop;
 
+function loadImages() {
+  bottomImgs = bottomImgs.map((src) => {
+    let img = new Image();
+    img.src = src;
+    return img;
+  });
+  topImgs = topImgs.map((src) => {
+    let img = new Image();
+    img.src = src;
+    return img;
+  });
+}
+
 function setup() {
+  loadImages();
   canvas = document.getElementById("flappyCanvas");
   canvas.width = width;
   canvas.height = height;
@@ -49,7 +80,16 @@ function gameTick() {
   ctx.clearRect(0, 0, width, height);
 
   // Add obstacles
-  if (frames % 60 == 0) obstacles.push(new Obstacle());
+  if (frames % 60 == 0)
+    obstacles.push(
+      new Obstacle(
+        obstacles[obstacles.length - 1]?.right > width
+          ? obstacles[obstacles.length - 1].right + 60
+          : width,
+        topImgs[Math.floor(Math.random() * topImgs.length)],
+        bottomImgs[Math.floor(Math.random() * bottomImgs.length)]
+      )
+    );
 
   // Update obstacles and remove off screen obstacles
   obstacles = obstacles.filter((obstacle) => obstacle.right >= 0);
@@ -58,7 +98,7 @@ function gameTick() {
   // Update player and check if dead
   player.vel += GRAVITY;
   player.update(frames % 10 == 0);
-  if(player.isDead(obstacles)) {
+  if (player.isDead(obstacles)) {
     die();
     return;
   }

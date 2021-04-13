@@ -28,11 +28,9 @@ export class Player {
   }
 
   draw(ctx, gl) {
-    if(!gl) console.log("draw");
-    // ctx.strokeRect(this.x, this.y, this.width, this.height);
-
     ctx.beginPath();
-    ctx.moveTo(this.x + this.width / 2, this.y + this.height / 2);
+    // ctx.moveTo(this.x + this.width / 2, this.y + this.height / 2);
+    ctx.moveTo(this.x, this.y);
     for (let i = 0; i < this.tail.length; i++) {
       ctx.lineTo(this.x - this.tail[i].x, this.tail[i].y);
     }
@@ -59,12 +57,14 @@ export class Player {
     return this.y;
   }
   get bottom() {
-    return this.y + this.height;
+    // return this.y + this.height;
+    return this.y;
   }
   get left() {
     return this.x;
   }
   get right() {
-    return this.x + this.width;
+    // return this.x + this.width;
+    return this.x;
   }
 }

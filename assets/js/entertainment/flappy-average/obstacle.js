@@ -3,13 +3,15 @@ import { width, height } from "./index.js";
 export class Obstacle {
   static spacing = 150;
 
-  constructor(topText, bottomText) {
-    this.topText = topText;
-    this.bottomText = bottomText;
-    this.x = width;
+  constructor(x, topImg, bottomImg) {
+    this.x = x;
+    this.topImg = topImg;
+    this.bottomImg = bottomImg;
     this.top = Math.floor((Math.random() * height) / 3) + height / 20;
     this.bottom = this.top + Obstacle.spacing;
-    this.width = 20;
+    this.topWidth = this.topImg.width * (this.top / this.topImg.height);
+    this.bottomWidth = this.bottomImg.width * ((height - this.bottom) / this.bottomImg.height);
+    this.width = Math.max(this.topWidth, this.bottomWidth);
     this.vel = -4;
   }
 
@@ -18,15 +20,30 @@ export class Obstacle {
   }
 
   draw(ctx) {
-    ctx.fillStyle = "darkblue";
-    ctx.fillRect(this.x, 0, this.width, this.top);
-    ctx.fillRect(this.x, this.bottom, this.width, height - this.bottom);
+    ctx.drawImage(
+      this.topImg,
+      this.x,
+      0,
+      this.topImg.width * (this.top / this.topImg.height),
+      this.top
+    );
+    ctx.drawImage(
+      this.bottomImg,
+      this.x,
+      this.bottom,
+      this.bottomImg.width * ((height - this.bottom) / this.bottomImg.height),
+      height - this.bottom
+    );
   }
 
   hits(player) {
     return (
-      (player.top < this.top || player.bottom > this.bottom) &&
-      player.left > this.left && player.left < this.right
+      (player.top < this.top &&
+        player.left > this.left &&
+        player.left < this.topRight) ||
+      (player.bottom > this.bottom &&
+        player.left > this.left &&
+        player.left < this.bottomRight)
     );
   }
 
@@ -35,5 +52,11 @@ export class Obstacle {
   }
   get right() {
     return this.x + this.width;
+  }
+  get topRight() {
+    return this.x + this.topWidth;
+  }
+  get bottomRight() {
+    return this.x + this.bottomWidth;
   }
 }
