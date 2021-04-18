@@ -23,6 +23,10 @@ body {
 
   @media only screen and (max-width: 600px) {
     font-size: 0.9rem;
+
+    h2 {
+      font-size: 1.5em;
+    }
   }
 }
 .answers {
@@ -78,6 +82,11 @@ body {
         content: none;
       }
     }
+  }
+
+  @media only screen and (max-width: 600px) {
+    gap: 1rem;
+    margin: 1rem 0;
   }
 }
 .result {
