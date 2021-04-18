@@ -20,6 +20,10 @@ body {
       content: "QUESTION " counter(question) ": ";
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 0.9rem;
+  }
 }
 .answers {
   list-style: none;
