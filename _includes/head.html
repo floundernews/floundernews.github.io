@@ -1,6 +1,9 @@
 <head>
   <meta charset="utf-8" />
-  {%- seo -%}
+  {%- seo title=false -%}
+  <title>{% if page.title %}
+    {{ page.title }} | 
+  {% endif %}{{ site.title }}</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
@@ -8,4 +11,5 @@
 
   <script defer src="/assets/js/scrollToTop.js"></script>
   <script defer src="/assets/js/issueList.js"></script>
+  <script defer src="/assets/js/quiz.js"></script>
 </head>

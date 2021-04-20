@@ -1,0 +1,17 @@
+---
+layout: default
+title: Entertainment
+---
+
+<ul class="article-list">
+  {% for entertainment in site.entertainment reversed %}
+    <li>
+      <a class="article-preview" href="{{ entertainment.url | relative_url }}">
+        {% if entertainment.image %}
+          <img src="{{ entertainment.image | relative_url }}" alt="{{ entertainment.image | relative_url }}"/>
+        {% endif %}
+        <h4>{{ entertainment.title | escape }}</h4>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

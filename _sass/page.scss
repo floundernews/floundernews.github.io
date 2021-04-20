@@ -18,10 +18,17 @@
   }
 }
 
+.page-description {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 .wrapper {
   margin: auto;
   padding: 1rem 2rem;
   background-color: #{$nav-text-color}CC;
+  position: relative;
 
   max-width: 1200px;
 }
@@ -233,6 +240,11 @@ section.apply {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 2rem;
+
+  @media only screen and (max-width: 800px) {
+    display: flex;
+    flex-flow: column;
+  }
 
   .member {
     width: 100%;
