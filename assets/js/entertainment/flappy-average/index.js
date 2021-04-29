@@ -7,6 +7,7 @@ export const height = 400;
 
 const startScreen = document.querySelector(".start-screen");
 const deathScreen = document.querySelector(".death-screen");
+const scoreEl = document.getElementById("score");
 
 let canvas, ctx;
 
@@ -70,6 +71,7 @@ function start() {
 }
 
 function die() {
+  scoreEl.innerText = player.score;
   deathScreen.style.opacity = 100;
   clearInterval(gameloop);
   gameloop = undefined;
@@ -80,7 +82,8 @@ function gameTick() {
   ctx.clearRect(0, 0, width, height);
 
   // Add obstacles
-  if (frames % 60 == 0)
+  if (frames % 60 == 0) {
+    player.score++;
     obstacles.push(
       new Obstacle(
         obstacles[obstacles.length - 1]?.right > width
@@ -90,6 +93,7 @@ function gameTick() {
         bottomImgs[Math.floor(Math.random() * bottomImgs.length)]
       )
     );
+  }
 
   // Update obstacles and remove off screen obstacles
   obstacles = obstacles.filter((obstacle) => obstacle.right >= 0);
@@ -107,7 +111,17 @@ function gameTick() {
   player.draw(ctx, gameloop);
   obstacles.forEach((obstacle) => obstacle.draw(ctx));
 
+  drawScore(player.score);
+
   frames++;
+}
+
+function drawScore(score) {
+  ctx.font = "24px Open Sans";
+  ctx.textAlign = "right";
+  ctx.textBaseline = "top";
+  ctx.fillStyle = "white";
+  ctx.fillText("Score: " + score, width - 10, 10);
 }
 
 function handleKeyPress(e) {

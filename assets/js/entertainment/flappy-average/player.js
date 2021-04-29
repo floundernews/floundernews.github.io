@@ -7,7 +7,7 @@ export class Player {
     this.width = 25;
     this.height = 25;
     this.vel = 0;
-    this.score = 0;
+    this.score = -1;
     this.tail = [];
   }
 
@@ -34,7 +34,7 @@ export class Player {
     for (let i = 0; i < this.tail.length; i++) {
       ctx.lineTo(this.x - this.tail[i].x, this.tail[i].y);
     }
-    ctx.stroke();
+    ctx.stroke();    
   }
 
   jump() {
