@@ -2,49 +2,57 @@
   margin: auto;
   position: relative;
 
-  &__prev, &__next {
+  &__prev,
+  &__next {
+    --size: 1rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
+    width: calc(4 * var(--size));
+    height: calc(4 * var(--size));
     background-color: #193536;
     font-size: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
+
+    @media only screen and (max-width: 600px) {
+      --size: 0.5rem;
+    }
   }
 
   &__prev {
-    left: -2rem;
+    left: calc(-2 * var(--size));
 
     &::before {
       content: "";
       transform: translateX(-30%);
-      border-right: 1.5rem solid white;
-      border-left: 1.5rem solid transparent;
-      border-top: 1rem solid transparent;
-      border-bottom: 1rem solid transparent;
+      border-right: calc(1.5 * var(--size)) solid white;
+      border-left: calc(1.5 * var(--size)) solid transparent;
+      border-top: var(--size) solid transparent;
+      border-bottom: var(--size) solid transparent;
     }
   }
 
   &__next {
-    right: -2rem;
+    right: calc(-2 * var(--size));
 
     &::before {
       content: "";
       transform: translateX(30%);
-      border-left: 1.5rem solid white;
-      border-right: 1.5rem solid transparent;
-      border-top: 1rem solid transparent;
-      border-bottom: 1rem solid transparent;
+      border-left: calc(1.5 * var(--size)) solid white;
+      border-right: calc(1.5 * var(--size)) solid transparent;
+      border-top: var(--size) solid transparent;
+      border-bottom: var(--size) solid transparent;
     }
   }
 
   &__list {
     list-style: none;
     display: flex;
+    align-items: center;
     overflow: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
@@ -52,8 +60,31 @@
 
   &__slide {
     flex: 0 0 100%;
-    display: grid;
-    place-items: center;
     scroll-snap-align: center;
+    position: relative;
+    height: min-content;
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 2em;
+      margin: 1.5rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, 0.7);
+
+      @media only screen and (max-width: 600px) {
+        font-size: 1em;
+        position: relative;
+        background: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
 }
