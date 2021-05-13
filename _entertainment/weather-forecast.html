@@ -7,18 +7,25 @@ title: Weather Forecast
     .inline {
         display: inline;
     }
+
+    .details {
+        margin-top: min(5vh, 0.5em);
+        font-size: min(5vw, 1.5em);
+    }
 </style>
 
 <div class="result" style="display: block;">
     <h2>
-        <div id="emoji" class="inline"></div> | <div id="temp" class="inline"></div> | <div id="weather" class="inline"></div>
+        <div id="weather" class="inline"></div>
     </h2>
-    <p style="display: inline-block;">
-        Date: <i id="date" class="inline"></i><br>
-        Precipitation: <i id="precip" class="inline"></i><br>
-        Humidity: <i id="humid" class="inline"></i><br>
-        Wind: <i id="wind" class="inline"></i><br>
-    </p>
+    <div style="display: inline-block;" class="details">
+        <div id="emoji" class="inline"></div><br>
+        <div id="date" class="inline"></div><br>
+        Temperature: <div id="temp" class="inline"></div><br>
+        Precipitation: <div id="precip" class="inline"></div><br>
+        Humidity: <div id="humid" class="inline"></div><br>
+        Wind: <div id="wind" class="inline"></div><br>
+    </div>
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
 <script src="/assets/js/entertainment/text-generator/textGen.js"></script>
