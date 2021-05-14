@@ -1,4 +1,4 @@
-const seed = Math.floor(new Date().getTime()/86400000);
+const seed = Math.floor(new Date().getTime()/86400000) - 6;
 
 function generateText(phraseLocation, elemID, category, format) {
     let rng = new Math.seedrandom(seed);
