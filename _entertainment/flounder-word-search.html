@@ -1,0 +1,162 @@
+---
+layout: page
+title: Flounder Word Search
+image: "/assets/img/logo.svg"
+---
+
+<style>
+  ul {
+    display: inline-block;
+    list-style: none;
+    columns: 10;
+    -webkit-columns: 10;
+    -moz-columns: 10;
+    column-width: 150px;
+  }
+</style>
+
+<center>
+  <canvas id="wordSearchCanvas" width="600" height="600" style="border: 3px solid #000000;"></canvas>
+</center>
+<br>
+<h2>Word List</h2>
+<ul id="wordList"></ul>
+
+<script type="text/javascript">
+  const WORDS = ["ARTICLE", "FACTS", "FISH", "FLOUNDER", "ISSUE", "JOURNALISM", "MONTHLY", "NEWS", "REAL", "SUBSCRIBE", "TRUTH"];
+  const WHITE = "#ffffff";
+  const RED = "#dd0044";
+  const GRAY = "#cccccc";
+  const BLACK = "#000000";
+
+  let board = Array(15).fill().map(() => Array(15).fill().map(() => "E"));
+  let mask = Array(15).fill().map(() => Array(15).fill().map(() => 0));
+
+  let c = document.getElementById("wordSearchCanvas");
+  let ctx = c.getContext("2d");
+
+  function placeWord(x, y, word, direction) {
+    if (direction == 0) {
+      for (let i = x; i < Math.min(15, x + word.length); i++) {
+        board[i][y] = word[i - x];
+      }
+    } else if (direction == 1) {
+      for (let i = y; i < Math.min(15, y + word.length); i++) {
+        board[x][i] = word[i - y];
+      }
+    }
+  }
+
+  function setBox(x, y, c) {
+    ctx.beginPath();
+    ctx.fillStyle = c;
+    ctx.fillRect(x * 40 + 1, y * 40 + 1, 38, 38);
+    ctx.stroke();
+
+    ctx.textBaseline = "middle";
+    ctx.textAlign = "center"; 
+    ctx.font = "34px Dosis";
+    ctx.fillStyle = BLACK;
+    ctx.fillText(board[x][y], x * 40 + 20, y * 40 + 21);
+  }
+
+  function resetBoard() {
+    for (let x = 0; x < 15; x++) {
+      for (let y = 0; y < 15; y++) {
+        setBox(x, y, WHITE);
+      }
+    }
+  }
+
+  function getMaskValue(x, y) {
+    if (x < 0 || x >= 15 || y < 0 || y >= 15) {
+      return 0;
+    }
+
+    return mask[x][y];
+  }
+
+  function isAdjacent(x, y) {
+    let count = 0;
+
+    for (let x = 0; x < 15; x++) {
+      for (let y = 0; y < 15; y++) {
+        if (mask[x][y]) {
+          count++;
+        }
+      }
+    }
+
+    if (count < 2) {
+      return true;
+    }
+
+    if (getMaskValue(x + 1, y) + getMaskValue(x - 1, y) + getMaskValue(x, y + 1) + getMaskValue(x, y - 1) == 1 && getMaskValue(x + 1, y + 1) + getMaskValue(x + 1, y - 1) + getMaskValue(x - 1, y + 1) + getMaskValue(x - 1, y - 1) == 0) {
+      return true;
+    }
+
+    return false;
+  }
+
+  function check() {
+    for (let x = 0; x < 15; x++) {
+      for (let y = 0; y < 15; y++) {
+        if (mask[x][y]) {
+          setBox(x, y, RED);
+        }
+      }
+    }
+
+    setTimeout(function() {
+      mask = Array(15).fill().map(() => Array(15).fill().map(() => 0));
+      resetBoard();
+    }, 500);
+  }
+
+  WORDS.forEach(function(word) {
+    let wl = document.createElement("li");
+    wl.appendChild(document.createTextNode(word));
+    document.getElementById("wordList").appendChild(wl);
+  });
+
+  ctx.strokeStyle = BLACK;
+  ctx.lineWidth = 1;
+
+  for (let i = 0; i <= 600; i += 40) {
+    ctx.beginPath();
+    ctx.moveTo(0, i);
+    ctx.lineTo(600, i);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(i, 0);
+    ctx.lineTo(i, 600);
+    ctx.stroke();
+  }
+
+  for (let z = 0; z < 1000; z++) {
+    let w = WORDS[Math.floor(Math.random() * WORDS.length)];
+    let cv = Math.floor(Math.random() * w.length);
+    w = w.substring(0, cv) + String.fromCharCode((w[cv].charCodeAt(0) - 64) % 26 + 65) + w.substring(cv + 1);
+    placeWord(Math.floor(Math.random() * 15), 
+              Math.floor(Math.random() * 15), 
+              w, 
+              z % 2);
+  }
+
+  resetBoard();
+
+  c.addEventListener("click", function(e) {
+    var r = c.getBoundingClientRect();
+    let x = Math.floor((e.clientX - r.left) / 40);
+    let y = Math.floor((e.clientY - r.top) / 40);
+
+    setBox(x, y, GRAY);
+
+    mask[x][y] = 1;
+
+    if (!isAdjacent(x, y)) {
+      check();
+    }
+  });
+</script>
