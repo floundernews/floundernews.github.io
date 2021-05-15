@@ -137,11 +137,63 @@ image: "/assets/img/logo.svg"
   for (let z = 0; z < 1000; z++) {
     let w = WORDS[Math.floor(Math.random() * WORDS.length)];
     let cv = Math.floor(Math.random() * w.length);
-    w = w.substring(0, cv) + String.fromCharCode((w[cv].charCodeAt(0) - 64) % 26 + 65) + w.substring(cv + 1);
     placeWord(Math.floor(Math.random() * 15), 
               Math.floor(Math.random() * 15), 
               w, 
               z % 2);
+  }
+
+  let words_trie = {};
+  for (let i = 0; i < WORDS.length; i++) {
+    let current_level = words_trie;
+    for (let j = 0; j < WORDS[i].length; j++) {
+      if (!(WORDS[i].charAt(j) in current_level)) {
+        current_level[WORDS[i].charAt(j)] = {};
+      }
+      current_level = current_level[WORDS[i].charAt(j)];
+    }
+
+    current_level["exists"] = true;
+  }
+
+  while (true) {
+    let hasErrors = false;
+
+    for (let x = 0; x < 15; x++) {
+      for (let y = 0; y < 15; y++) {
+        let current_level = words_trie;
+        for (let i = x; i < 15; i++) {
+          try {
+            if ("exists" in current_level) {
+              let cv = Math.floor(Math.random() * (i - x)) + x;
+              board[cv][y] = String.fromCharCode((board[cv][y].charCodeAt(0) - 64) % 26 + 65);
+              hasErrors = true;
+            }
+            current_level = current_level[board[i][y]];
+          } catch (e) {
+            break;
+          }
+        }
+
+        current_level = words_trie;
+        for (let i = y; i < 15; i++) {
+          try {
+            if ("exists" in current_level) {
+              let cv = Math.floor(Math.random() * (i - y)) + y;
+              board[x][cv] = String.fromCharCode((board[x][cv].charCodeAt(0) - 64) % 26 + 65);
+              hasErrors = true;
+            }
+            current_level = current_level[board[x][i]];
+          } catch (e) {
+            break;
+          }
+        }
+      }
+    }
+
+    if (!hasErrors) {
+      break;
+    }
   }
 
   resetBoard();
