@@ -162,7 +162,7 @@ image: "/assets/img/logo.svg"
     for (let x = 0; x < 15; x++) {
       for (let y = 0; y < 15; y++) {
         let current_level = words_trie;
-        for (let i = x; i < 15; i++) {
+        for (let i = x; i <= 15; i++) {
           try {
             if ("exists" in current_level) {
               let cv = Math.floor(Math.random() * (i - x)) + x;
@@ -176,7 +176,7 @@ image: "/assets/img/logo.svg"
         }
 
         current_level = words_trie;
-        for (let i = y; i < 15; i++) {
+        for (let i = y; i <= 15; i++) {
           try {
             if ("exists" in current_level) {
               let cv = Math.floor(Math.random() * (i - y)) + y;
