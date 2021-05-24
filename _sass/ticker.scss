@@ -1,0 +1,14 @@
+.ticker {
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+
+  .ticker-item {
+    padding: 0.1rem 0;
+    flex: 1 0 50%;
+    color: red;
+  }
+}

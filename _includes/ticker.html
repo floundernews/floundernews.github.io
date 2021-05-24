@@ -1,0 +1,12 @@
+<ul class="ticker">
+  {%- for headline in site.data.ticker-headlines -%}
+    <li class="ticker-item">{{ headline }}</li>
+  {%- endfor -%}
+</ul>
+
+<script>
+  const ticker = document.querySelector(".ticker");
+  setInterval(() => {
+    ticker.scrollBy(1, 0);
+  }, 1000 / 24); // 24 FPS
+</script>
