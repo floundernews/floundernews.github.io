@@ -5,5 +5,8 @@ _site
 .jekyll-metadata
 vendor
 
+# Ruby artifacts
+Gemfile.lock
+
 # No backup files
 \#*\#
