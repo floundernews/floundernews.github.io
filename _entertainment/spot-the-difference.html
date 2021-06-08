@@ -1,0 +1,39 @@
+---
+layout: page
+title: Spot the Difference
+---
+
+<style>
+  .page-title { cursor: default; }
+</style>
+
+<center>
+  <canvas id="spotTheDifferenceCanvas" style="border: 3px solid #000000;"></canvas>
+</center>
+
+<script type="text/javascript">
+  let c = document.getElementById("spotTheDifferenceCanvas");
+  let ctx = c.getContext("2d");
+
+  let img = new Image();
+  img.src = "/assets/img/spot-the-difference.png";
+  img.onload = function() {
+    c.width = 2 * img.width;
+    c.height = img.height;
+
+    ctx.drawImage(img, 0, 0);
+    ctx.drawImage(img, img.width, 0);
+
+    ctx.beginPath();
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 5;
+    ctx.moveTo(c.width / 2, 0);
+    ctx.lineTo(c.width / 2, c.height);
+    ctx.stroke();
+
+    document.getElementsByClassName("page-title")[0].innerHTML = "Spot the <span id=\"spotTheDifferenceGoal\">Difference</span>";
+    document.getElementById("spotTheDifferenceGoal").onclick = function() {
+      alert("YOU WIN!\n\nCongrats! You're part of the 0.001% of people who figured this out and a part of the 107% of people who believe online statistics!");
+    };
+  };
+</script>
