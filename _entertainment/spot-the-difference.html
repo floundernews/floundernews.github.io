@@ -42,6 +42,11 @@ title: Spot the Difference
     background: black;
     opacity: 0.75;
   }
+
+  canvas {
+    border: 3px solid #000000;
+    max-width: 100%;
+  }
 </style>
 
 <div id="superWrapper" class="super-wrapper" style="display:none;" onclick="closePopup()"></div>
@@ -58,7 +63,7 @@ title: Spot the Difference
 </div>
 
 <center>
-  <canvas id="spotTheDifferenceCanvas" style="border: 3px solid #000000;"></canvas>
+  <canvas id="spotTheDifferenceCanvas"></canvas>
 </center>
 
 <script type="text/javascript">
