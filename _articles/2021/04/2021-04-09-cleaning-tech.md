@@ -10,7 +10,7 @@ TORONTO ON- In the height of the COVID-19 epidemic, Mackenzie Officials unveiled
 
 Developed in-house, the new Mackenzie Cleaning Spray claims to kill 99% of all things it is sprayed on, including germs and bacteria. Developed in a collaboration between the Engineering Club and Chemistry Club, this new technology cost the school a mere $200,000 to develop.
 
-"I feel so safe that I don't wear a mask anymore" said one grade 9 student. "] What a perceptible difference in the cleanliness of the school!"
+"I feel so safe that I don't wear a mask anymore" said one grade 9 student. "What a perceptible difference in the cleanliness of the school!"
 
 Mackenzie Engineering Club released some before and after photos showcasing the power of this new technology.
 
