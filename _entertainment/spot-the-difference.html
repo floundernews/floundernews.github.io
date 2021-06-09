@@ -72,21 +72,40 @@ image: "/assets/img/spot-the-difference-preview.png"
   let c = document.getElementById("spotTheDifferenceCanvas");
   let ctx = c.getContext("2d");
 
+  function setImages() {
+    if (window.innerHeight <= window.innerWidth) {
+      c.width = 2 * img.width;
+      c.height = img.height;
+
+      ctx.drawImage(img, 0, 0);
+      ctx.drawImage(img, img.width, 0);
+
+      ctx.beginPath();
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 5;
+      ctx.moveTo(c.width / 2, 0);
+      ctx.lineTo(c.width / 2, c.height);
+      ctx.stroke();
+    } else {
+      c.width = img.width;
+      c.height = 2 * img.height;
+
+      ctx.drawImage(img, 0, 0);
+      ctx.drawImage(img, 0, img.height);
+
+      ctx.beginPath();
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 5;
+      ctx.moveTo(0, c.height / 2);
+      ctx.lineTo(c.width, c.height / 2);
+      ctx.stroke();
+    }
+  }
+
   let img = new Image();
   img.src = "/assets/img/spot-the-difference.png";
   img.onload = function() {
-    c.width = 2 * img.width;
-    c.height = img.height;
-
-    ctx.drawImage(img, 0, 0);
-    ctx.drawImage(img, img.width, 0);
-
-    ctx.beginPath();
-    ctx.strokeStyle = "#000000";
-    ctx.lineWidth = 5;
-    ctx.moveTo(c.width / 2, 0);
-    ctx.lineTo(c.width / 2, c.height);
-    ctx.stroke();
+    setImages();
 
     document.getElementsByClassName("page-title")[0].innerHTML = "Spot the <span id=\"spotTheDifferenceGoal\">Difference</span>";
     document.getElementById("spotTheDifferenceGoal").onclick = function() {
@@ -101,4 +120,6 @@ image: "/assets/img/spot-the-difference-preview.png"
     document.getElementById("superWrapper").style.display = "none";
     document.body.style.overflow = "auto";
   }
+
+  window.onresize = setImages;
 </script>
