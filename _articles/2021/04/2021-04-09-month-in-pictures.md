@@ -2,6 +2,7 @@
 layout: article
 order: 7
 title: This Month in Pictures
+image: "/assets/img/2021-04-09-month-in-pictures-preview.png"
 ---
 
 <div class="carousel">
