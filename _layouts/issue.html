@@ -9,6 +9,15 @@ layout: default
   <a href="{{ page.pdf }}" class="download-pdf-link" target="_blank">[ View as PDF ]</a>
 {% endif %}
 
+{% if page.front_cover %}
+  <center>
+    <img src="{{ page.front_cover | relative_url }}" alt="{{ page.front_cover | relative_url }}" class="cover-image" />
+  </center>
+  <br>
+  <hr>
+  <br>
+{% endif %}
+
 <section id="toc">
   <h2>
     <span>Table of </span>
@@ -46,5 +55,13 @@ layout: default
     {{ article.content | markdownify }}
   </div>
 {% endfor %}
+
+{% if page.back_cover %}
+  <hr>
+  <br>
+  <center>
+    <img src="{{ page.back_cover | relative_url }}" alt="{{ page.back_cover | relative_url }}" class="cover-image" />
+  </center>
+{% endif %}
 
 {{ content }}
