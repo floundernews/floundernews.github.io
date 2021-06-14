@@ -2,7 +2,7 @@ var config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
-    parent: "canvas",
+    parent: 'canvas',
     physics: {
         default: 'arcade',
         arcade: {
@@ -109,7 +109,7 @@ function update() {
     let time = game.getTime() - startTime;
 
     cursors = this.input.keyboard.createCursorKeys();
-    if (cursors.up.isDown || cursors.space.isDown) {
+    if (cursors.up.isDown || cursors.space.isDown || this.input.activePointer.isDown) {
         if (gameState == "ongoing") player.setVelocityY(-160);
         else if (gameState == "beforeStart") startGame(this);
     } else if (gameState != "ongoing") null;
