@@ -1,0 +1,125 @@
+---
+layout: page
+title: Spot the Difference
+image: "/assets/img/spot-the-difference-preview.png"
+---
+
+<style>
+  .page-title { cursor: default; }
+
+  .popup {
+    background: #2d5e5c;
+    max-width: 400px;
+    border-radius: 15px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .popup-button {
+    padding: 5px;
+    background: #28ded5;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2d5e5c;
+    font-size: 110%;
+  }
+
+  .popup-button:hover {
+    filter: brightness(95%);
+  }
+  
+  .super-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.75;
+  }
+
+  canvas {
+    border: 3px solid #000000;
+    max-width: 100%;
+  }
+</style>
+
+<div id="superWrapper" class="super-wrapper" style="display:none;" onclick="closePopup()"></div>
+
+<div id="popup" class="popup" style="display:none;">
+  <center>
+    <h1>YOU WIN!</h1>
+    <p>Congrats! You're part of the 0.001% of people who figured this out and a part of the 107% of people who believe online statistics!</p>
+
+    <br />
+
+    <input type="button" class="popup-button" value="Close" onclick="closePopup()" />
+  </center>
+</div>
+
+<center>
+  <canvas id="spotTheDifferenceCanvas"></canvas>
+</center>
+
+<script type="text/javascript">
+  let c = document.getElementById("spotTheDifferenceCanvas");
+  let ctx = c.getContext("2d");
+
+  function setImages() {
+    if (window.innerHeight <= window.innerWidth) {
+      c.width = 2 * img.width;
+      c.height = img.height;
+
+      ctx.drawImage(img, 0, 0);
+      ctx.drawImage(img, img.width, 0);
+
+      ctx.beginPath();
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 5;
+      ctx.moveTo(c.width / 2, 0);
+      ctx.lineTo(c.width / 2, c.height);
+      ctx.stroke();
+    } else {
+      c.width = img.width;
+      c.height = 2 * img.height;
+
+      ctx.drawImage(img, 0, 0);
+      ctx.drawImage(img, 0, img.height);
+
+      ctx.beginPath();
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 5;
+      ctx.moveTo(0, c.height / 2);
+      ctx.lineTo(c.width, c.height / 2);
+      ctx.stroke();
+    }
+  }
+
+  let img = new Image();
+  img.src = "/assets/img/spot-the-difference.png";
+  img.onload = function() {
+    setImages();
+
+    document.getElementsByClassName("page-title")[0].innerHTML = "Spot the <span id=\"spotTheDifferenceGoal\">Difference</span>";
+    document.getElementById("spotTheDifferenceGoal").onclick = function() {
+      document.getElementById("popup").style.display = "block";
+      document.getElementById("superWrapper").style.display = "block";
+      document.body.style.overflow = "hidden";
+    };
+  };
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("superWrapper").style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+
+  window.onresize = setImages;
+</script>
