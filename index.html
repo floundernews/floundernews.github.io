@@ -9,7 +9,9 @@ layout: home
   {%- assign issues = site.issues | reverse | shift -%}
 
   <a class="issue-preview latest" href="{{ latest_issue.url | relative_url }}">
-    {% if latest_issue.image %}
+    {% if latest_issue.front_cover %}
+      <img src="{{ latest_issue.front_cover | relative_url }}" alt="{{ latest_issue.front_cover | relative_url }}"/>
+    {% elsif latest_issue.image %}
       <img src="{{ latest_issue.image | relative_url }}" alt="{{ latest_issue.image | relative_url }}"/>
     {% endif %}
     <h4>{{ latest_issue.title | escape }}</h4>
@@ -30,7 +32,9 @@ layout: home
       {%- for issue in issues -%}
         <li>
           <a class="issue-preview" href="{{ issue.url | relative_url }}">
-            {% if issue.image %}
+            {% if issue.front_cover %}
+              <img src="{{ issue.front_cover | relative_url }}" alt="{{ issue.front_cover | relative_url }}"/>
+            {% elsif issue.image %}
               <img src="{{ issue.image | relative_url }}" alt="{{ issue.image | relative_url }}"/>
             {% endif %}
             <h4>{{ issue.title | escape }}</h4>
