@@ -9,10 +9,10 @@ permalink: /issues/
     <li>
       <a class="article-preview" href="{{ issue.url | relative_url }}">
         {% if issue.front_cover %}
-              <img src="{{ issue.front_cover | relative_url }}" alt="{{ issue.front_cover | relative_url }}"/>
-            {% elsif issue.image %}
-              <img src="{{ issue.image | relative_url }}" alt="{{ issue.image | relative_url }}"/>
-            {% endif %}
+          <img src="{{ issue.front_cover | relative_url }}" alt="{{ issue.front_cover | relative_url }}"/>
+        {% elsif issue.image %}
+          <img src="{{ issue.image | relative_url }}" alt="{{ issue.image | relative_url }}"/>
+        {% endif %}
         <h4>{{ issue.title | escape }}</h4>
       </a>
     </li>
