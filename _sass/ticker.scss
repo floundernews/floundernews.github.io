@@ -11,4 +11,10 @@
     flex: 1 0 50%;
     color: red;
   }
+  
+  &::before,
+  &::after {
+    content: "";
+    flex: 0 0 100%;
+  }
 }
