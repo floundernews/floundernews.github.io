@@ -1,0 +1,51 @@
+---
+layout: page
+title: Fortune Cookie
+---
+
+<style>
+    .inline {
+        display: inline;
+    }
+
+    .details {
+        margin-top: min(5vh, 0.5em);
+        position: relative;
+    }
+
+    .cookie {
+        max-width: 100%;
+    }
+
+    .fortune {
+        position: absolute;
+        transform: rotate(32deg);
+        font-size: 1.2vw;
+        width: 50%;
+        height: 4%;
+        top: 35%;
+        left: 34%;
+    }
+
+
+</style>
+
+<div class="result" style="display: block;">
+    <div style="display: inline-block;" class="details">
+        <img id="cookie" class="cookie" src="/assets/img/fortune-cookie/cookie_closed.png" onclick="displayFortune();">
+        <div id="fortune" class="fortune" style="visibility: hidden;">Amog Us</div>
+    </div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+<script src="/assets/js/entertainment/text-generator/textGen.js"></script>
+<script>
+    let fortuneDisplayed = false;
+
+    function displayFortune() {
+        if (fortuneDisplayed) return;
+        document.getElementById("cookie").src = "/assets/img/fortune-cookie/cookie_open.png";
+        document.getElementById("fortune").innerHTML = generateText(Math.random(), '/assets/etc/entertainment/fortune-cookie/phrase.json', 'fortune', 'master', false);
+        document.getElementById("fortune").style.visibility = "visible";
+        fortuneDisplayed = true;
+    }
+</script>
