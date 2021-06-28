@@ -30,11 +30,11 @@ title: Weather Forecast
 <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
 <script src="/assets/js/entertainment/text-generator/textGen.js"></script>
 <script>
-    generateText('/assets/etc/entertainment/weather-forecast/phrase.json', 'weather', 'master', true);
-    generateText('/assets/etc/entertainment/weather-forecast/phrase.json', 'emoji', 'emoji', false);
-    document.getElementById('temp').innerHTML = generateNumber(-100, 100, 0) + '°C';
-    document.getElementById('precip').innerHTML = generateNumber(-100, 200, 1) + '%';
-    document.getElementById('humid').innerHTML = generateNumber(-100, 200, 2) + '%';
-    document.getElementById('wind').innerHTML = generateNumber(-50, 100, 3) + 'km/s';
+    generateText(dateSeed, '/assets/etc/entertainment/weather-forecast/phrase.json', 'weather', 'master', true);
+    generateText(dateSeed, '/assets/etc/entertainment/weather-forecast/phrase.json', 'emoji', 'emoji', false);
+    document.getElementById('temp').innerHTML = generateNumber(dateSeed, -100, 100, 0) + '°C';
+    document.getElementById('precip').innerHTML = generateNumber(dateSeed, -100, 200, 1) + '%';
+    document.getElementById('humid').innerHTML = generateNumber(dateSeed, -100, 200, 2) + '%';
+    document.getElementById('wind').innerHTML = generateNumber(dateSeed, -50, 100, 3) + 'km/s';
     document.getElementById('date').innerHTML = (new Date()).toDateString();
 </script>
