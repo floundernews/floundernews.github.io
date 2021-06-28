@@ -5,7 +5,7 @@ title: Fortune Cookie
 
 <style>
     .inline {
-        display: inline;
+        display: inline-block;
     }
 
     .details {
@@ -13,27 +13,43 @@ title: Fortune Cookie
         position: relative;
     }
 
-    .cookie {
+    .cookie-open {
         max-width: 100%;
     }
 
     .fortune {
         position: absolute;
         transform: rotate(32deg);
-        font-size: 1.2vw;
-        width: 50%;
-        height: 4%;
-        top: 35%;
-        left: 34%;
+        width: 57%;
+        height: 10%;
+        top: 34%;
+        left: 30%;
     }
 
+    .fortune-text {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        font-size: calc(1.2vw + 1.75px);
+        line-height: -50px;
+    }
 
+    @media screen and (min-width: 800px) {
+        .cookie-closed {
+            max-width: 50%;
+        }
+    }
 </style>
 
+<link rel="prefetch" href="/assets/img/fortune-cookie/cookie_open.png">
+
 <div class="result" style="display: block;">
-    <div style="display: inline-block;" class="details">
-        <img id="cookie" class="cookie" src="/assets/img/fortune-cookie/cookie_closed.png" onclick="displayFortune();">
-        <div id="fortune" class="fortune" style="visibility: hidden;">Amog Us</div>
+    <div class="details">
+        <img id="cookie" class="cookie-closed" src="/assets/img/fortune-cookie/cookie_closed.png" onclick="displayFortune();">
+        <div id="fortune" class="fortune" style="visibility: hidden;">
+            <div class="fortune-text" id="fortune-text">Amog Us</div>
+        </div>
     </div>
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
@@ -44,7 +60,9 @@ title: Fortune Cookie
     function displayFortune() {
         if (fortuneDisplayed) return;
         document.getElementById("cookie").src = "/assets/img/fortune-cookie/cookie_open.png";
-        document.getElementById("fortune").innerHTML = generateText(Math.random(), '/assets/etc/entertainment/fortune-cookie/phrase.json', 'fortune', 'master', false);
+        document.getElementById("cookie").classList.remove("cookie-closed");
+        document.getElementById("cookie").classList.add("cookie-open");
+        generateText(Math.random(), '/assets/etc/entertainment/fortune-cookie/phrase.json', 'fortune-text', 'master', false);
         document.getElementById("fortune").style.visibility = "visible";
         fortuneDisplayed = true;
     }
