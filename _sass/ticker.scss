@@ -7,9 +7,11 @@
   overflow: hidden;
 
   .ticker-item {
+    margin-right: 20rem;
     padding: 0.1rem 0;
-    flex: 1 0 50%;
+    flex: 1 0 0;
     color: red;
+    white-space: nowrap;
   }
   
   &::before,

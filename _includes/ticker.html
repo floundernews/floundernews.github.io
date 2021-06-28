@@ -5,11 +5,20 @@
 </ul>
 
 <script>
+  function shuffle(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      let j = Math.floor(Math.random() * ( i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
   const ticker = document.querySelector(".ticker");
+  ticker.innerHTML = shuffle(Array.from(ticker.childNodes)).map(e => e.outerHTML).join('');
   setInterval(() => {
     if(Math.ceil(ticker.scrollLeft) >= ticker.scrollWidth - ticker.offsetWidth) {
       ticker.scrollLeft = 0;
     }
-    ticker.scrollBy(1, 0);
+    ticker.scrollBy(2, 0);
   }, 1000 / 24); // 24 FPS
 </script>
