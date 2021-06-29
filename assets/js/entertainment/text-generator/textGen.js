@@ -1,6 +1,6 @@
-const seed = Math.floor(new Date().getTime()/86400000) - 6;
+const dateSeed = Math.floor(new Date().getTime()/86400000) - 6;
 
-function generateText(phraseLocation, elemID, category, format) {
+function generateText(seed, phraseLocation, elemID, category, format) {
     let rng = new Math.seedrandom(seed);
 
     fetch(phraseLocation).then(resp => resp.json()).then(phrases => {
@@ -16,7 +16,7 @@ function generateText(phraseLocation, elemID, category, format) {
     });
 }
 
-function generateNumber(lowerBound, upperBound, idx) {
+function generateNumber(seed, lowerBound, upperBound, idx) {
     let rng = new Math.seedrandom(seed);
     for (i=0; i<idx; i++) rng();
     return Math.floor(rng()*(upperBound-lowerBound))+lowerBound
