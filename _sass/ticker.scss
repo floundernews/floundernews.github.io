@@ -8,10 +8,13 @@
 
   .ticker-item {
     margin-right: 20rem;
-    padding: 0.1rem 0;
+    padding: 0.15rem 0;
     flex: 1 0 0;
     color: red;
     white-space: nowrap;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1rem;
   }
   
   &::before,
