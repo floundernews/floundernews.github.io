@@ -162,9 +162,11 @@ section.apply {
   padding: 2rem;
   margin: 1em 0;
   max-width: 730px;
-  border-radius: 5px;
-  background-color: $light-blue;
 
+  @at-root .application-form iframe, & {
+    border-radius: 5px;
+    background-color: $light-blue;
+  }
   .job {
     text-decoration: none;
     color: black;
@@ -196,7 +198,7 @@ section.apply {
   display: flex;
   width: 100%;
   height: 600px;
-  margin-top: 2rem;
+  margin: 1.5em 0;
 
   iframe {
     width: 100%;
