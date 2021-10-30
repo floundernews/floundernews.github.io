@@ -206,6 +206,15 @@ section.apply {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    padding: 2rem;
+  }
+  .jobs .job {
+    flex-basis: 100px;
+  }
+}
+
 .school {
   position: absolute;
   margin-top: 2rem;
