@@ -8,30 +8,34 @@ accepting_apps: false
 <section class="apply">
   {%- if page.accepting_apps -%}
     <div class="jobs">
-      <a class="job" href="#apply-form">
-        <img src="/assets/img/writer.svg">
-        <h4>Writer</h4>
-      </a>
-      <a class="job" href="#apply-form">
-        <img src="/assets/img/illustrator.svg">
-        <h4>Illustrator</h4>
-      </a>
-      <a class="job" href="#apply-form">
-        <img src="/assets/img/editor.svg">
-        <h4>Editor</h4>
-      </a>
-      <a class="job" href="#apply-form">
-        <img src="/assets/img/designer.svg">
-        <h4>Layout Design</h4>
-      </a>
-      <a class="job" href="#apply-form">
-        <img src="/assets/img/developer.svg">
-        <h4>Website Developer</h4>
-      </a>
-      <a class="job" href="#apply-form">
-        <img src="/assets/img/social.svg">
-        <h4>Social Media</h4>
-      </a>
+      {%- for role in site.data.roles -%}
+        <a class="job" href="#{{ role.short }}">
+          <img src="/assets/img/{{ role.short }}.svg">
+          <h4>{{ role.role }}</h4>
+        </a>
+      {%- endfor -%}
+    </div>
+    <div class="roles">
+      {%- for role in site.data.roles -%}
+        <section class="role">
+          <h2 id="{{ role.short }}">{{ role.role }}</h2>
+          <p>{{ role.description }}</p>
+          <h3>Who are you?</h3>
+          <p>
+            {%- for detail in role.who -%}
+              {{ detail }}
+              {%- unless forloop.last -%}<br>{%- endunless -%}
+            {%- endfor -%}
+          </p>
+          <h3>What do you do?</h3>
+          <p>
+            {%- for detail in role.what -%}
+              {{ detail }}
+              {%- unless forloop.last -%}<br>{%- endunless -%}
+            {%- endfor -%}
+          </p>
+        </section>
+      {%- endfor -%}
     </div>
     <div class="application-form" id="apply-form">
       <iframe frameborder="0" marginheight="0" marginwidth="0" src="https://docs.google.com/forms/d/e/1FAIpQLScXWZd8B-4JSekIXLTdxzTExB-K3Ur_il1ucbzfTg0x-c6Nvw/viewform?embedded=true">Loading…</iframe>
