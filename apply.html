@@ -5,6 +5,12 @@ permalink: /apply/
 accepting_apps: false
 ---
 
+{%- if page.accepting_apps -%}
+  <section class="about">
+    <p><i>The Flounder</i> is looking for humourless staff to craft its content. If you do not like to make people laugh, then consider applying for one of the following roles. <a href="#apply-form">Jump to the application form</a></p>
+    <p></p>
+  </section>
+{%- endif -%}
 <section class="apply">
   {%- if page.accepting_apps -%}
     <div class="jobs">
