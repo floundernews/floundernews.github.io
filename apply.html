@@ -39,66 +39,12 @@ accepting_apps: false
   {%- else -%}
     <p>Our team is a full school. Come back next year to apply!</p>
     <div class="school">
-      <div>
-        <span class="fish">
-          <img alt="fish" src="/assets/img/logo.svg">
-        </span>
-      </div>
-      <div>
-        <span class="fish">
-          <img alt="fish" src="/assets/img/logo.svg">
-        </span>
-      </div>
-      <div>
-        <span class="fish">
-          <img alt="fish" src="/assets/img/logo.svg">
-        </span>
-      </div>
-      <div>
-        <span class="fish">
-          <img alt="fish" src="/assets/img/logo.svg">
-        </span>
-      </div>
-      <div>
-        <span class="fish">
-          <img alt="fish" src="/assets/img/logo.svg">
-        </span>
-      </div>
-      <div>
-        <span class="fish">
-          <img alt="fish" src="/assets/img/logo.svg">
-        </span>
-      </div>
-      <div>
-        <span class="fish">
-          <img alt="fish" src="/assets/img/logo.svg">
-        </span>
-      </div>
-      <div>
-        <span class="fish">
-          <img alt="fish" src="/assets/img/logo.svg">
-        </span>
-      </div>
-      <div>
-        <span class="fish">
-          <img alt="fish" src="/assets/img/logo.svg">
-        </span>
-      </div>
-      <div>
-        <span class="fish">
-          <img alt="fish" src="/assets/img/logo.svg">
-        </span>
-      </div>
-      <div>
-        <span class="fish">
-          <img alt="fish" src="/assets/img/logo.svg">
-        </span>
-      </div>
-      <div>
-        <span class="fish">
-          <img alt="fish" src="/assets/img/logo.svg">
-        </span>
-      </div>
-    </div>
+      {%- for i in (1..12) -%}
+        <div>
+          <span class="fish">
+            <img alt="fish" src="/assets/img/logo.svg">
+          </span>
+        </div>
+      {%- endfor -%}
   {%- endif -%}
 </section>
