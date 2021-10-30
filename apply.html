@@ -2,7 +2,8 @@
 layout: page
 title: Apply
 permalink: /apply/
-accepting_apps: false
+accepting_apps: true
+application_form: https://docs.google.com/forms/d/e/1FAIpQLSfyXV1UIUysONnAN21WFE3iR5u-T3kFMqzzXybbZ9Uy2ShQvg/viewform
 ---
 
 {%- if page.accepting_apps -%}
@@ -44,7 +45,7 @@ accepting_apps: false
       {%- endfor -%}
     </div>
     <div class="application-form" id="apply-form">
-      <iframe frameborder="0" marginheight="0" marginwidth="0" src="https://docs.google.com/forms/d/e/1FAIpQLScXWZd8B-4JSekIXLTdxzTExB-K3Ur_il1ucbzfTg0x-c6Nvw/viewform?embedded=true">Loading…</iframe>
+      <iframe frameborder="0" marginheight="0" marginwidth="0" src="{{ page.application_form }}?embedded=true">Loading…</iframe>
     </div>
   {%- else -%}
     <p>Our team is a full school. Come back next year to apply!</p>
