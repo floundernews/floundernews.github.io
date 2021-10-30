@@ -5,7 +5,7 @@
     - You are enthusiastic to write newspaper style articles.
     - You enjoy employing your creativity and humour in your writing.
   what:
-    - You write newspaper style articles about realissues focused on the school (with very real news).
+    - You write newspaper style articles about issues focused on the school and beyond. 
     - You work with editors to improve your articles.
 - role: Editor
   short: editor
@@ -40,7 +40,7 @@
   short: developer
   description: Website developers develop the website!
   who:
-    - You enjoy and are experienced with static website building, namely HTML, CSS, and JavaScript. Jekyll would be a bonus.
+    - You enjoy and are experienced with static website building, including HTML, CSS, and JavaScript. Jekyll and Sass would be a bonus.
     - You like creating things with code. 
   what:
     - You help maintain the website.
@@ -48,11 +48,11 @@
     - You make entertainment released on our website.
 - role: Social Media Director
   short: social
-  description: Social media managers manage our social media accounts!
+  description: Social media directors direct our social media!
   who:
     - You are experienced with using Instagram and Facebook.
     - You have an artistic eye, a good sense of humour, and a talent to write convincingly.
   what:
     - You create posts for our social media accounts for announcements and updates.
-    - You work with illustrators and editors to make sure that the posts are both visually-appealing and well-written.
+    - You work with illustrators and editors to make sure that the posts are both visually appealing and well-written.
     - You compose amusement on social media.
