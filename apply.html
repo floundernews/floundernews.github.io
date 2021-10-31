@@ -8,7 +8,7 @@ application_form: https://docs.google.com/forms/d/e/1FAIpQLSfyXV1UIUysONnAN21WFE
 
 {%- if page.accepting_apps -%}
   <section class="about">
-    <p><i>The Flounder</i> is looking for humourless staff to craft its content. If you do not like to make people laugh, then consider applying for one of the following roles. <a href="#apply-form">Jump to the application form</a></p>
+    <p><i>The Flounder</i> is looking for humourless staff to craft its content. If you do not like to make people laugh, then consider applying for one of the following roles. The application form is available <a href="{{ page.application_form }}" target="_blank" rel="noopener">here</a>.</p>
     <p></p>
   </section>
 {%- endif -%}
@@ -16,7 +16,7 @@ application_form: https://docs.google.com/forms/d/e/1FAIpQLSfyXV1UIUysONnAN21WFE
   {%- if page.accepting_apps -%}
     <div class="jobs">
       {%- for role in site.data.roles -%}
-        <a class="job" href="#{{ role.short }}">
+        <a class="job">
           <img src="/assets/img/{{ role.short }}.svg">
           <h4>{{ role.role }}</h4>
         </a>
