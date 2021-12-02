@@ -1,0 +1,11 @@
+---
+layout: page
+title: Random
+permalink: /random/
+---
+
+<script>
+  let issues = {{ site.issues | jsonify }};
+  let index = Math.floor(Math.random() * issues.length);
+  window.location.replace(issues[index].url);
+</script>
