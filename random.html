@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: null
 title: Random
 permalink: /random/
 ---
 
 <script>
-  let issues = {{ site.issues | jsonify }};
-  let index = Math.floor(Math.random() * issues.length);
-  window.location.replace(issues[index].url);
+  let articles = JSON.parse(decodeURI("{{ site.articles | jsonify | uri_escape }}"));
+  let index = Math.floor(Math.random() * articles.length);
+  window.location.replace(articles[index].url);
 </script>
