@@ -51,3 +51,7 @@ defaults:
       path: ""
     values:
       image: "/assets/img/logo.png"
+
+exclude:
+  - assets/js/tsconfig.json
+  - assets/js/*.ts
