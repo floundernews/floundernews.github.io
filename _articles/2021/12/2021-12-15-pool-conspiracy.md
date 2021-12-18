@@ -4,7 +4,7 @@ author: "Piscine Molitor Patel"
 title: "Plain Misbehavior or Something Deeper? Student Explains How Locked Washrooms Prove the Mackenzie Swimming Pool Exists"
 description: "Facts don’t care about your feelings, and the fact is that the pool has always been there."
 image: /assets/img/2021-12-15-secret-pool.png
-order:
+order: 8
 ---
 
 TORONTO, ON — In the wake of the infamous boys’ washroom locking's in late November, students across Mackenzie have been speculating the reason for this seemingly arbitrary decision. One, in particular, sees the move as a cover for the long-rumoured Mackenzie swimming pool in the basement.

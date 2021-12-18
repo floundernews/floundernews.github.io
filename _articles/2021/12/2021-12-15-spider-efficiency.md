@@ -4,7 +4,7 @@ author: "Eric Nid"
 title: "New Spider Terrorization Tactics are Effectively Increasing Productivity"
 description: "How much is the increase in productivity? It’s over 9000%!"
 image: /assets/img/2021-12-15-spider-terrorization.jpg
-order:
+order: 1
 ---
 
 TORONTO, ON - TDSB schools have recently installed dispensers on ceiling tiles to drop spiders when students get distracted.

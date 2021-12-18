@@ -4,7 +4,7 @@ author: "Anonymous Toronto Privat Helth Column Writer"
 title: "Students With Faces in Hands as Midterm Marks Distributed"
 description: "The darn kids are not taking COVID seriously"
 image: /assets/img/2021-12-15-disappointing-midterm-marks.png
-order:
+order: 3
 ---
 
 North York, ON - Students of William Lyon Mackenzie held their faces in their hands as they cried while reluctantly showing their parents their midterm report. Unfortunately, these students did not take precautions against the deadly coronavirus pandemic seriously.

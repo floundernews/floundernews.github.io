@@ -4,7 +4,7 @@ author: "Carol O. Ulrich-Patterson, World News Writer"
 title: "Student-run team takes over hiring process for staff"
 description: "Averages skyrocket to 145%, leading the nation's education system."
 image: /assets/img/2021-12-15-student-team-hiring.png
-order:
+order: 6
 ---
 
 CANADA -- A new student-led group, the Recruitment of Instructors and Office-staff Team (RIOT), has been appointed by the WLMAC administration to manage the hiring process. These students will be in charge of accepting or rejecting applicants for the positions of teachers, office staff, principal, and various minor administrative positions, in addition to being responsible for the continued employment of current staff.
