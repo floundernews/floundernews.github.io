@@ -25,3 +25,4 @@ Parents and a few members of staff have lauded criticisms against the group, fea
 
 The staff at the school who have remained long enough to comment seem very hopeful for the current generation’s prospects after this display of integrity and decision-making skills. RIOT is currently looking into Board policies to see how they may go about hiring youth administration as part of their Principles Through Principals program.
 
+{% include image.html image=page.image %}

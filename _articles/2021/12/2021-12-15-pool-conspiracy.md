@@ -22,3 +22,5 @@ He described the discovery of a hidden pipe that ran through the boys' washroom 
 As president of Flat Earth Club, Wrights has no lack of experience speaking out against the status quo, and he plans on making the “poolist” voice heard at Mackenzie, with a demonstration already scheduled for January 6th of next year.
 
 “What the people and the mainstream media mob need to understand is that facts don’t care about your feelings, and the fact is that the pool has always been there. Wake up Mackenzie!”
+
+{% include image.html image=page.image %}

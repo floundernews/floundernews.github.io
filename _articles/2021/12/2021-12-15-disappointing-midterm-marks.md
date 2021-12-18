@@ -22,3 +22,5 @@ Students replaced their usual wave gestures with close contact hugs without mask
 “Seems awfully crowded, but this assembly is of the utmost importance,” a teacher remarked.
 
 Several students attempted to take their own lives by licking a known coronavirus patient.
+
+{% include image.html image=page.image %}

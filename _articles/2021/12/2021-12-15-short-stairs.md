@@ -18,3 +18,5 @@ Despite the overwhelming positive feedback on the new addition, several students
 “It's our only option until we grow tall enough to climb normal steps,” one grade 9 student said, “Unfortunately, since everybody is using the new staircase, it’s like a mosh pit when changing floors. I’m surprised nobody’s gotten into an accident yet.”
 
 A petition has been passed around for the installment of multiple short staircases to alleviate the issue, in addition to lowered locker handles, water fountains and door frames.
+
+{% include image.html image=page.image %}
