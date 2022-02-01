@@ -9,7 +9,7 @@ order: 3
 
 North York, ON - Students of William Lyon Mackenzie held their faces in their hands as they cried while reluctantly showing their parents their midterm report. Unfortunately, these students did not take precautions against the deadly coronavirus pandemic seriously.
 
-The Toronto Publik Helth advised students to support their pitiful faces with their elbows as to avoid direct contact between their hands and face.
+Toronto Publik Helth had advised students to support their sad faces with their elbows as to avoid direct contact between their hands and face.
 
 “I have a 102 in math,” cried a student touching their face with both hands, “my parents are going to pull out the slipper.”
 
@@ -20,7 +20,5 @@ Classrooms erupted in chaos as the report cards were distributed, with students 
 Students replaced their usual wave gestures with close contact hugs without masks in an attempt to comfort each other. Administration reprimanded this behaviour and called for a school-wide assembly in the cafeteria on the importance of following COVID safety guidelines.
 
 “Seems awfully crowded, but this assembly is of the utmost importance,” a teacher remarked.
-
-Several students attempted to take their own lives by licking a known coronavirus patient.
 
 {% include image.html image=page.image %}

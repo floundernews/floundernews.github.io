@@ -7,11 +7,11 @@ image: /assets/img/2021-12-15-short-stairs.png
 order: 4
 ---
 
-TORONTO, ON - To improve accessibility, TDSB approved William Lyon Mackenzie C.I.'s renovation request for a new staircase with steps half the size.
+TORONTO, ON - To improve accessibility, William Lyon Mackenzie C.I. has renovated the staircases in the school to have steps half the size.
 
 Students under 5’0 are encouraged to use the new staircase to aid travel to the second floor. “This staircase should make Mackenzie more welcoming to the grade 9 students,” the head of the architecture department remarked. “Until they are tall enough to climb the real deal, it can serve as their training wheels.”
 
-Morale and participation have significantly improved since the new staircase, as reported by Grade 9 teachers on the second floor. Another teacher comments, “Everybody uses it nowadays. Taking the stairs two at a time is so cool.”
+Morale and participation have significantly improved since the new staircase, as reported by Grade 9 teachers on the second floor. Another teacher commented, “Everybody uses it nowadays. Taking the stairs two at a time is so cool.”
 
 Despite the overwhelming positive feedback on the new addition, several students have raised concerns about congestion.
 
