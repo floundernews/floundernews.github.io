@@ -1,0 +1,81 @@
+---
+layout: page
+title: Maze
+image: "/assets/img/maze/maze.png"
+---
+
+<style>
+  html,
+  body {
+    scroll-behavior: auto;
+  }
+  #maze-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  #maze-canvas-wrapper {
+    min-height: 0;
+  }
+  #maze-canvas {
+    max-width: 100%;
+    max-height: 100%;
+  }
+</style>
+
+<h2>Instructions</h2>
+
+<ul>
+  <li>Help Thomas the Turtle get to the flag!</li>
+  <li>Use arrow keys or <kbd>WASD</kbd> to move Thomas.</li>
+  <li>
+    To generate a new maze, press <kbd>G</kbd> or click the
+    <em>Generate Maze</em> button. Optionally specify the number of rows and
+    columns in the input boxes.
+  </li>
+  <li>Press <kbd>H</kbd> to hide/show the controls.</li>
+  <li>
+    You can do it!
+    <del
+      >In case you want to give up, press <kbd>L</kbd> or click the
+      <em>Show Solution</em> button.</del
+    >
+  </li>
+</ul>
+
+<br />
+<details>
+  <summary>Game asset credits</summary>
+  <ul>
+    <li>
+      <a href="https://openclipart.org/detail/229886/turtle">Turtle</a> by
+      <a href="https://openclipart.org/artist/badaman">badaman</a>
+    </li>
+    <li>
+      <a href="https://openclipart.org/detail/287030/red-flag">Red flag</a> by
+      <a href="https://openclipart.org/artist/Kib">Kib</a>
+    </li>
+  </ul>
+</details>
+<br />
+
+<div id="maze-container" style="">
+  <div id="maze-controls">
+    <p>
+      <input id="maze-rows" type="text" size="3" /> rows x
+      <input id="maze-cols" type="text" size="3" /> columns
+      <button id="generate-maze">Generate Maze (G)</button>
+      <button id="show-solution">Show Solution (L)</button>
+      <button id="hide-maze-controls">Hide Controls (H)</button>
+    </p>
+  </div>
+  <div id="maze-canvas-wrapper">
+    <canvas id="maze-canvas"></canvas>
+  </div>
+</div>
+
+<img id="flag-img" src="/assets/img/maze/flag.png" style="display: none" />
+<img id="turtle-img" src="/assets/img/maze/turtle.png" style="display: none" />
+
+<script src="/assets/js/entertainment/maze/index.js"></script>
