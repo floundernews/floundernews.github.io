@@ -36,22 +36,26 @@ function drawGridLine(x1: number, y1: number, x2: number, y2: number) {
   ctx.stroke();
 }
 
-function getInputNumOrDefault(id: string, defaultVal: number) {
-  let s = (document.getElementById(id) as HTMLInputElement).value;
-  let i = parseInt(s);
-  if (i != NaN && i >= 1) {
-    return i;
+function getInputNumOrNull(id: string) {
+  let s = document.getElementById(id) as HTMLInputElement;
+  if (s.reportValidity()) {
+    return parseInt(s.value);
   } else {
-    return defaultVal;
+    return null;
   }
 }
 function generateMaze() {
   let currentPositionId = 0;
   let adj: number[][] = [];
   let keyboardDisabled = false;
-
-  rows = getInputNumOrDefault("maze-rows", 15);
-  cols = getInputNumOrDefault("maze-cols", 15);
+  let maybe_rows = getInputNumOrNull("maze-rows");
+  let maybe_cols = getInputNumOrNull("maze-cols");
+  if (maybe_rows != null && maybe_cols != null) {
+    rows = maybe_rows;
+    cols = maybe_cols;
+  } else {
+    return;
+  }
   boxSize = c.width / (cols + 2);
   c.height = boxSize * (rows + 2);
 
@@ -270,7 +274,7 @@ window.onkeydown = (e) => {
     moveCharacter(0, -1);
   } else if (e.key == "ArrowDown" || e.key == "s") {
     moveCharacter(0, 1);
-  } else if (e.key == "g") {
+  } else if (e.key == "g" || e.key == "Enter") {
     generateMaze();
   } else if (e.key == "l") {
     showSolution();
