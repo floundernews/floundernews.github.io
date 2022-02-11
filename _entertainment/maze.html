@@ -22,6 +22,13 @@ image: "/assets/img/maze/maze.png"
     max-width: 100%;
     max-height: 100%;
   }
+  .number-input {
+    width: 3em;
+  }
+  .control-button {
+    margin: 3px;
+    padding: 3px;
+  }
 </style>
 
 <h2>Instructions</h2>
@@ -62,13 +69,28 @@ image: "/assets/img/maze/maze.png"
 
 <div id="maze-container" style="">
   <div id="maze-controls">
-    <p>
-      <input id="maze-rows" type="number" min="10" size="3" required /> rows x
-      <input id="maze-cols" type="number" min="10" size="3" required /> columns
-      <button id="generate-maze">Generate Maze (G)</button>
-      <button id="show-solution">Show Solution (L)</button>
-      <button id="hide-maze-controls">Hide Controls (H)</button>
-    </p>
+    <input
+      class="number-input"
+      id="maze-rows"
+      type="number"
+      min="10"
+      required
+    />
+    rows &times;
+    <input
+      class="number-input"
+      id="maze-cols"
+      type="number"
+      min="10"
+      required
+    />
+    columns
+
+    <button class="control-button" id="generate-maze">Generate Maze (G)</button>
+    <button class="control-button" id="show-solution">Show Solution (L)</button>
+    <button class="control-button" id="hide-maze-controls">
+      Hide Controls (H)
+    </button>
   </div>
   <div id="maze-canvas-wrapper">
     <canvas id="maze-canvas"></canvas>
