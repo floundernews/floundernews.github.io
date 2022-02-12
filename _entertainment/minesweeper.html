@@ -4,8 +4,8 @@ title: Minesweeper
 image: "/assets/img/minesweeper/minesweeper.png"
 ---
 
-<center>
-    <canvas id="minesweeperCanvas" width="960" height="480"></canvas>
+<center style="overflow-x: auto;">
+    <canvas id="minesweeperCanvas" width="800" height="640"></canvas>
 </center>
 
 <br>
@@ -20,8 +20,8 @@ image: "/assets/img/minesweeper/minesweeper.png"
 
     const TILE_SIZE = 32;
     const MINE_COUNT = 100;
-    const BOARD_WIDTH = 30;
-    const BOARD_HEIGHT = 15;
+    const BOARD_WIDTH = 25;
+    const BOARD_HEIGHT = 20;
 
     /* Tile sprite types */
     const EMPTY = -1;
