@@ -4,7 +4,29 @@ title: Minesweeper
 image: "/assets/img/minesweeper/minesweeper.png"
 ---
 
-<center style="overflow-x: auto;">
+<style>
+    .minesweeper-container {
+        overflow-x: auto;
+    }
+
+    .minesweeper-bar {
+        width: 800px;
+        height: 60px;
+        background-color: #bdbdbd;
+        border: 2px solid #7b7b7b;
+    }
+
+    .minesweeper-face {
+        width: 50px;
+        height: 50px;
+        margin-top: 3px;
+    }
+</style>
+
+<center class="minesweeper-container">
+    <div class="minesweeper-bar">
+        <img id="minesweeperFace" class="minesweeper-face" src="/assets/img/minesweeper/happy.png"/>
+    </div>
     <canvas id="minesweeperCanvas" width="800" height="640"></canvas>
 </center>
 
@@ -78,6 +100,7 @@ image: "/assets/img/minesweeper/minesweeper.png"
 
     function reset() {
         resetBoard();
+        document.getElementById("minesweeperFace").src = "/assets/img/minesweeper/happy.png";
         renderBoard();
         gameOngoing = true;
     }
@@ -134,6 +157,7 @@ image: "/assets/img/minesweeper/minesweeper.png"
             }
         }
         gameOngoing = false;
+        document.getElementById("minesweeperFace").src = "/assets/img/minesweeper/dead.png";
         renderBoard();
     });
 
