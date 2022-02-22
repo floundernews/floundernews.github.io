@@ -1,0 +1,183 @@
+---
+layout: page
+title: Minesweeper
+image: "/assets/img/minesweeper/minesweeper.png"
+---
+
+<style>
+    h2 {
+        text-align: center;
+    }
+
+    .minesweeper-container {
+        overflow-x: auto;
+    }
+
+    .minesweeper-bar {
+        width: 800px;
+        height: 60px;
+        background-color: #bdbdbd;
+        border: 2px solid #7b7b7b;
+    }
+
+    .minesweeper-face {
+        width: 50px;
+        height: 50px;
+        margin-top: 3px;
+    }
+</style>
+
+<center class="minesweeper-container">
+    <div class="minesweeper-bar">
+        <img id="minesweeperFace" class="minesweeper-face" src="/assets/img/minesweeper/happy.png"/>
+    </div>
+    <canvas id="minesweeperCanvas" width="800" height="640"></canvas>
+</center>
+
+<br>
+
+<h2><a href="#" onclick="reset()">Reset Game</a></h2>
+<h3>Left click to reveal a tile and right click to place a flag!</h3>
+
+<script>
+
+    let c = document.getElementById("minesweeperCanvas");
+    let ctx = c.getContext("2d");
+
+    const TILE_SIZE = 32;
+    const MINE_COUNT = 100;
+    const BOARD_WIDTH = 25;
+    const BOARD_HEIGHT = 20;
+
+    /* Tile sprite types */
+    const EMPTY = -1;
+    const FLAGGED = -2;
+    const MINE = -3;
+    const MISFLAGGED = -4;
+    const MINE_DEATH = -5;
+
+    const SPRITESHEET_SIZE = 128;
+
+    let spritesheet = new Image(SPRITESHEET_SIZE, SPRITESHEET_SIZE);
+    let spriteMap = new Map([
+        [0, [0, 0]],
+        [1, [32, 0]],
+        [2, [64, 0]],
+        [3, [96, 0]],
+        [4, [0, 32]],
+        [5, [32, 32]],
+        [6, [64, 32]],
+        [7, [96, 32]],
+        [8, [0, 64]],
+        [EMPTY, [32, 64]],
+        [FLAGGED, [96, 64]],
+        [MINE, [64, 96]],
+        [MISFLAGGED, [0, 96]],
+        [MINE_DEATH, [64, 64]]
+    ]);
+
+    let board = Array(BOARD_WIDTH).fill().map(() => Array(BOARD_HEIGHT).fill().map(() => EMPTY));
+    let gameOngoing = false;
+
+    function drawTile(tile, x, y) {
+        let dx = x * TILE_SIZE;
+        let dy = y * TILE_SIZE;
+        let [sx, sy] = spriteMap.get(board[x][y]);
+        ctx.drawImage(spritesheet, sx, sy, TILE_SIZE, TILE_SIZE, dx, dy, TILE_SIZE, TILE_SIZE);
+    }
+
+    function renderBoard() {
+        for(let x = 0; x < BOARD_WIDTH; x++) {
+            for(let y = 0; y < BOARD_HEIGHT; y++) {
+                drawTile(board[x][y], x, y);
+            }
+        }
+    }
+
+    function resetBoard() {
+        for(let x = 0; x < BOARD_WIDTH; x++) {
+            for(let y = 0; y < BOARD_HEIGHT; y++) {
+                board[x][y] = EMPTY;
+            }
+        }
+    }
+
+    function reset() {
+        resetBoard();
+        document.getElementById("minesweeperFace").src = "/assets/img/minesweeper/happy.png";
+        renderBoard();
+        gameOngoing = true;
+    }
+
+    function getMouseTile(e) {
+        let r = c.getBoundingClientRect();
+        let x = Math.floor((e.clientX - r.left) / TILE_SIZE);
+        let y = Math.floor((e.clientY - r.top) / TILE_SIZE);
+        return [x, y];
+    }
+
+    c.addEventListener("click", function(e) {
+        e.preventDefault();
+        if(!gameOngoing) return;
+        let [x, y] = getMouseTile(e);
+        if(board[x][y] == FLAGGED) return;
+        if(board[x][y] == EMPTY) {
+            board[x][y] = MINE_DEATH;
+        }
+        for(let x = 0; x < BOARD_WIDTH; x++) {
+            for(let y = 0; y < BOARD_HEIGHT; y++) {
+                if(board[x][y] == FLAGGED) {
+                    board[x][y] = MISFLAGGED;
+                }
+            }
+        }
+        for(let i = 0; i < MINE_COUNT; i++) {
+            let rx = Math.floor(Math.random() * BOARD_WIDTH);
+            let ry = Math.floor(Math.random() * BOARD_HEIGHT);
+            if(board[rx][ry] == EMPTY) {
+                board[rx][ry] = MINE;
+            } else if(board[rx][ry] == MISFLAGGED) {
+                board[rx][ry] = FLAGGED;
+            }
+        }
+        const SURROUNDING = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
+        for(let x = 0; x < BOARD_WIDTH; x++) {
+            for(let y = 0; y < BOARD_HEIGHT; y++) {
+                if(board[x][y] == EMPTY) {
+                    let count = 0;
+                    for(let [deltaX, deltaY] of SURROUNDING) {
+                        let newX = x + deltaX;
+                        let newY = y + deltaY;
+                        if(newX < 0 || newX >= BOARD_WIDTH || newY < 0 || newY >= BOARD_HEIGHT) {
+                            continue;
+                        }
+                        let tile = board[newX][newY];
+                        if(tile == MINE || tile == FLAGGED || tile == MINE_DEATH) {
+                            count++;
+                        }
+                    }
+                    board[x][y] = count;
+                }
+            }
+        }
+        gameOngoing = false;
+        document.getElementById("minesweeperFace").src = "/assets/img/minesweeper/dead.png";
+        renderBoard();
+    });
+
+    c.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+        if(!gameOngoing) return;
+        let [x, y] = getMouseTile(e);
+        if(board[x][y] == FLAGGED) {
+            board[x][y] = EMPTY
+        } else {
+            board[x][y] = FLAGGED;
+        }
+        drawTile(board[x][y], x, y);
+    });
+
+    spritesheet.onload = reset;
+    spritesheet.src = "/assets/img/minesweeper/sprites.png";
+
+</script>
