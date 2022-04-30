@@ -4,7 +4,7 @@ author: "Camron R. Ouf"
 title: "Students and teachers are no longer allowed to have cameras on as concerns about equitable treatment of the visually impaired arise"
 description: "Now coming at you in 0k"
 image: "/assets/img/2022-03-03-cameras-off.png"
-order: 11
+order: 10
 ---
 
 TORONTO, ON - TDSB’s new policy mandates that any person online keep their cameras off to increase fair treatment amongst students who are visually impaired.
@@ -17,6 +17,6 @@ All the students interviewed were strangely delighted with the policy change. On
 
 Many teachers share a common enthusiasm for this new policy. “I’m proud to be spreading awareness for the visually impaired. They are a community that has been largely overlooked, and it’s good to put them in a fresh new perspective. Although, I wonder how the TDSB will apply this policy when students return to full in-person learning.”
 
-Students are also proud to raise awareness for the visually impaired, seeing the disabled cameras as a badge of honour. “Supporting groups with disabilities is always beneficial. It’s good to know that the TDSB is willing to give them the attention they deserve. Knowing all the cameras are off must make blind students feel welcomed.”
+Students are also proud to raise awareness for the visually impaired, seeing the disabled cameras as a badge of honour. “Supporting groups with disabilities is always beneficial. It’s good to know that the TDSB is willing to give them the attention they deserve. Knowing all the cameras are off must make visually impaired students feel welcomed.”
 
 {% include image.html image=page.image %}

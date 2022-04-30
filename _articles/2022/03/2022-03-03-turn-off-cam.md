@@ -4,7 +4,7 @@ author: "Mike Anne Kam"
 title: "Students Turn off Cameras to Stop the Spread of New Omicron Variant"
 description: "Safety first, learning much further down the list."
 image: "/assets/img/2022-03-03-turn-off-cam.png"
-order: 8
+order: 7
 ---
 
 TORONTO, ON - In the face of a new Omicron variant, students are turning off their cameras and microphones during virtual class to halt its new transmission methods.
