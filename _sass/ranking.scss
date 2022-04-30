@@ -1,0 +1,47 @@
+.ranking-slide {
+    margin-bottom: 30px;
+
+    h2 {
+        margin-bottom: 5px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.ranking-button-container {
+    margin: 10px;
+}
+
+.ranking-button {
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    margin-top: 0.3em;
+    opacity: 0.5;
+    border: none;
+    background-color: lightblue;
+    font: $nav-font;
+    color: $nav-text-color;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &.selected {
+        opacity: 1;
+        color: black;
+    }
+
+    &.show-all {
+        margin-left: 1em;
+        border-radius: 0%;
+        width: auto;
+        padding: 0.2em;
+    }
+
+    svg {
+        width: 1em;
+    }
+}
