@@ -1,35 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Our Team (2020-2021)
 ---
-
-<section class="about">
-  <p>
-    It's a new year at Mackenzie, and there's new fish to fry. From stacked
-    hallways to feral mascots, The Flounder's got you covered with real,
-    important news about the school you know and love.
-  </p>
-  <p>
-    Read The Flounder because you are a successful student, a leader in your
-    industry, and a respected community member. Stay informed about the local
-    school news.
-  </p>
-  <p>
-    Check out our content guidelines
-    <a
-      href="https://docs.google.com/document/d/1mIKKr3WbyH0_qzcV1HXnuHg9eIJ0NvZwmvX9LYFtQBA/edit?usp=sharing"
-      >here</a
-    >
-    and our article writing guidelines
-    <a
-      href="https://docs.google.com/document/d/1iuPazfiYrri6W3APmywnfCKYzujfQY1yIkTWpLJEoIg/edit?usp=sharing"
-      >here</a
-    >.
-  </p>
-</section>
-
-<h1 class="page-title">Our Team</h1>
 
 <div class="dropdown">
     <button class="dropbtn">Select Year ▼</button>
@@ -40,7 +12,7 @@ permalink: /about/
 </div>
 
 <section class="members">
-  {%- assign members = site.data.members2021 -%}
+  {%- assign members = site.data.members2020 -%}
   
   {%- assign team = members | where:"team","President" -%}
   {%- for member in team -%}
@@ -114,3 +86,4 @@ permalink: /about/
     </div>
   {%- endfor -%}
 </section>
+

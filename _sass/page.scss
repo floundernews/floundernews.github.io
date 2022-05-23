@@ -309,3 +309,45 @@ section.apply {
     margin-bottom: 1em;
   }
 }
+
+.dropbtn {
+  background-color: $light-blue;
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  min-width: 140px;
+}
+  
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+  
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  z-index: 1;
+}
+  
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #84bcbf;
+}
