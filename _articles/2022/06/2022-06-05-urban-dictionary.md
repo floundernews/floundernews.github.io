@@ -3,7 +3,7 @@ layout: article
 author: "soyboy joytoy"
 title: "School to Use Urban Dictionary as Official English Dictionary"
 image:
-order:
+order: 2
 ---
 
 Toronto, ON - North York school William Lyon Mackenzie CI has adopted a new policy requiring all English classrooms to immediately switch over to using Urban Dictionary as the official English dictionary, replacing the Canadian Oxford dictionary.

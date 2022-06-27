@@ -4,7 +4,7 @@ author: "Weir M. Asks"
 title: "New strain of senioritis discovered; adolescent teens now most at risk."
 description: “I can't believe it's not aging!”
 image: /assets/img/2022/06/2022-06-05-junioritis.png
-order:
+order: 7
 ---
 
 ON - New senioritis variant emerges that primarily affects younger students, scientists dub ‘junioritis.’

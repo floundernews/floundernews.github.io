@@ -4,7 +4,7 @@ author: "Notaching G. Rass"
 title: "New e-Learning Courses Are All the Craze at Mackenzie"
 description: “I must say, this novel channel of education is truly exquisite.”
 image: /assets/img/2022/06/2022-06-05-elearning.png
-order:
+order: 8
 ---
 
 COMPUTER DESK, ON — The recent introduction by the Ministry of Education of a new e-Learning graduation requirement has received an overwhelmingly positive response from the Mackenzie community. Despite the option to opt out, nearly all students are fully embracing the change to their high school experience.

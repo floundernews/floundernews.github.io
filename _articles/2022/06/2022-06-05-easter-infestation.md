@@ -4,7 +4,7 @@ author: "Peter Cottontail"
 title: "Mackenzie Calls Exterminators for Undetected Easter Bunny Infestation"
 description: “They really do breed like rabbits.”
 image: /assets/img/2022/06/2022-06-05-unexpeggted.png
-order:
+order: 1
 ---
 
 TORONTO, ON - Upon returning to school on May 2nd, Mackenzie students were greeted with a cheery infestation of bunnies and colourful eggs.

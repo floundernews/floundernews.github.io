@@ -3,7 +3,7 @@ layout: article
 author: "Daig Fard"
 title: "Schools Shift to Giving Marks by Lottery to Promote Equity and Learning"
 image:
-order:
+order: 10
 ---
 
 TORONTO, ON - The TDSB recently elected to implement a new system of marking where each mark will be drawn through a lottery.
