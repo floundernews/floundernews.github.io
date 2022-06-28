@@ -41,7 +41,7 @@ permalink: /about/
 </div>
 
 <section class="members">
-  {%- assign members = site.data.members2021 -%}
+  {%- assign members = site.data.members.2021 -%}
   
   {%- assign team = members | where:"team","President" -%}
   {%- for member in team -%}
