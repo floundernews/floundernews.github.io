@@ -24,6 +24,9 @@ collections:
   entertainment:
     output: true
     permalink: /fun/:name/
+  bios:
+    output: true
+    permalink: /bios/:name/
 
 compress_html:
   blanklines: false
