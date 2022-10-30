@@ -351,3 +351,19 @@ section.apply {
 .dropdown:hover .dropbtn {
   background-color: #84bcbf;
 }
+
+.hidden { 
+    display: none;
+}
+
+.load-btn {
+    cursor: pointer;
+    font-weight: bold;
+    color: $nav-text-color;
+    background: $nav-color;
+    border: $nav-color;
+    border-radius: 4px;
+    min-width: 180px;
+    min-height: 50px;
+    margin-top: 40px;
+}

@@ -57,17 +57,44 @@ layout: home
 <h1 class="page-title">Our Articles</h1>
 
 <section>
-  <ul class="article-list">
+  <ul id="article-list" class="article-list">
     {% for article in site.articles reversed %}
-      <li>
+      <li hidden>
         <a class="article-preview" href="{{ article.url | relative_url }}">
-          {% if article.image %}
-            <img src="{{ article.image | relative_url }}" alt="{{ article.image | relative_url }}"/>
-          {% endif %}
           <h4>{{ article.title | escape }}</h4>
           <p>{{ article.description | escape }}</p>
         </a>
       </li>
     {% endfor %}
   </ul>
+  <button id="load-btn" class="load-btn" onClick="load()">Load More</button>
 </section>
+
+<script>
+    const LOAD_AMT = 8;
+
+    let articles = JSON.parse(decodeURI("{{ site.articles | jsonify | uri_escape }}")).reverse();
+    let index = 0;
+
+    function load() {
+        let list = document.getElementById('article-list');
+        if(index >= list.children.length) {
+            return;
+        }
+        let origIndex = index;
+        for(; index < Math.min(list.children.length, origIndex + LOAD_AMT); index++) {
+            if(articles[index].image) {
+                let preview = document.createElement('img');
+                preview.src = articles[index].image;
+                preview.alt = articles[index].image;
+                list.children[index].prepend(preview);
+            }
+            list.children[index].hidden = false;
+        }
+        if(index >= list.children.length) {
+            document.getElementById('load-btn').hidden = true;
+        }
+    }
+
+    load();
+</script>
