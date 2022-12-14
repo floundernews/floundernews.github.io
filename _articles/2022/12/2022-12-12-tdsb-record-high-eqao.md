@@ -1,7 +1,7 @@
 ---
 layout: article
-author: “Exem Fraudantes”
-title: “TDSB Ecstatic Over Record High Pass Rate on EQAO”
+author: "Exem Fraudantes"
+title: "TDSB Ecstatic Over Record High Pass Rate on EQAO"
 order: 10
 ---
 
