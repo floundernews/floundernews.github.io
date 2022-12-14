@@ -3,6 +3,7 @@ layout: article
 author: "Joe King"
 title: "Teachers To Allow Only Online Messaging (No Talking) During Class To 'Keep the Noise Levels Down'"
 description: "Teachers embrace technology in a desperate attempt to “shut those kids up"
+image: "/assets/img/2022-12-12-online-messaging-during-class.png"
 order: 9
 ---
     
