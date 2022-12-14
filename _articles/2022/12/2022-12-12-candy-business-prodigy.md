@@ -3,6 +3,7 @@ layout: article
 author: "Ethin Vestor"
 title: "The Halloween Hustle: A Practical Guide to Candy Scalping"
 description: "Featuring Business Prodigy Trist Coan"
+image: "/assets/img/2022-12-12-halloween-hustle.png"
 order: 7
 ---
 Business Hallway, Mackenzie – The season of spooks and scares has come to an end, and children from around the world have joyfully refilled their stashes of sweets. Most of this candy is fated to disappear, slowly and sadly, into the tummies of their owners (and possibly their hungry parents).
