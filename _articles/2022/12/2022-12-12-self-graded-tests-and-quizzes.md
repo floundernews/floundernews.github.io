@@ -2,6 +2,7 @@
 layout: article
 author: "R. Yew Chee-Ting"
 title: "Quizzes and Tests to Be “Self-Graded” to Keep Marks Fully Private and Confidential"
+image: "/assets/img/2022-12-12-self-graded-test.png"
 order: 5
 ---
 TORONTO, ON - In response to student complaints, the T.D.S.B. has introduced a new policy that allows tests and quizzes to be graded by the students themselves.
