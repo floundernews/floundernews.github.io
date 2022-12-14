@@ -6,6 +6,8 @@ author: “Dedphi Shgone”
 
 title: “High School Students Discover Shocking Information About Flounder Fish”
 
+image: "/assets/img/2022-12-12-shocking-news-flounder.png"
+
 order: 6
 
 ---
