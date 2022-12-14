@@ -1,6 +1,6 @@
 ---
 layout: article
-author: "Ethin Vestor"
+author: "Lei Zi"
 title: "The Halloween Hustle: A Practical Guide to Candy Scalping"
 description: "Featuring Business Prodigy Trist Coan"
 image: "/assets/img/2022-12-12-halloween-hustle.png"
