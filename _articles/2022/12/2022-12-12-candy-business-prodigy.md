@@ -6,6 +6,7 @@ description: "Featuring Business Prodigy Trist Coan"
 image: "/assets/img/2022-12-12-halloween-hustle.png"
 order: 7
 ---
+
 Business Hallway, Mackenzie – The season of spooks and scares has come to an end, and children from around the world have joyfully refilled their stashes of sweets. Most of this candy is fated to disappear, slowly and sadly, into the tummies of their owners (and possibly their hungry parents).
 
 However, according to business experts, there is potential concealed beneath the wrappers. One such expert is Trist “Scalpel” Coan, 14, business mogul and master entrepreneur, with whom the Flounder sat for an interview. 

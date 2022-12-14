@@ -18,4 +18,3 @@ When asked about what they’ve learned from this food drive experience, a stude
 Another student commented, “I love giving to others, because you get so much more than you gave in return! The meal was delicious and I was completely stuffed at the end - that buffet lunch could have fed *so* many people!”
 
 Mr. Cheaper’s students definitely enjoyed their tasty victory for this food drive, and now eagerly await the upcoming clothing drive. One student expressed their excitement, “I can’t wait to donate an old shirt or something - for the reward of an entire new wardrobe from The Gap!”
-
