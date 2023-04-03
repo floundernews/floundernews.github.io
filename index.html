@@ -87,7 +87,8 @@ layout: home
                 let preview = document.createElement('img');
                 preview.src = articles[index].image;
                 preview.alt = articles[index].image;
-                list.children[index].prepend(preview);
+                /*add image to anchor instead of list element*/
+                list.children[index].children.item(0).prepend(preview);
             }
             list.children[index].hidden = false;
         }
