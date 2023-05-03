@@ -2,7 +2,7 @@
 layout: article
 author: "Prince Phillip VIII"
 title: Mackenzie Through The Years
-description: "We shall discusseth our plans for the grand weeketh of spirit" - Julius Caesar, former President of the Mackenzie Student Council
+description: "'We shall discusseth our plans for the grand weeketh of spirit' - Julius Caesar, former President of the Mackenzie Student Council"
 order: 5
 ---
 
