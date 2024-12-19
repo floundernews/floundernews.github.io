@@ -6,7 +6,7 @@ description: " “Ronald Dump says he will ban being a Democrat upon being elect
 order: 3  
 ---
 
-###The Flounder Here, Your One and Only Source into the Scandalous Lives of America’s Elite
+### The Flounder Here, Your One and Only Source into the Scandalous Lives of America’s Elite
 
 As of late, we see our favourites, DJ Vance, Ronald Dump and Peelon Mask in the spotlight once more. Sources confirm what Y (formerly tweeter) users already know, there is no stopping Ronny from an opinion, a first amendment right for all American citizens\! 
 
