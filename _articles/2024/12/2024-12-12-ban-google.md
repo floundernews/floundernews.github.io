@@ -1,11 +1,14 @@
-/---  
+---  
 layout: article  
 author: "Mentie Brakedawn"  
 title: "TDSB Announces Decision to Ban Google From Its WI-FI"  
 description: " "Google Classroom? Back in my day, we had a real classroom in a real school. Not this wishy-washy Google stuff you hear of today", TDSB Congressman, age 86, says."  
 image: "/assets/img/2024-12-12-ban-google.png"  
 order: 2  
-/---  
+---
+
+### TDSB Announces Decision to Ban Google From Its WI-FI
+
 {% include image.html image=page.image %}
 
 TORONTO, ON-- The TDSB has just recently announced their decision to ban all Google products-- that includes the Google browser, Google Drive, and Google Classroom-- from all TDSB Wi-Fi networks. 
