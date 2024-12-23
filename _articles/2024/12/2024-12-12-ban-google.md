@@ -1,3 +1,4 @@
+---
 layout: article
 author: "Mentie Brakedawn"
 title: "TDSB Announces Decision to Ban Google From Its WI-FI"
