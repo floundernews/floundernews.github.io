@@ -2,12 +2,10 @@
 layout: article
 author: "Yawantsum Candi"
 title: "Kids’ Safety Organization Promotes Accepting Candy from Strangers at Night as “Perfectly Safe”"
-description: "Safety video for kids"
+description: "'I would never let my kids to something like this... unless it's October 31st'"
 image: "/assets/img/2024-12-09-stranger-candy-safe.png"
 order: 6
 ---
-
-### Kids' Safety Organization Promotes Accepting Candy from Strangers at Night as "Perfectly Safe"
 
 By Yawantsum Candi
 
