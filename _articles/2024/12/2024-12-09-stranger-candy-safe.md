@@ -7,8 +7,6 @@ image: "/assets/img/2024-12-09-stranger-candy-safe.png"
 order: 6
 ---
 
-By Yawantsum Candi
-
 {% include image.html image=page.image %}
 
 TORONTO, ON --- With the Halloween season fast approaching, kids' safety organization, 'Safety Always First for Everyone' (SAFE), recently released a new and updated series of general safety tip videos for kids. These videos have been widely viewed this past week, thanks to a decision by the TDSB to broadcast them in class to all elementary and middle school-aged students.
