@@ -6,8 +6,6 @@ description: " “Ronald Dump says he will ban being a Democrat upon being elect
 order: 3  
 ---
 
-### The Flounder Here, Your One and Only Source into the Scandalous Lives of America’s Elite
-
 As of late, we see our favourites, DJ Vance, Ronald Dump and Peelon Mask in the spotlight once more. Sources confirm what Y (formerly tweeter) users already know, there is no stopping Ronny from an opinion, a first amendment right for all American citizens\! 
 
 The European Onion, a fake news source according to Dumpy, has stated that they will set an arrest warrant for Peelon should he allow Ronny back onto the platform. “Wow, that’s crazy beef. Mans would never smoke their bredrins like that bro. Ronny ain’t gonna nize his beak to nun." DJ, Ronny’s right hand man, said in a formal apology for his deleted tweets from 2016, calling Ronald ‘reprehensible’. After this old beef emerged once more between DJ and Ronald, DJ is adamant to stand up for Ronald through everything, showing him that he is worthy of being second in command. 
