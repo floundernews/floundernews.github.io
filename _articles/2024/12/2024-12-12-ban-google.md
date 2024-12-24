@@ -4,7 +4,7 @@ author: "Mentie Brakedawn"
 title: "TDSB Announces Decision to Ban Google From Its WI-FI"
 description: "'Google Classroom? Back in my day, we had a real classroom in a real school. Not this wishy-washy Google stuff you hear of today,' TDSB Congressman, age 86, says."
 image: "/assets/img/2024-12-12-ban-google.jpg"
-order: 2
+order: 1
 ---
 
 {% include image.html image=page.image %}
