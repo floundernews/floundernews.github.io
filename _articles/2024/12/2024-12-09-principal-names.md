@@ -2,11 +2,9 @@
 layout: article
 author: "anonymous"
 title: "MECK: The Principal Curse"
-description: "principal names form MECK"
+description: "New principal at Mackenzie: fourth change in 2 years. Is it a curse??"
 order: 5
 ---
-
-### MECK: The Principal Curse
 
 If you take the first name initials of the latest four Mackenzie principals, and combine them, you get MECK. A simple word. A nice looking one. Most will not make the immediate connection to our very own Mackenzie Electricity CKlub, also known as MECK. 
 
