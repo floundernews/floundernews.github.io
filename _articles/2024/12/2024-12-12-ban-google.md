@@ -7,8 +7,6 @@ image: "/assets/img/2024-12-12-ban-google.jpg"
 order: 2
 ---
 
-### TDSB Announces Decision to Ban Google From Its WI-FI
-
 {% include image.html image=page.image %}
 
 TORONTO, ON-- The TDSB has just recently announced their decision to ban all Google products-- that includes the Google browser, Google Drive, and Google Classroom-- from all TDSB Wi-Fi networks. 
