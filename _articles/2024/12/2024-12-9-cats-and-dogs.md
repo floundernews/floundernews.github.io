@@ -2,12 +2,9 @@
 layout: article
 author: "anonymous"
 title: "Widespread Panic As Cats and Dogs Discover the Truth: Opinions From Experts"
-description: "cats-and-dogs"
+description: " 'They're eating the WHAT???' "
 order: 4
 ---
-
-### Widespread Panic As Cats and Dogs Discover the Truth: Opinions From Experts
-“*They’re eating the WHAT???*”
 
 “The news really hit me hard. I mean, Toronto is only 3 hours away from the border. If all the cats are being eaten in the US, it’s not too long before Canada follows.” - Ms *Trahnzgendrohp Rations*, local cat citizen
 
