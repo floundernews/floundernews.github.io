@@ -12,11 +12,10 @@ Four Mackenzie principals in two years: a valid cause for suspicion amongst stud
 
 Not to worry, the MECK club assured us that the past three principals are safe and happy. Though, at the Flounder, we wonder what MECK really stands for? The Mackenzie Electricity CKlub? Or perhaps something darker… Mackenzie Eradicates its Council of Knowledge? It’s anyone’s guess, but one thing is for sure– there’s more to this club than just light bulbs. As for our new principal, she makes up the final initial in MECK, and she is hopefully here to stay. Might as well get to know her:
 
-Principal Four Truths and a Lie
-First person to dm the wlmac.flounder instagram account the correct answer, will win a chocolate bar
+Principal Four Truths and a Lie: Which of these facts about Ms. Neag are false? Dm us @wlmac.floundernews on instagram with the correct answer.
 
-1. A
-2. A
-3. A
-4. A
-5. A
+1. She snowboards and wakeboards
+2. She has a dog who is a Rhodesian Ridgeback
+3. She enjoys playing volleyball
+4. She has fantastic skating skills, frequently landing axel jumps
+5. Before being a principal, she was an enthusiastic math teacher
