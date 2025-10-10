@@ -1,0 +1,13 @@
+$top-color: #039e95; // Top bar
+$nav-color: #28ded5; // Nav
+$nav-text-color: #2d5e5c; // Nav text
+$light-blue: #93D2D5; // Box color
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Open+Sans:wght@300;700&family=Spartan:wght@700&family=Raleway:wght@400;800&family=Kaushan+Script&display=swap");
+@import url("https://use.typekit.net/enr5njk.css");
+
+// font-style font-variant font-weight font-size/line-height font-family
+$nav-font: normal normal 700 1em / normal "Open Sans", sans-serif;
+$title-font: normal normal 600 2em / normal "Dosis", sans-serif;
+$body-font: normal normal 300 1em / normal "Open Sans", sans-serif;

@@ -1,0 +1,111 @@
+#toc {
+  position: relative;
+  font-family: league-gothic, sans-serif;
+  min-height: 38rem;
+
+  h2 {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+
+    span:first-child {
+      font-size: 1.5em;
+      letter-spacing: 0.25em;
+    }
+    span:last-child {
+      color: yellow;
+      font-family: "Spartan", sans-serif;
+      font-size: 4em;
+    }
+  }
+}
+
+.toc-list {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  font-size: 2em;
+  max-width: 50%;
+  list-style: none;
+  
+  li {
+    counter-increment: toc-counter;
+    position: relative;
+    margin: 1rem 0;
+
+    &::before {
+      content: counter(toc-counter);
+      font-family: "Spartan", sans-serif;
+      font-size: 2em;
+      color: yellow;
+      position: absolute;
+      right: calc(100% + 1rem);
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #toc h2 {
+    font-size: 1.5em;
+    position: absolute;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: 90% 50%;
+  }
+}
+
+.download-pdf-link {
+  text-decoration: none;
+  display: block;
+  color: darken(yellow, 15%);
+  font: $title-font;
+  font-size: 1.5em;
+  text-align: center;
+  transition: all .1s ease-in;
+  margin-bottom: 1rem;
+
+  @media only screen and (min-width: 800px) {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+  }
+}
+
+.download-pdf-link:hover {
+  color: yellow;
+}
+
+.external-link {
+  align-self: flex-end;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  color: #193536;
+
+  svg {
+    width: 0.75em;
+    height: 0.75em;
+  }
+
+  &:hover {
+    color: white;
+  }
+}
+
+hr {
+  color: #2a5457;
+  margin-top: 0.6em;
+}
+
+.cover-image {
+  max-width: 600px;
+  display: block;
+  width: 100%;
+}
