@@ -1,0 +1,129 @@
+---
+layout: article
+---
+
+<div class="ranking-content" id="ranking-content">
+    <div class="ranking-button-container" id="ranking-button-container">
+        {% for item in page.slides %}
+            <button class="ranking-button">
+                {% if page.hascover %}
+                    {% if forloop.index>1 %}
+                        {{forloop.index|minus:1}}
+                    {% else %}
+                        <!-- home icon created by:"Roy Pfund";
+	License:"http://creativecommons.org/licenses/publicdomain/"; -->
+                        <svg version="1.1" viewbox="0 0 512 512" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg">
+                            <g transform="translate(0,448)">
+                                <path d="m 16,256 240,-192 96,72 0,-32 48,0 0,72 96,80 -48,0 0,192 -120,0 0,-160 -96,0 0,160 -168,0 0,-192 z" style="
+                                                  fill: currentColor;
+                                                  fill-opacity: 1;
+                                                  stroke: currentColor;
+                                                  stroke-width: 12;
+                                                  stroke-linecap: butt;
+                                                  stroke-linejoin: round;
+                                                  stroke-miterlimit: 4;
+                                                  stroke-opacity: 1;
+                                                  stroke-dasharray: none;
+                                                " transform="translate(0,-448)"/>
+                            </g>
+                        </svg>
+                    {% endif %}
+                {% else %}
+                    {{forloop.index}}
+                {% endif %}
+            </button>
+        {% endfor %}
+        <button class="ranking-button show-all">Expand All</button>
+    </div>
+
+    {% for item in page.slides %}
+        <div class="ranking-slide">
+            {% assign headline=item|first|first %}
+            {% if item.first.last.first.first %}
+                {% assign img_name=item.first.last.first.first %}
+            {% else %}
+                {% assign
+    img_name=item.first.last %}
+            {% endif %}
+            {% if page.hascover %}
+                {% if
+    forloop.index>1 %}
+                    <h2>{{forloop.index|minus:1|append:'. '|append:headline}}</h2>
+                {% endif %}
+            {% else %}
+                <h2>{{forloop.index|append:'. '|append:headline}}</h2>
+            {% endif %}
+
+            <figure>
+                <img class="ranking-img" src={{page.imagedir| append:'/'| append: img_name}}>
+                {% if item.first.last.first.last %}
+                    <figcaption>{{item.first.last.first.last}}</figcaption>
+                {% endif %}
+            </figure>
+        </div>
+    {% endfor %}
+</div>
+<script>
+  let currentSlide = 1;
+  let maxSlide;
+  function init() {
+    let buttons = document.getElementsByClassName("ranking-button");
+    let i = 1;
+    for (let button of buttons) {
+      let j = i;
+      button.onclick = () => {
+        showSlide(j);
+
+        document.getElementById("ranking-button-container").scrollIntoView();
+      };
+      ++i;
+    }
+    showSlide(1);
+
+    maxSlide = i - 1;
+    window.onkeydown = (e) => {
+      if (e.key == "ArrowLeft") {
+        currentSlide = Math.max(currentSlide - 1, 1);
+      } else if (e.key == "ArrowRight") {
+        currentSlide = Math.min(currentSlide + 1, maxSlide);
+      } else {
+        return;
+      }
+      e.preventDefault();
+      showSlide(currentSlide);
+      document.getElementById("ranking-button-container").scrollIntoView();
+    };
+  }
+
+  function showSlide(index) {
+    currentSlide = index;
+    if (index == maxSlide) {
+      document.getElementById("ranking-content").classList.add("show-all");
+    } else {
+      document.getElementById("ranking-content").classList.remove("show-all");
+    }
+    let slides = document.getElementsByClassName("ranking-slide");
+    let buttons = document.getElementsByClassName("ranking-button");
+
+    let showAll = index == slides.length + 1;
+    let i = 1;
+    for (let slide of slides) {
+      if (i == index || showAll) {
+        slide.classList.remove("hide");
+      } else {
+        slide.classList.add("hide");
+      }
+      ++i;
+    }
+    i = 1;
+    for (let button of buttons) {
+      if (i == index) {
+        button.classList.add("selected");
+      } else {
+        button.classList.remove("selected");
+      }
+      ++i;
+    }
+  }
+  init();
+</script>
