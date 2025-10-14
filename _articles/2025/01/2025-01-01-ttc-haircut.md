@@ -3,7 +3,7 @@ layout: article
 author: "T.T.C Andre-Preneur"
 title: "Local Woman Starts Portable Hairdressing Business on the Subway"
 description: "Her cutting is unsteady, her business is questionable, but nobody shares her passion."
-image: "/assets/img/2025-01-01-ttc-haircut.jpg"
+image: "/assets/img/TTCIllustration.png"
 order: 3
 ---
 

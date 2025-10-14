@@ -2,7 +2,7 @@
 layout: article
 author: "Hallex Pert"
 title: "Surviving the Hallways of Mackenzie"
-image: "/assets/img/2025-01-01-crowded-hallways.png"
+image: "/assets/img/crowded-hallways.png"
 order: 1
 ---
 
