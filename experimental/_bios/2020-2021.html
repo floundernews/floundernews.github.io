@@ -1,0 +1,91 @@
+---
+layout: page
+title: Staff (2020-2021)
+---
+
+<div class="dropdown">
+    <button class="dropbtn">Select Year ▼</button>
+    <div class="dropdown-content">
+      <a href="/about">2022-2023</a>
+      <a href="/bios/2021-2022">2021-2022</a>
+      <a href="/bios/2020-2021/">2020-2021</a>
+      <a href="/bios/2019-2020/">2019-2020</a>
+    </div>
+</div>
+
+<section class="members">
+  {%- assign members = site.data.members.2020 -%}
+  
+  {%- assign team = members | where:"team","President" -%}
+  {%- for member in team -%}
+    <div class="member">
+      <h2 class="name">{{ member.name }}</h2>
+      <h4 class="team">{{ member.team }}</h4>
+      <p class="bio">{{ member.bio }}</p>
+    </div>
+  {%- endfor -%}
+
+  {%- assign team = members | where:"team","Vice President" -%}
+  {%- for member in team -%}
+    <div class="member">
+      <h2 class="name">{{ member.name }}</h2>
+      <h4 class="team">{{ member.team }}</h4>
+      <p class="bio">{{ member.bio }}</p>
+    </div>
+  {%- endfor -%}
+
+  {%- assign team = members | where:"team","Writer" -%}
+  {%- for member in team -%}
+    <div class="member">
+      <h2 class="name">{{ member.name }}</h2>
+      <h4 class="team">{{ member.team }}</h4>
+      <p class="bio">{{ member.bio }}</p>
+    </div>
+  {%- endfor -%}
+
+  {%- assign team = members | where:"team","Illustrator" -%}
+  {%- for member in team -%}
+    <div class="member">
+      <h2 class="name">{{ member.name }}</h2>
+      <h4 class="team">{{ member.team }}</h4>
+      <p class="bio">{{ member.bio }}</p>
+    </div>
+  {%- endfor -%}
+
+  {%- assign team = members | where:"team","Editor" -%}
+  {%- for member in team -%}
+    <div class="member">
+      <h2 class="name">{{ member.name }}</h2>
+      <h4 class="team">{{ member.team }}</h4>
+      <p class="bio">{{ member.bio }}</p>
+    </div>
+  {%- endfor -%}
+
+  {%- assign team = members | where:"team","Layout Designer" -%}
+  {%- for member in team -%}
+    <div class="member">
+      <h2 class="name">{{ member.name }}</h2>
+      <h4 class="team">{{ member.team }}</h4>
+      <p class="bio">{{ member.bio }}</p>
+    </div>
+  {%- endfor -%}
+
+  {%- assign team = members | where:"team","Web Developer" -%}
+  {%- for member in team -%}
+    <div class="member">
+      <h2 class="name">{{ member.name }}</h2>
+      <h4 class="team">{{ member.team }}</h4>
+      <p class="bio">{{ member.bio }}</p>
+    </div>
+  {%- endfor -%}
+
+  {%- assign team = members | where:"team","Social Media" -%}
+  {%- for member in team -%}
+    <div class="member">
+      <h2 class="name">{{ member.name }}</h2>
+      <h4 class="team">{{ member.team }}</h4>
+      <p class="bio">{{ member.bio }}</p>
+    </div>
+  {%- endfor -%}
+</section>
+

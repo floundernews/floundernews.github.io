@@ -1,0 +1,12 @@
+# Jekyll .gitignore
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+
+# Ruby artifacts
+Gemfile.lock
+
+# No backup files
+\#*\#

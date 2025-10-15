@@ -1,0 +1,70 @@
+---
+layout: page
+title: Fortune Cookie
+image: "/assets/img/fortune-cookie/cookie_closed.png"
+---
+
+<style>
+    .inline {
+        display: inline-block;
+    }
+
+    .details {
+        margin-top: min(5vh, 0.5em);
+        position: relative;
+    }
+
+    .cookie-open {
+        max-width: 100%;
+    }
+
+    .fortune {
+        position: absolute;
+        transform: rotate(32deg);
+        width: 54%;
+        height: 10%;
+        top: 34%;
+        left: 30%;
+    }
+
+    .fortune-text {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        font-size: calc(1.2vw + 1.75px);
+        line-height: -50px;
+    }
+
+    @media screen and (min-width: 800px) {
+        .cookie-closed {
+            max-width: 50%;
+        }
+    }
+</style>
+
+<link rel="prefetch" href="/assets/img/fortune-cookie/cookie_open.png">
+
+<div class="result" style="display: block;">
+    <div class="details">
+        <img id="cookie" class="cookie-closed" src="/assets/img/fortune-cookie/cookie_closed.png" onclick="displayFortune();">
+        <div id="fortune" class="fortune" style="visibility: hidden;">
+            <div class="fortune-text" id="fortune-text">Amog Us</div>
+        </div>
+    </div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+<script src="/assets/js/entertainment/text-generator/textGen.js"></script>
+<script>
+    let fortuneDisplayed = false;
+
+    function displayFortune() {
+        if (fortuneDisplayed) return;
+        document.getElementById("cookie").src = "/assets/img/fortune-cookie/cookie_open.png";
+        document.getElementById("cookie").classList.remove("cookie-closed");
+        document.getElementById("cookie").classList.add("cookie-open");
+        generateText(Math.random(), '/assets/etc/entertainment/fortune-cookie/phrase.json', 'fortune-text', 'master', false);
+        document.getElementById("fortune").style.visibility = "visible";
+        fortuneDisplayed = true;
+    }
+</script>

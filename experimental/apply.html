@@ -1,0 +1,62 @@
+---
+layout: page
+title: Apply
+permalink: /apply/
+accepting_apps: false
+application_form: https://forms.gle/v2bo8FKhS8perSW59
+---
+
+{%- if page.accepting_apps -%}
+  <section class="about">
+    <p><i>The Flounder</i> is looking for humourless staff to craft its content. If you do not like to make people laugh, then consider applying for one of the following roles. The application form is available <a href="{{ page.application_form }}" target="_blank" rel="noopener">here</a>.</p>
+    <p></p>
+  </section>
+{%- endif -%}
+<section class="apply">
+  {%- if page.accepting_apps -%}
+    <div class="jobs">
+      {%- for role in site.data.roles -%}
+        <a class="job">
+          <img src="/assets/img/{{ role.short }}.svg">
+          <h4>{{ role.role }}</h4>
+        </a>
+      {%- endfor -%}
+    </div>
+    <div class="roles">
+      {%- for role in site.data.roles -%}
+        <section class="role">
+          <h2 id="{{ role.short }}">{{ role.role }}</h2>
+          <p>{{ role.description }}</p>
+          <h3>Who are you?</h3>
+          <p>
+            {%- for detail in role.who -%}
+              {{ detail }}
+              {%- unless forloop.last -%}<br>{%- endunless -%}
+            {%- endfor -%}
+          </p>
+          <h3>What do you do?</h3>
+          <p>
+            {%- for detail in role.what -%}
+              {{ detail }}
+              {%- unless forloop.last -%}<br>{%- endunless -%}
+            {%- endfor -%}
+          </p>
+        </section>
+      {%- endfor -%}
+    </div>
+    <div class="application-form" id="apply-form">
+      <iframe frameborder="0" marginheight="0" marginwidth="0" src="{{ page.application_form }}?embedded=true">Loading…</iframe>
+    </div>
+    <p>or, <a href="{{ page.application_form }}" target="_blank" rel="noopener">open the form in a new tab</a>.</p>
+  {%- else -%}
+    <p>Our team is a full school. Come back next year to apply!</p>
+    <div class="school">
+      {%- for i in (1..12) -%}
+        <div>
+          <span class="fish">
+            <img alt="fish" src="/assets/img/logo.svg">
+          </span>
+        </div>
+      {%- endfor -%}
+  {%- endif -%}
+</section>
