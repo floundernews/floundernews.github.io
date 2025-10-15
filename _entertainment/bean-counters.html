@@ -1,0 +1,16 @@
+---
+layout: page
+title: Bean Counters
+image: "/assets/img/logo.png"
+---
+
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.querySelector("embed");
+            container.replaceWith(player);
+            player.load("bean_counters.swf");
+        });
