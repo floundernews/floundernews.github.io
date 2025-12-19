@@ -1,0 +1,24 @@
+﻿---
+layout: article
+author: "Joe"
+title: "The Defrosting Of Mariah Carey"
+image: "/assets/img/mariahcareycountdown.png"
+order: 8
+---
+
+
+At midnight on November 1st, Mariah Carey's annual thaw signals the start of the Christmas Season, with all of the Halloween decorations mysteriously disappearing and festive cheer taking over the streets.
+
+  
+
+At precisely 12:01 AM on November 1st, Mariah’s signature whistle pierced the night, exploding pumpkins and making decorations vanish without a trace. Eyewitnesses reported skeletons being dragged off front lawns by small creatures wearing cone hats and oversized ears, while ghosts didn’t even survive the purge, dying yet again. These elves, rumored to be part of Mariah’s elite fanbase known as the Lambily, moved fast and efficiently, ensuring Halloween disappeared into the night, replaced by glittering wreaths and peppermint-scented candles, meant to scare away the last lingering spirits of the spooky season.
+
+  
+
+There have already been early stages of Mariah's effects across the city with speakers randomly turning on by themselves and radios starting to blast familiar holiday songs. Citizens were baffled, as resistance did not seem to be an option. They were advised to stock up on cookies, hot chocolate and cozy sweaters before the holiday spirit reached full force; for when the first snowflake fell, we would all know she had awakened.
+
+  
+
+As Mariah's thaw continued, its effects quickly spread, with officials reporting William Lyon Mackenzie as the most affected area. Students experienced uncontrollable urges to deck the halls with bells of holly and blast “All I Want For Christmas Is You” every passing period. Teachers were caught and punished to a strict limit of 2 candy canes a day for using class time to watch the live countdown to Mariah's full defrost. Insiders warned that once Mariah fully thawed, Mackenzie might never be the same- especially if she started looking for a principal position and turned the school into a year-round holiday madness.
+
+\- TheFlounder

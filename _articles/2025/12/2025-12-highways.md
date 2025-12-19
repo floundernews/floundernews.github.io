@@ -1,0 +1,23 @@
+---
+layout: article
+author: "ConcernedAuthor"
+title: "From Mackenzie Hallways to Highways…What’s going on?"
+image: "/assets/img/2025-12-highways.png"
+order: 7
+---
+
+It’s only been two months into the new school year, and the hallways at Mackenzie are nothing short of a disaster. But something feels amiss… We’ve got halls more packed than the 401 during rush hour with a 3-car collision, and places emptier than a road in a corny Halloween film. 
+
+Coming from one hallway to another is quite literally like walking from a valley filled with rainbows and rabbits to a straight zombie warland. This transition can be frightening, especially for first-year freshmen. You step into the wrong corner, or “intersection,” and suddenly BOOM, you’ve got 80 angry teens all crammed together in a 10-foot square space, 15 more coming at you from each direction, and-- hold on-- did a guy just pass by on a scooter? The person beside you tries to cling to their friend, and in doing so, pushes you to the ground in desperation. On the other side, there’s a guy shoving a sandwich in his mouth while he juggles 20 books and 3 binders that look dangerously close to falling on you. You try your best to keep a cool facade while you use every remaining ounce of strength to not get carried down to the wrong floor, and finally, you escape the crowd, just to get back into the SAME situation 90 minutes later.
+
+So what’s the issue here? Why are we transforming from normal walking students to gladiators in a span of 30 feet? Being the great investigators we are, The Flounder decided to interview some students to see what they thought. We’ve summed up all their thoughts in a few quotes below. 
+
+“Dude, I think…like maybe we gotta have like hall monitors herding students. Like sheep\! Yea no that’s the solution right there bruh.” \- Totally anonymous student. 
+
+“Okay now don’t tell anyone I said this but-” (oops\!) “-I think the issue is that they have too many popular classes in one hallway and not enough math- I mean not fun classes in other hallways. Maybe they should like have fun class, not fun class, fun class in every hall so you kinda get a balanced amount of kids- Hey are you recording me?” \- individual who 100% consented to being in this article
+
+“They should build a rocket ship on the school so we could have classes there.” \- Son of nobel prize winner
+
+As we gathered more and more statements, we concluded that there isn’t much of a way to solve this problem unless we build a rocket ship on top of the school. We will be starting a GoFundMe page, and the link will be below this article. Do you want clearer hallways? Do you want to stop being pushed to the ground between periods? Do you hate having to be crushed between two seniors? If you answered yes to any of these questions, feel free to click the link and donate below.
+
+\- TheFlounder 
