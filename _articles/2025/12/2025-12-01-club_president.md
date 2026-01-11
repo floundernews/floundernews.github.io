@@ -3,7 +3,7 @@ layout: article
 author: "Club president 😈"
 title: "Club presidents beg students to join their club at club crawl"
 description: "“In order to ensure that their club will be able to continue in future years, club presidents at William Lyon Mackenzie CI in North York have begun to beg students in the younger grades to join.”"
-image: "/assets/img/2025-12-club_president.PNG"
+image: "https://github.com/floundernews/floundernews.github.io/blob/master/assets/img/COMIC%20-%20CLUB%20CRAWL%20FRENZY.PNG?raw=true"
 order: 2
 ---
 
