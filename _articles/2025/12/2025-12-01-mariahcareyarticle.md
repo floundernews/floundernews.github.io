@@ -2,7 +2,7 @@
 layout: article
 author: "Joe"
 title: "The Defrosting Of Mariah Carey"
-image: "/assets/img/mariahcareycountdown.png"
+image: "assets/img/Untitled142_20251023224555.png"
 order: 8
 ---
 

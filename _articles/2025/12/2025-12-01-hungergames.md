@@ -2,6 +2,7 @@
 layout: article
 title: "Examination Replacement Proposal (REJECTED)"
 order: 4
+image: "assets/img/hungergames2.png"
 ---
 
 Despite hours of research by our top experts, we here at the Flounder are still unsure as to why the province of Ontario has decided that 30% of a secondary student’s grade is to be determined by a final assessment. Furthermore, it was proven mathematically indeterminable as to why the standard for many courses has become to make that assessment an exam. We as students are intimately familiar with the stress that comes before such an event. Such studying, which accounts for our longest nights and our worst days, filled with caffeine, tears, and regret. Therefore, our closest guess is that exams were created as a torture method. Someone in the Ministry of Education vehemently hates children, and is doing a very bad job of hiding it. I mean, who hasn’t looked at an exam study sheet and literally thought, end me?
