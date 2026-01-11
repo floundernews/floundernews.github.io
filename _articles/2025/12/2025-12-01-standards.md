@@ -2,7 +2,7 @@
 layout: article
 author: "Local Grade 12 Student"
 title: "Post-Secondary Admission Standards Rise to New Heights; “At least 100% Top 6 to be considered,” Mackenzie Guidance Counsellors Say"
-image: "standards.jpg"
+image: "assets/img/standards.jpg"
 order: 5
 ---
 
