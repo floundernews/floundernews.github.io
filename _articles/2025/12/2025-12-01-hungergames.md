@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Examination Replacement Proposal (REJECTED)"
-image: "https://flounder.news/assets/img/hungergames2.png"
+image: "/assets/img/hungergames2.png"
 order: 4
 ---
 
