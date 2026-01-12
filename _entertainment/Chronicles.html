@@ -3,14 +3,22 @@ layout: page
 title: Flounder Chronicles
 image: "/assets/img/logo.png"
 ---
-<div>
-<embed src="https://flipnand.github.io/Platformer/" width="800" height="600"></embed>
+
+<div style="text-align: center;">
+    <embed id="game-embed" src="https://flipnand.github.io/Platformer/" width="800" height="600"></embed>
+</div>
+
 <script>
+    // 1. Prevent Scrolling
     window.addEventListener("keydown", function(e) {
-        // Space and arrow keys
         if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
             e.preventDefault();
         }
     }, false);
+
+    // 2. Auto-focus the game when the mouse moves over it
+    var embed = document.getElementById('game-embed');
+    embed.addEventListener('mouseenter', function() {
+        embed.focus();
+    });
 </script>
-<div>
