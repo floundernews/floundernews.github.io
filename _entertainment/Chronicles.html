@@ -5,4 +5,12 @@ image: "/assets/img/logo.png"
 ---
 <div>
 <embed src="https://flipnand.github.io/Platformer/" width="800" height="600"></embed>
+<script>
+    window.addEventListener("keydown", function(e) {
+        // Space and arrow keys
+        if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+            e.preventDefault();
+        }
+    }, false);
+</script>
 <div>
