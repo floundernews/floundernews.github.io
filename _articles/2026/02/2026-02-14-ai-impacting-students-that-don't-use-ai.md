@@ -3,7 +3,7 @@ layout: article
 author: AI bot ?
 title: "Use of AI increasing academic standards by 100x"
 description: “Students who do not use AI are still being impacted by the effects of the students who do.”
-order: 6
+order: 8
 ---
 
 **TORONTO ON \-** The use of AI in schools by students has been at an all time high and is increasing at an alarming rate. Administrators confirmed the situation is “under control” before immediately logging off. Reports have been saying that the students who do not use AI are being left with the repercussions of those who do. 
