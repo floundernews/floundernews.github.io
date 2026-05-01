@@ -2,7 +2,7 @@
 layout: article  
 author: Anonymous
 title: "Students Celebrate Birthday of Under Construction Rooftop LRT"  
-order: 4
+order: 3
 ---
 
 Last week, Mackenzie students celebrated the fifteenth birthday of the currently under construction rooftop LRT line. The party was held in the stairwell at the end of the science hallway, the future site of one of the LRT stations. There was cake for all attendees and even a mariachi performance by Wind Symphony.
