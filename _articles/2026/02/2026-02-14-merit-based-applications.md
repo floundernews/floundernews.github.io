@@ -2,7 +2,7 @@
 layout: article  
 author: Alluck Nosekill
 title: "Specialized Programs; New Merit-Based Application Process to Only Consider 50% of Exams"  
-order: 3 
+order: 5
 ---
 
 TORONTO \- It’s safe to say that the TDSB have quickly backtracked on their idea of lottery-based selection for specialized programs. The lottery system has caused a completely unforeseen shift in academic performance among the program’s student body. For our beloved school, it seemed like the students who did deserve to be in the program were only suffering under the embarrassment of being known as “Lotto MaCS”. 
