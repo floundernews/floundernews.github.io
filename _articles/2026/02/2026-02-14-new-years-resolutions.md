@@ -6,6 +6,8 @@ image: "/assets/img/2026-02-14-new-years-resolutions.png"
 order: 5
 ---
 
+{% include image.html image=page.image %}
+
 Every New Year’s Eve, people decide that the moment the clock strikes twelve, they will become completely new and improved. “New year, new me\! 2026 will be my year,” they declare, with the same enthusiasm from 2025, 2024, and several other years that were in fact, not their year. Dear readers, after reviewing hundreds of failed resolution lists, I present the ultimate list of realistic resolutions to continue your bad habits with actual commitment this time.
 
 1. Buy Things You Don’t Need
