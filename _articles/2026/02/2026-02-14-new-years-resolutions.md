@@ -3,7 +3,7 @@ layout: article
 author: "Jan Wary"
 title: "New Year’s Resolutions: A Realistic Guide to Continue Worst Habits in 2026"
 image: "/assets/img/2026-02-14-new-years-resolutions.png"
-order: 5
+order: 4
 ---
 
 {% include image.html image=page.image %}
