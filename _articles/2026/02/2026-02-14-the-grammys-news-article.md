@@ -3,7 +3,7 @@ layout: article
 author: Joe
 title: "Leaked Reports Show the Grammys Voting Members Haven’t Listened To Music In 20 Years"
 description: "Sources confirm that voters believed Billie Eilish was a band, and Meghan Trainor was a fitness coach."
-order: 5
+order: 2
 ---
 
 This weekend, a shocking internal Grammy report was leaked, showing that the committee responsible for picking these winners has been completely unaware of current music for the last two decades. Committee members have reportedly based votes off album cover colours, coin flips and amounts of money the artists donated to that year's show. After being questioned, one member embarrassingly admitted that he once saw Beyonce in a coffee shop order a “straight up black coffee” which is apparently “criminal”. Safe to say his vote did not go to Cowboy Carter.
