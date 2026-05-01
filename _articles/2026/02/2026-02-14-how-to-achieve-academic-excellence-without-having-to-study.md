@@ -3,7 +3,7 @@ layout: article
 author: _______
 title: "How to Achieve Academic Excellence Without Having to Study"
 description: “A comprehensive guide for the truly committed procrastinator."
-order: 8
+order: 6
 ---
 
 By: \_\_\_\_\_\_\_  
