@@ -3,7 +3,7 @@ layout: article
 author: "Cupid’s #1 Salescherub"
 title: "**The Perfect Solution for Lonely ~~Losers~~ Lovers: the Soulmate™**"
 image: "/assets/img/2026-02-14-commercialization-of-valentines-day.PNG"
-order: 5
+order: 7
 ---
 
 Are you(yes, YOU) sad, single and looking for love? Well, your search ends here\! For a measly price of $12.99 (taxes, shipping fees, emotional damages, maintenance fees, utility charges and other NDA-mandated unnameable expenses not included), you can get your very own Soulmate™\! For an additional $45.86, your Soulmate™ can be anyone (or anyTHING) you want: the perfect table tennis partner,taste-tester or ghost hunting co-investigator\!
