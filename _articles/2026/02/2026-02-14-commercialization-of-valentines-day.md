@@ -17,3 +17,5 @@ You may be skeptical \- how well does this work? Will you get an actual soulmate
 Put down your phone, dear reader. Delete Tinder and Bumble and all of those other useless apps. This is the future of dating \- where everyone gets who they want and everyone is happy. You’ll never spend another Valentine’s Day eating a whole pizza and watching _Friends_ reruns alone \- you’ll finally have someone to do that with\! And really, isn’t that \- eating and watching TV with someone by your side \- the point of life?
 
 Results may vary. Cupid does not take responsibility for injury, death, or existential collapse that occurs as a result of the purchase of the Soulmate™. No refunds or returns. No warranty. Payment plans available \- 500 year terms. Transferable to family members after death.
+
+{% include image.html image=page.image %}
