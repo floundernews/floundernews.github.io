@@ -42,24 +42,23 @@ layout: article
             {% if item.first.last.first.first %}
                 {% assign img_name=item.first.last.first.first %}
             {% else %}
-                {% assign
-    img_name=item.first.last %}
+                {% assign img_name=item.first.last %}
             {% endif %}
             {% if page.hascover %}
-                {% if
-    forloop.index>1 %}
+                {% if forloop.index>1 %}
                     <h2>{{forloop.index|minus:1|append:'. '|append:headline}}</h2>
                 {% endif %}
             {% else %}
                 <h2>{{forloop.index|append:'. '|append:headline}}</h2>
             {% endif %}
-
+            {% if img_name %}
             <figure>
-                <img class="ranking-img" src={{page.imagedir| append:'/'| append: img_name}}>
+                <img class="ranking-img" src="{{page.imagedir| append:'/'| append: img_name}}">
                 {% if item.first.last.first.last %}
                     <figcaption>{{item.first.last.first.last}}</figcaption>
                 {% endif %}
             </figure>
+            {% endif %}
         </div>
     {% endfor %}
 </div>
